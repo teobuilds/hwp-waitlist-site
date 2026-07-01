@@ -25,10 +25,10 @@ export default function ConfirmedPage() {
 
         <div className="flex gap-6 items-center">
           <a href="https://tiktok.com/@hoopwithprezence" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-            <Image src="/images/tiktok.png" alt="TikTok" width={48} height={48} />
+            <Image src="/images/tiktok.png" alt="TikTok" width={52} height={52} className="w-[52px] h-[52px] object-contain" />
           </a>
           <a href="https://instagram.com/hoopwithprezence" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-            <Image src="/images/instagram.png" alt="Instagram" width={48} height={48} />
+            <Image src="/images/instagram.png" alt="Instagram" width={52} height={52} className="w-[52px] h-[52px] object-contain" />
           </a>
         </div>
       </section>
