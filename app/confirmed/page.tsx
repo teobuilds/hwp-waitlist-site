@@ -7,10 +7,10 @@ export default function ConfirmedPage() {
       <Navbar />
 
       <section className="pt-40 pb-20 flex flex-col items-center text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-bold" style={{ color: '#7B5EA7' }}>
+        <h1 style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           You&apos;re in!
         </h1>
-        <p className="text-2xl md:text-3xl font-bold mt-2" style={{ color: '#A78BCC' }}>
+        <p className="mt-2" style={{ color: '#AF94E0', fontSize: '35px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           You&apos;ll be the first to know when we drop.
         </p>
 
@@ -18,7 +18,7 @@ export default function ConfirmedPage() {
           <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={260} height={530} className="drop-shadow-xl" />
         </div>
 
-        <p className="mt-10 max-w-md text-gray-400 font-medium text-sm leading-relaxed">
+        <p className="mt-10 max-w-md" style={{ color: '#C5BAD9', fontSize: '20px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           While you wait — follow along on TikTok and Instagram. We&apos;re dropping early previews,
           behind the scenes, and content you won&apos;t see anywhere else.
         </p>
