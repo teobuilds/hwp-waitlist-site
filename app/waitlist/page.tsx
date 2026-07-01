@@ -79,7 +79,13 @@ export default function WaitlistPage() {
               type="tel"
               placeholder="###-###-####"
               value={form.phone}
-              onChange={e => setForm({ ...form, phone: e.target.value })}
+              onChange={e => {
+                const digits = e.target.value.replace(/\D/g, '').slice(0, 10);
+                let formatted = digits;
+                if (digits.length > 6) formatted = `${digits.slice(0,3)}-${digits.slice(3,6)}-${digits.slice(6)}`;
+                else if (digits.length > 3) formatted = `${digits.slice(0,3)}-${digits.slice(3)}`;
+                setForm({ ...form, phone: formatted });
+              }}
               className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
             />
           </div>
