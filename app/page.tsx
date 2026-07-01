@@ -36,10 +36,10 @@ export default function Home() {
 
       {/* Hero */}
       <section className="pt-32 pb-16 flex flex-col items-center text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight" style={{ color: '#7B5EA7' }}>
+        <h1 className="leading-tight" style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Train With Intention.
         </h1>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-1" style={{ color: '#A78BCC' }}>
+        <h1 className="mt-1" style={{ color: '#AF94E0', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Hoop With Prezence.
         </h1>
 
