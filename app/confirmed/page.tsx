@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function ConfirmedPage() {
@@ -13,9 +14,8 @@ export default function ConfirmedPage() {
           You&apos;ll be the first to know when we drop.
         </p>
 
-        {/* App screenshot placeholder */}
-        <div className="mt-10 w-56 md:w-64 bg-gray-50 rounded-[2.5rem] shadow-xl aspect-[9/19] flex items-center justify-center border border-gray-200">
-          <span className="text-gray-400 text-sm text-center px-4">App screenshot<br/>(coming soon)</span>
+        <div className="mt-10">
+          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={260} height={530} className="drop-shadow-2xl" />
         </div>
 
         <p className="mt-10 max-w-md text-gray-400 font-medium text-sm leading-relaxed">

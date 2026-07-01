@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 const features = [
@@ -6,31 +7,27 @@ const features = [
     title: 'Create a Play',
     description: 'Create, diagram, and analyze plays with a dynamic coaching board. Map out movements by role and position, then generate personalized workouts based on your actions and reads.',
     imageRight: true,
+    image: '/images/screen-create-play.png',
   },
   {
     title: 'Specific Workout',
     description: 'Get personalized workouts based on your position, movements, and reads—built directly from the plays you create.',
     imageRight: false,
+    image: '/images/screen-workout.png',
   },
   {
     title: 'Workout Library',
     description: 'The Workout Library stores every workout you complete so you can revisit, repeat, or build consistency over time.',
     imageRight: true,
+    image: '/images/screen-library.png',
   },
   {
     title: 'Player Profile',
     description: 'Enter the Film Room to break down actions, reactions, and outcomes. Prepare to outthink before you outplay.',
     imageRight: false,
+    image: '/images/screen-profile.png',
   },
 ];
-
-function PhoneMockup({ label }: { label: string }) {
-  return (
-    <div className="w-48 md:w-56 bg-gray-50 rounded-[2.5rem] shadow-lg aspect-[9/19] flex items-center justify-center border border-gray-200">
-      <span className="text-gray-400 text-xs text-center px-3">{label}</span>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -47,7 +44,7 @@ export default function Home() {
         </h1>
 
         <div className="mt-10">
-          <PhoneMockup label="Hero app screenshot" />
+          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={280} height={570} className="drop-shadow-2xl" />
         </div>
 
         <Link href="/waitlist">
@@ -72,7 +69,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex-1 flex justify-center">
-            <PhoneMockup label={`${feature.title} screenshot`} />
+            <Image src={feature.image} alt={feature.title} width={260} height={530} className="drop-shadow-xl" />
           </div>
         </section>
       ))}
