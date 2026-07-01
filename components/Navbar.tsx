@@ -15,7 +15,7 @@ export default function Navbar() {
           Shop
         </Link>
         <Link href="/waitlist">
-          <button className="px-5 py-2 rounded-full border-2 font-semibold text-sm hover:opacity-80 transition-opacity" style={{ borderColor: '#7B5EA7', color: '#7B5EA7' }}>
+          <button className="px-5 py-2 rounded-full border-2 hover:opacity-80 transition-opacity" style={{ borderColor: '#AF94E0', color: '#AF94E0', fontSize: '15px', fontWeight: 600, letterSpacing: '0em', lineHeight: 1.2 }}>
             Join
           </button>
         </Link>

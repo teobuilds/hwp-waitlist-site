@@ -48,8 +48,8 @@ export default function Home() {
         </div>
 
         <Link href="/waitlist">
-          <button className="mt-10 px-8 py-3 rounded-full border-2 font-semibold text-sm hover:opacity-80 transition-opacity" style={{ borderColor: '#7B5EA7', color: '#7B5EA7' }}>
-            Join the Waitlist
+          <button className="mt-10 px-8 py-3 rounded-full border-2 hover:opacity-80 transition-opacity" style={{ borderColor: '#AF94E0' }}>
+            <span style={{ fontSize: '15px', fontWeight: 600, letterSpacing: '0em', lineHeight: 1.2, color: '#AF94E0' }}>Join the Waitlist</span>
           </button>
         </Link>
       </section>
@@ -62,9 +62,9 @@ export default function Home() {
             feature.imageRight ? 'md:flex-row' : 'md:flex-row-reverse'
           } items-center gap-12 max-w-5xl mx-auto`}
         >
-          <div className={`flex-1 text-center ${feature.imageRight ? 'md:text-left' : 'md:text-right'}`}>
+          <div className="flex-1 text-center">
             <h2 className="mb-4" style={{ color: '#AF94E0', fontSize: '32px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{feature.title}</h2>
-            <p className="max-w-sm mx-auto md:mx-0 md:ml-auto" style={{ color: '#999999', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
+            <p className="max-w-sm mx-auto" style={{ color: '#999999', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
               {feature.description}
             </p>
           </div>
@@ -79,8 +79,8 @@ export default function Home() {
         <h2 style={{ color: '#7956B9', fontSize: '32px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>Unleash your edge.</h2>
         <p className="mt-2" style={{ color: '#AF94E0', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.1 }}>Start transforming your game now.</p>
         <Link href="/waitlist">
-          <button className="mt-8 px-8 py-3 rounded-full border-2 font-semibold text-sm hover:opacity-80 transition-opacity" style={{ borderColor: '#7B5EA7', color: '#7B5EA7' }}>
-            Get it now
+          <button className="mt-8 px-8 py-3 rounded-full border-2 hover:opacity-80 transition-opacity" style={{ borderColor: '#AF94E0' }}>
+            <span style={{ fontSize: '15px', fontWeight: 600, letterSpacing: '0em', lineHeight: 1.2, color: '#AF94E0' }}>Get it now</span>
           </button>
         </Link>
       </section>
