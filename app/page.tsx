@@ -63,8 +63,8 @@ export default function Home() {
           } items-center gap-12 max-w-5xl mx-auto`}
         >
           <div className={`flex-1 text-center ${feature.imageRight ? 'md:text-left' : 'md:text-right'}`}>
-            <h2 className="text-3xl font-bold mb-4" style={{ color: '#7B5EA7' }}>{feature.title}</h2>
-            <p className="text-gray-500 text-base leading-relaxed max-w-sm mx-auto md:mx-0 md:ml-auto">
+            <h2 className="mb-4" style={{ color: '#AF94E0', fontSize: '32px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{feature.title}</h2>
+            <p className="max-w-sm mx-auto md:mx-0 md:ml-auto" style={{ color: '#999999', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
               {feature.description}
             </p>
           </div>
@@ -76,8 +76,8 @@ export default function Home() {
 
       {/* Bottom CTA */}
       <section className="py-24 flex flex-col items-center text-center px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Unleash your edge.</h2>
-        <p className="font-semibold mt-2 text-lg" style={{ color: '#A78BCC' }}>Start transforming your game now.</p>
+        <h2 style={{ color: '#7956B9', fontSize: '32px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>Unleash your edge.</h2>
+        <p className="mt-2" style={{ color: '#AF94E0', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.1 }}>Start transforming your game now.</p>
         <Link href="/waitlist">
           <button className="mt-8 px-8 py-3 rounded-full border-2 font-semibold text-sm hover:opacity-80 transition-opacity" style={{ borderColor: '#7B5EA7', color: '#7B5EA7' }}>
             Get it now
