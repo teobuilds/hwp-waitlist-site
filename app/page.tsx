@@ -44,7 +44,7 @@ export default function Home() {
         </h1>
 
         <div className="mt-10">
-          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={280} height={570} className="drop-shadow-2xl" />
+          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={280} height={570} className="mix-blend-multiply" />
         </div>
 
         <Link href="/waitlist">
@@ -69,7 +69,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex-1 flex justify-center">
-            <Image src={feature.image} alt={feature.title} width={260} height={530} className="drop-shadow-xl" />
+            <Image src={feature.image} alt={feature.title} width={260} height={530} className="mix-blend-multiply" />
           </div>
         </section>
       ))}

@@ -15,7 +15,7 @@ export default function ConfirmedPage() {
         </p>
 
         <div className="mt-10">
-          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={260} height={530} className="drop-shadow-2xl" />
+          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={260} height={530} className="mix-blend-multiply" />
         </div>
 
         <p className="mt-10 max-w-md text-gray-400 font-medium text-sm leading-relaxed">
