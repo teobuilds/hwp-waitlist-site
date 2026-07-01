@@ -32,9 +32,9 @@ function ShopContent() {
         <h1 style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Coming Soon.
         </h1>
-        <p style={{ color: '#AF94E0', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
-          The HWP shop is almost here. Stay tuned.
-        </p>
+        <h2 style={{ color: '#AF94E0', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+          The HWP shop is almost here.
+        </h2>
       </section>
     );
   }
