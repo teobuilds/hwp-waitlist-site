@@ -41,10 +41,10 @@ export default function WaitlistPage() {
       <Navbar />
 
       <section className="pt-40 pb-20 flex flex-col items-center text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-bold" style={{ color: '#7B5EA7' }}>
+        <h1 style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Hoop With Prezence
         </h1>
-        <p className="text-2xl md:text-3xl font-bold mt-2" style={{ color: '#A78BCC' }}>
+        <p className="mt-2" style={{ color: '#AF94E0', fontSize: '35px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Early access. Limited spots.
         </p>
 
@@ -89,8 +89,7 @@ export default function WaitlistPage() {
           <button
             type="submit"
             disabled={loading}
-            className="mt-2 px-8 py-3 rounded-full border-2 font-semibold text-sm hover:opacity-80 transition-opacity disabled:opacity-50"
-            style={{ borderColor: '#7B5EA7', color: '#7B5EA7' }}
+            className="btn-pill mt-2 px-8 py-3 disabled:opacity-50"
           >
             {loading ? 'Submitting...' : 'Submit'}
           </button>
