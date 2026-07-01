@@ -37,6 +37,10 @@ h1, h2, h3 {
   border-radius: 999px;
   transition: background 0.2s, color 0.2s;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 1.2;
 }
 
 .btn-pill:hover,

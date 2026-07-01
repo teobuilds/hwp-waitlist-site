@@ -49,7 +49,7 @@ export default function Home() {
 
         <Link href="/waitlist">
           <button className="btn-pill mt-10 px-8 py-3">
-            <span style={{ fontSize: '15px', fontWeight: 600, letterSpacing: '0em', lineHeight: 1.2, color: '#AF94E0' }}>Join the Waitlist</span>
+            Join the Waitlist
           </button>
         </Link>
       </section>
@@ -80,7 +80,7 @@ export default function Home() {
         <p className="mt-2" style={{ color: '#AF94E0', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.1 }}>Start transforming your game now.</p>
         <Link href="/waitlist">
           <button className="btn-pill mt-8 px-8 py-3">
-            <span style={{ fontSize: '15px', fontWeight: 600, letterSpacing: '0em', lineHeight: 1.2, color: '#AF94E0' }}>Get it now</span>
+            Get it now
           </button>
         </Link>
       </section>
