@@ -28,7 +28,7 @@ export default function ConfirmedPage() {
             <Image src="/images/tiktok.png" alt="TikTok" width={52} height={52} className="w-[52px] h-[52px] object-contain" />
           </a>
           <a href="https://instagram.com/hoopwithprezence" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-            <Image src="/images/instagram.png" alt="Instagram" width={52} height={52} className="w-[52px] h-[52px] object-contain" />
+            <Image src="/images/instagram.png" alt="Instagram" width={62} height={62} className="w-[62px] h-[62px] object-contain" />
           </a>
         </div>
       </section>
