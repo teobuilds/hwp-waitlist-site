@@ -57,7 +57,7 @@ export default function WaitlistPage() {
               value={form.name}
               onChange={e => setForm({ ...form, name: e.target.value })}
               required
-              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0]"
             />
           </div>
 
@@ -69,7 +69,7 @@ export default function WaitlistPage() {
               value={form.email}
               onChange={e => setForm({ ...form, email: e.target.value })}
               required
-              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0]"
             />
           </div>
 
@@ -86,7 +86,7 @@ export default function WaitlistPage() {
                 else if (digits.length > 3) formatted = `${digits.slice(0,3)}-${digits.slice(3)}`;
                 setForm({ ...form, phone: formatted });
               }}
-              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0]"
             />
           </div>
 
