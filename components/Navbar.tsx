@@ -11,7 +11,10 @@ export default function Navbar() {
       </Link>
 
       <div className="flex items-center gap-4">
-        <Link href="/shop" className="text-sm font-semibold text-gray-600 hover:text-purple-600 transition-colors">
+        <Link href="/shop" className="transition-colors" style={{ fontSize: '15px', fontWeight: 600, color: '#999999' }}
+          onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = '#AF94E0'}
+          onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = '#999999'}
+        >
           Shop
         </Link>
         <Link href="/waitlist">
