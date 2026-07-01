@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         <Link href="/waitlist">
-          <button className="mt-10 px-8 py-3 rounded-full border-2 hover:opacity-80 transition-opacity" style={{ borderColor: '#AF94E0' }}>
+          <button className="btn-pill mt-10 px-8 py-3">
             <span style={{ fontSize: '15px', fontWeight: 600, letterSpacing: '0em', lineHeight: 1.2, color: '#AF94E0' }}>Join the Waitlist</span>
           </button>
         </Link>
@@ -79,7 +79,7 @@ export default function Home() {
         <h2 style={{ color: '#7956B9', fontSize: '32px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>Unleash your edge.</h2>
         <p className="mt-2" style={{ color: '#AF94E0', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.1 }}>Start transforming your game now.</p>
         <Link href="/waitlist">
-          <button className="mt-8 px-8 py-3 rounded-full border-2 hover:opacity-80 transition-opacity" style={{ borderColor: '#AF94E0' }}>
+          <button className="btn-pill mt-8 px-8 py-3">
             <span style={{ fontSize: '15px', fontWeight: 600, letterSpacing: '0em', lineHeight: 1.2, color: '#AF94E0' }}>Get it now</span>
           </button>
         </Link>

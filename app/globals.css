@@ -29,3 +29,18 @@ h1, h2, h3 {
     text-wrap: balance;
   }
 }
+
+.btn-pill {
+  border: 2px solid #AF94E0;
+  color: #AF94E0;
+  background: transparent;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-pill:hover,
+.btn-pill:active {
+  background: #AF94E0;
+  color: white;
+}
