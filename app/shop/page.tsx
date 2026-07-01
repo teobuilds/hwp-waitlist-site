@@ -23,24 +23,20 @@ export default function ShopPage() {
       <Navbar />
 
       <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-2" style={{ color: '#7B5EA7' }}>Shop</h1>
-        <p className="text-center text-gray-400 mb-12">Rep the brand. Train with intention.</p>
+        <h1 className="text-center mb-1" style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
+        <p className="text-center mb-12" style={{ color: '#999999', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Rep the brand. Train with intention.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {shirts.map(shirt => (
             <div key={shirt.id} className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
-              {/* Product image placeholder */}
               <div className="bg-gray-100 aspect-square flex items-center justify-center">
-                <span className="text-gray-400 text-sm">Product photo coming soon</span>
+                <span style={{ color: '#999999', fontSize: '16px', fontWeight: 500 }}>Product photo coming soon</span>
               </div>
-              <div className="p-5 flex flex-col gap-2">
-                <h2 className="text-lg font-bold text-gray-800">{shirt.name}</h2>
-                <p className="text-gray-500 text-sm">{shirt.description}</p>
-                <p className="font-bold text-gray-800">{shirt.price}</p>
-                <button
-                  className="mt-3 px-6 py-2 rounded-full border-2 font-semibold text-sm hover:opacity-80 transition-opacity"
-                  style={{ borderColor: '#7B5EA7', color: '#7B5EA7' }}
-                >
+              <div className="p-6 flex flex-col gap-2">
+                <h2 style={{ color: '#7956B9', fontSize: '24px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{shirt.name}</h2>
+                <p style={{ color: '#999999', fontSize: '18px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{shirt.description}</p>
+                <p style={{ color: '#7956B9', fontSize: '20px', fontWeight: 700, letterSpacing: '-0.02em' }}>{shirt.price}</p>
+                <button className="btn-pill mt-3 px-6 py-3">
                   Buy Now
                 </button>
               </div>
