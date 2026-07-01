@@ -6,25 +6,25 @@ export default function ConfirmedPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      <section className="pt-40 pb-20 flex flex-col items-center text-center px-6">
+      <section className="h-screen flex flex-col items-center justify-center text-center px-6 gap-4">
         <h1 style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           You&apos;re in!
         </h1>
-        <p className="mt-2" style={{ color: '#AF94E0', fontSize: '35px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+        <p style={{ color: '#AF94E0', fontSize: '35px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           You&apos;ll be the first to know when we drop.
         </p>
 
-        <div className="mt-10">
-          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={260} height={530} className="drop-shadow-xl" />
+        <div>
+          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={200} height={400} className="drop-shadow-xl" />
         </div>
 
-        <p className="mt-10 max-w-md" style={{ color: '#C5BAD9', fontSize: '20px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+        <p className="max-w-md" style={{ color: '#C5BAD9', fontSize: '20px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           While you wait — follow along on TikTok and Instagram. We&apos;re dropping early previews,
           behind the scenes, and content you won&apos;t see anywhere else.
         </p>
 
         {/* Social links */}
-        <div className="mt-8 flex gap-6 items-center">
+        <div className="flex gap-6 items-center">
           <a
             href="https://tiktok.com/@hoopwithprezence"
             target="_blank"
