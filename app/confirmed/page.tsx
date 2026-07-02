@@ -15,7 +15,14 @@ export default function ConfirmedPage() {
         </p>
 
         <div>
-          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={200} height={400} className="drop-shadow-xl w-[150px] md:w-[200px] h-auto" />
+          <Image
+            src="/images/screen-home.png"
+            alt="Hoop With Prezence App"
+            width={200}
+            height={400}
+            className="drop-shadow-xl md:!w-[200px] md:!h-auto"
+            style={{ width: 'clamp(180px, calc(32dvh - 35px), 240px)', height: 'auto' }}
+          />
         </div>
 
         <p className="max-w-[260px] md:max-w-md text-[13px] md:text-[20px]" style={{ color: '#C5BAD9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1.2 }}>
