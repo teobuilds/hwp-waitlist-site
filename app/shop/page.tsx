@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 const shirts = [
@@ -28,13 +29,16 @@ function ShopContent() {
 
   if (!isPreview) {
     return (
-      <section className="h-screen flex flex-col items-center justify-center text-center px-6 gap-4">
+      <section className="h-screen flex flex-col items-center justify-center text-center px-6 gap-4 relative">
         <h1 style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Coming Soon.
         </h1>
         <h2 style={{ color: '#AF94E0', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           The HWP shop is almost here.
         </h2>
+        <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+          <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={600} height={80} className="mix-blend-multiply opacity-90" />
+        </div>
       </section>
     );
   }
