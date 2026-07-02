@@ -37,7 +37,7 @@ function ShopContent() {
           The HWP shop is almost here.
         </h2>
         <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-          <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={220} height={30} className="mix-blend-multiply opacity-40" />
+          <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={320} height={44} className="mix-blend-multiply" />
         </div>
       </section>
     );
