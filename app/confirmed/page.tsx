@@ -3,10 +3,10 @@ import Navbar from '@/components/Navbar';
 
 export default function ConfirmedPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white flex flex-col">
       <Navbar />
 
-      <section className="h-screen flex flex-col items-center justify-center text-center px-6 gap-3 md:gap-4">
+      <section className="flex-1 flex flex-col items-center justify-center text-center px-6 gap-3 md:gap-4 pt-24 pb-6 md:h-screen md:pt-0 md:pb-0">
         <h1 className="text-[26px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           You&apos;re in!
         </h1>
@@ -32,6 +32,10 @@ export default function ConfirmedPage() {
           </a>
         </div>
       </section>
+
+      <div className="md:hidden flex justify-center pb-8">
+        <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={320} height={44} className="mix-blend-multiply w-[160px] h-auto" />
+      </div>
     </main>
   );
 }

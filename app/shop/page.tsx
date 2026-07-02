@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 const shirts = [
@@ -28,7 +29,7 @@ function ShopContent() {
 
   if (!isPreview) {
     return (
-      <section className="h-screen flex flex-col items-center justify-center text-center px-6 gap-3 md:gap-4 relative">
+      <section className="flex-1 flex flex-col items-center justify-center text-center px-6 gap-3 md:gap-4 relative md:h-screen">
         <h1 className="text-[28px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Coming Soon.
         </h1>
@@ -65,11 +66,15 @@ function ShopContent() {
 
 export default function ShopPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white flex flex-col">
       <Navbar />
       <Suspense>
         <ShopContent />
       </Suspense>
+
+      <div className="md:hidden flex justify-center pb-8">
+        <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={320} height={44} className="mix-blend-multiply w-[160px] h-auto" />
+      </div>
     </main>
   );
 }

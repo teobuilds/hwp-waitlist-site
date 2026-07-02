@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function WaitlistPage() {
@@ -101,6 +102,10 @@ export default function WaitlistPage() {
           </button>
         </form>
       </section>
+
+      <div className="md:hidden flex justify-center pb-8">
+        <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={320} height={44} className="mix-blend-multiply w-[160px] h-auto" />
+      </div>
     </main>
   );
 }
