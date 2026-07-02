@@ -44,7 +44,7 @@ export default function Home() {
         </h1>
 
         <div className="mt-6 md:mt-10">
-          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={340} height={690} className="drop-shadow-xl w-[220px] md:w-[340px] h-auto" />
+          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={340} height={690} className="drop-shadow-xl w-[260px] md:w-[380px] h-auto" />
         </div>
 
         <Link href="/waitlist">
