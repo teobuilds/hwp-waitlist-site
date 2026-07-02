@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,9 +20,6 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-white">
         {children}
-        <div className="hidden md:flex fixed bottom-0 left-0 right-0 justify-center items-end pb-4 pointer-events-none z-40 bg-gradient-to-t from-white via-white/80 to-transparent pt-8">
-          <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={320} height={44} className="mix-blend-multiply w-[320px] h-auto" />
-        </div>
       </body>
     </html>
   );
