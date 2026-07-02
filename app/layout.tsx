@@ -21,9 +21,9 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-white">
         {children}
-        <footer className="w-full flex justify-center py-8 mt-4">
+        <div className="fixed bottom-0 left-0 right-0 flex justify-center items-end pb-4 pointer-events-none z-40 bg-gradient-to-t from-white via-white/80 to-transparent pt-8">
           <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={320} height={44} className="mix-blend-multiply" />
-        </footer>
+        </div>
       </body>
     </html>
   );
