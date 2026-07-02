@@ -28,11 +28,11 @@ function ShopContent() {
 
   if (!isPreview) {
     return (
-      <section className="h-screen flex flex-col items-center justify-center text-center px-6 gap-4 relative">
-        <h1 style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+      <section className="h-screen flex flex-col items-center justify-center text-center px-6 gap-3 md:gap-4 relative">
+        <h1 className="text-[28px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Coming Soon.
         </h1>
-        <h2 style={{ color: '#AF94E0', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+        <h2 className="text-[24px] md:text-[40px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1.2 }}>
           The HWP shop is almost here.
         </h2>
       </section>
@@ -40,21 +40,21 @@ function ShopContent() {
   }
 
   return (
-    <section className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
-      <h1 className="text-center mb-1" style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
-      <p className="text-center mb-12" style={{ color: '#999999', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Rep the brand. Train with intention.</p>
+    <section className="pt-24 pb-14 md:pt-32 md:pb-20 px-6 max-w-5xl mx-auto">
+      <h1 className="text-center mb-1 text-[28px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
+      <p className="text-center mb-8 md:mb-12 text-[15px] md:text-[22px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Rep the brand. Train with intention.</p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
         {shirts.map(shirt => (
           <div key={shirt.id} className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
             <div className="bg-gray-100 aspect-square flex items-center justify-center">
-              <span style={{ color: '#999999', fontSize: '16px', fontWeight: 500 }}>Product photo coming soon</span>
+              <span className="text-[14px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500 }}>Product photo coming soon</span>
             </div>
-            <div className="p-6 flex flex-col gap-2">
-              <h2 style={{ color: '#7956B9', fontSize: '24px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{shirt.name}</h2>
-              <p style={{ color: '#999999', fontSize: '18px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{shirt.description}</p>
-              <p style={{ color: '#7956B9', fontSize: '20px', fontWeight: 700, letterSpacing: '-0.02em' }}>{shirt.price}</p>
-              <button className="btn-pill mt-3 px-6 py-3">Buy Now</button>
+            <div className="p-4 md:p-6 flex flex-col gap-2">
+              <h2 className="text-[19px] md:text-[24px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{shirt.name}</h2>
+              <p className="text-[15px] md:text-[18px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{shirt.description}</p>
+              <p className="text-[17px] md:text-[20px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{shirt.price}</p>
+              <button className="btn-pill mt-3 px-6 py-2.5 md:py-3 text-[13px] md:text-[15px]">Buy Now</button>
             </div>
           </div>
         ))}

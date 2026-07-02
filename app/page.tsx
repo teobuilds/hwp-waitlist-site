@@ -35,20 +35,20 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 flex flex-col items-center text-center px-6">
-        <h1 className="leading-tight" style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+      <section className="pt-24 pb-10 md:pt-32 md:pb-16 flex flex-col items-center text-center px-6">
+        <h1 className="leading-tight text-[28px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Train With Intention.
         </h1>
-        <h1 className="mt-1" style={{ color: '#AF94E0', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+        <h1 className="mt-1 text-[28px] md:text-[40px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Hoop With Prezence.
         </h1>
 
-        <div className="mt-10">
-          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={340} height={690} className="drop-shadow-xl" />
+        <div className="mt-6 md:mt-10">
+          <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={340} height={690} className="drop-shadow-xl w-[220px] md:w-[340px] h-auto" />
         </div>
 
         <Link href="/waitlist">
-          <button className="btn-pill mt-10 px-8 py-3">
+          <button className="btn-pill mt-6 md:mt-10 px-6 py-2.5 md:px-8 md:py-3 text-[13px] md:text-[15px]">
             Join the Waitlist
           </button>
         </Link>
@@ -58,28 +58,28 @@ export default function Home() {
       {features.map((feature, i) => (
         <section
           key={i}
-          className={`py-16 px-6 md:px-20 flex flex-col ${
+          className={`py-10 md:py-16 px-6 md:px-20 flex flex-col ${
             feature.imageRight ? 'md:flex-row' : 'md:flex-row-reverse'
-          } items-center gap-12 max-w-5xl mx-auto`}
+          } items-center gap-6 md:gap-12 max-w-5xl mx-auto`}
         >
           <div className="flex-1 text-center">
-            <h2 className="mb-4" style={{ color: '#AF94E0', fontSize: '32px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{feature.title}</h2>
-            <p className="max-w-sm mx-auto" style={{ color: '#999999', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
+            <h2 className="mb-2 md:mb-4 text-[22px] md:text-[32px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{feature.title}</h2>
+            <p className="max-w-[280px] md:max-w-sm mx-auto text-[15px] md:text-[22px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
               {feature.description}
             </p>
           </div>
           <div className="flex-1 flex justify-center">
-            <Image src={feature.image} alt={feature.title} width={340} height={690} className="drop-shadow-xl" />
+            <Image src={feature.image} alt={feature.title} width={340} height={690} className="drop-shadow-xl w-[200px] md:w-[340px] h-auto" />
           </div>
         </section>
       ))}
 
       {/* Bottom CTA */}
-      <section className="py-24 flex flex-col items-center text-center px-6">
-        <h2 style={{ color: '#7956B9', fontSize: '32px', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>Unleash your edge.</h2>
-        <p className="mt-2" style={{ color: '#AF94E0', fontSize: '22px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.1 }}>Start transforming your game now.</p>
+      <section className="py-14 md:py-24 flex flex-col items-center text-center px-6">
+        <h2 className="text-[24px] md:text-[32px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>Unleash your edge.</h2>
+        <p className="mt-2 text-[15px] md:text-[22px]" style={{ color: '#AF94E0', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.1 }}>Start transforming your game now.</p>
         <Link href="/waitlist">
-          <button className="btn-pill mt-8 px-8 py-3">
+          <button className="btn-pill mt-6 md:mt-8 px-6 py-2.5 md:px-8 md:py-3 text-[13px] md:text-[15px]">
             Get it now
           </button>
         </Link>

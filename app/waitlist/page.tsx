@@ -40,11 +40,11 @@ export default function WaitlistPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      <section className="pt-40 pb-20 flex flex-col items-center text-center px-6">
-        <h1 style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+      <section className="pt-28 pb-14 md:pt-40 md:pb-20 flex flex-col items-center text-center px-6">
+        <h1 className="text-[28px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Hoop With Prezence
         </h1>
-        <p className="mt-2" style={{ color: '#AF94E0', fontSize: '35px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+        <p className="mt-2 text-[20px] md:text-[35px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Early access. Limited spots.
         </p>
 
