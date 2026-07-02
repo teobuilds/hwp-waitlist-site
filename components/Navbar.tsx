@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 md:px-6 md:py-4 bg-white">
       <Link href="/">
-        <Image src="/images/logo.png" alt="Hoop With Prezence" width={60} height={60} className="w-[44px] h-[44px] md:w-[60px] md:h-[60px]" />
+        <Image src="/images/logo.png" alt="Hoop With Prezence" width={975} height={1024} className="w-[44px] h-auto md:w-[60px]" />
       </Link>
 
       <div className="flex items-center gap-3 md:gap-4">
