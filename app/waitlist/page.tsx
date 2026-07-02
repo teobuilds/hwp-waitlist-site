@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function WaitlistPage() {
@@ -38,44 +37,44 @@ export default function WaitlistPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="h-[100dvh] overflow-hidden md:h-auto md:min-h-screen bg-white">
       <Navbar />
 
-      <section className="pt-28 pb-14 md:pt-40 md:pb-20 flex flex-col items-center text-center px-6">
-        <h1 className="text-[28px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+      <section className="h-full md:h-auto flex flex-col items-center justify-center md:justify-start text-center px-6 md:pt-40 md:pb-20">
+        <h1 className="text-[22px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Hoop With Prezence
         </h1>
-        <p className="mt-2 text-[20px] md:text-[35px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+        <p className="mt-1 md:mt-2 text-[15px] md:text-[35px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1.1 }}>
           Early access. Limited spots.
         </p>
 
-        <form onSubmit={handleSubmit} className="mt-10 w-full max-w-sm flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="mt-4 md:mt-10 w-full max-w-sm flex flex-col gap-2 md:gap-4">
           <div className="flex flex-col gap-1 text-left">
-            <label className="text-sm font-medium text-gray-700">Name</label>
+            <label className="text-[13px] md:text-sm font-medium text-gray-700">Name</label>
             <input
               type="text"
               placeholder="Jane Smith"
               value={form.name}
               onChange={e => setForm({ ...form, name: e.target.value })}
               required
-              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0]"
+              className="px-4 py-2 md:py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0] text-[14px] md:text-base"
             />
           </div>
 
           <div className="flex flex-col gap-1 text-left">
-            <label className="text-sm font-medium text-gray-700">Email</label>
+            <label className="text-[13px] md:text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
               placeholder="jane@hoopwithprezence.com"
               value={form.email}
               onChange={e => setForm({ ...form, email: e.target.value })}
               required
-              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0]"
+              className="px-4 py-2 md:py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0] text-[14px] md:text-base"
             />
           </div>
 
           <div className="flex flex-col gap-1 text-left">
-            <label className="text-sm font-medium text-gray-700">Phone Number</label>
+            <label className="text-[13px] md:text-sm font-medium text-gray-700">Phone Number</label>
             <input
               type="tel"
               placeholder="###-###-####"
@@ -87,7 +86,7 @@ export default function WaitlistPage() {
                 else if (digits.length > 3) formatted = `${digits.slice(0,3)}-${digits.slice(3)}`;
                 setForm({ ...form, phone: formatted });
               }}
-              className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0]"
+              className="px-4 py-2 md:py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0] text-[14px] md:text-base"
             />
           </div>
 
@@ -96,16 +95,12 @@ export default function WaitlistPage() {
           <button
             type="submit"
             disabled={loading}
-            className="btn-pill mt-2 px-8 py-3 disabled:opacity-50"
+            className="btn-pill mt-2 px-8 py-2.5 md:py-3 text-[14px] md:text-[15px] disabled:opacity-50"
           >
             {loading ? 'Submitting...' : 'Submit'}
           </button>
         </form>
       </section>
-
-      <div className="md:hidden flex justify-center pb-8">
-        <Image src="/images/hwp-wordmark.png" alt="Hoop With Prezence" width={320} height={44} className="mix-blend-multiply w-[160px] h-auto" />
-      </div>
     </main>
   );
 }
