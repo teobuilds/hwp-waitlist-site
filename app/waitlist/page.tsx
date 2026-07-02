@@ -40,7 +40,7 @@ export default function WaitlistPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      <section className="pt-40 pb-20 flex flex-col items-center text-center px-6">
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 pb-24">
         <h1 style={{ color: '#7956B9', fontSize: '40px', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Hoop With Prezence
         </h1>
