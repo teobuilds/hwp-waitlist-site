@@ -33,7 +33,7 @@ function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <div className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+    <div className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow md:w-[560px] md:shrink-0 md:snap-start">
       <div
         onClick={goToProduct}
         className="bg-gray-100 aspect-square flex items-center justify-center relative cursor-pointer"
@@ -128,7 +128,7 @@ function ShopContent() {
         <h1 className="text-center mb-1 text-[20px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
         <p className="text-center mb-4 md:mb-12 text-[11px] md:text-[22px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Rep the brand. Train with intention.</p>
 
-        <div className="grid grid-cols-2 gap-2.5 md:gap-8">
+        <div className="grid grid-cols-2 gap-2.5 md:flex md:overflow-x-auto md:gap-8 md:pb-4 md:snap-x md:snap-mandatory">
           {products.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
