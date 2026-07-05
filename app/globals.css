@@ -47,3 +47,21 @@ h1, h2, h3 {
   background: #AF94E0;
   color: white;
 }
+
+.btn-pill-filled {
+  border: 2px solid #7956B9;
+  color: white;
+  background: #7956B9;
+  border-radius: 999px;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 1.2;
+}
+
+.btn-pill-filled:hover,
+.btn-pill-filled:active {
+  background: #664AA0;
+  border-color: #664AA0;
+}

@@ -1,56 +1,33 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
+import { products, type Product } from '@/lib/products';
 
-const shirts = [
-  {
-    id: 1,
-    name: 'HWP Classic Tee',
-    price: '$35',
-    description: 'Train with intention.',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      { name: 'Black', swatch: '#1A1A1A', image: '/images/products/classic-tee-black-front.jpg' },
-      { name: 'Grey', swatch: '#9CA3AF', image: null },
-    ],
-  },
-  {
-    id: 2,
-    name: 'HWP Logo Hoodie',
-    price: '$65',
-    description: 'Hoop With Prezence.',
-    image: null,
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-  },
-];
-
-function ProductCard({ shirt }: { shirt: (typeof shirts)[number] }) {
-  const [selectedSize, setSelectedSize] = useState(shirt.sizes[0]);
-  const [showNotReady, setShowNotReady] = useState(false);
-  const colors = 'colors' in shirt ? shirt.colors : null;
-  const [selectedColor, setSelectedColor] = useState(colors?.[0]);
-  const image = colors ? selectedColor?.image : shirt.image;
+function ProductCard({ product }: { product: Product }) {
+  const [selectedColor, setSelectedColor] = useState(product.colors?.[0]);
+  const image = product.colors ? selectedColor?.images[0] : product.image;
 
   return (
     <div className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
       <div className="bg-gray-100 aspect-square flex items-center justify-center relative">
         {image ? (
-          <Image src={image} alt={shirt.name} fill className="object-cover" />
+          <Image src={image} alt={product.name} fill className="object-cover" />
         ) : (
           <span className="text-[14px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500 }}>Product photo coming soon</span>
         )}
       </div>
       <div className="p-4 md:p-6 flex flex-col gap-2">
-        <h2 className="text-[19px] md:text-[24px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{shirt.name}</h2>
-        <p className="text-[15px] md:text-[18px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{shirt.description}</p>
-        <p className="text-[17px] md:text-[20px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{shirt.price}</p>
+        <h2 className="text-[19px] md:text-[24px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{product.name}</h2>
+        <p className="text-[15px] md:text-[18px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
+        <p className="text-[17px] md:text-[20px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
 
-        {colors && (
+        {product.colors && (
           <div className="flex flex-wrap gap-2 mt-2 items-center">
-            {colors.map(color => (
+            {product.colors.map(color => (
               <button
                 key={color.name}
                 onClick={() => setSelectedColor(color)}
@@ -66,34 +43,12 @@ function ProductCard({ shirt }: { shirt: (typeof shirts)[number] }) {
           </div>
         )}
 
-        <div className="flex flex-wrap gap-2 mt-2">
-          {shirt.sizes.map(size => (
-            <button
-              key={size}
-              onClick={() => setSelectedSize(size)}
-              className="rounded-full border px-3 py-1 text-[13px] md:text-[14px] transition-colors"
-              style={{
-                borderColor: selectedSize === size ? '#7956B9' : '#E5E5E5',
-                color: selectedSize === size ? '#7956B9' : '#999999',
-                fontWeight: 600,
-              }}
-            >
-              {size}
-            </button>
-          ))}
-        </div>
-
-        <button
-          className="btn-pill mt-3 px-6 py-2.5 md:py-3 text-[13px] md:text-[15px]"
-          onClick={() => setShowNotReady(true)}
+        <Link
+          href={`/shop/${product.id}?preview=hwp2025`}
+          className="btn-pill mt-3 px-6 py-2.5 md:py-3 text-[13px] md:text-[15px] text-center"
         >
           Buy Now
-        </button>
-        {showNotReady && (
-          <p className="text-[13px] md:text-[14px] text-center" style={{ color: '#999999', fontWeight: 500 }}>
-            Checkout isn&apos;t set up yet — coming soon!
-          </p>
-        )}
+        </Link>
       </div>
     </div>
   );
@@ -128,8 +83,8 @@ function ShopContent() {
         <p className="text-center mb-8 md:mb-12 text-[15px] md:text-[22px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Rep the brand. Train with intention.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-          {shirts.map(shirt => (
-            <ProductCard key={shirt.id} shirt={shirt} />
+          {products.map(product => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
