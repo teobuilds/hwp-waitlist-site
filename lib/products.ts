@@ -75,6 +75,30 @@ export const products: Product[] = [
       },
     ],
   },
+  {
+    id: 4,
+    name: 'HWP Compression Shirt',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/compression-white-front.jpg',
+          '/images/products/compression-white-action.jpg',
+          '/images/products/compression-white-detail.jpg',
+          '/images/products/compression-white-flatlay.jpg',
+        ],
+      },
+    ],
+  },
 ];
 
 export function getProduct(id: number) {
