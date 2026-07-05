@@ -35,7 +35,11 @@ export const products: Product[] = [
       {
         name: 'Grey',
         swatch: '#9CA3AF',
-        images: ['/images/products/classic-tee-grey-front.jpg', '/images/products/classic-tee-grey-back.jpg'],
+        images: [
+          '/images/products/classic-tee-grey-front.jpg',
+          '/images/products/classic-tee-grey-action.jpg',
+          '/images/products/classic-tee-grey-back.jpg',
+        ],
       },
     ],
   },
