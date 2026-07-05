@@ -2,20 +2,66 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
-import { products, type Product } from '@/lib/products';
+import { products, type Product, type ProductColor } from '@/lib/products';
 
 function ProductCard({ product }: { product: Product }) {
+  const router = useRouter();
   const [selectedColor, setSelectedColor] = useState(product.colors?.[0]);
-  const image = product.colors ? selectedColor?.images[0] : product.image;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const images = product.colors ? selectedColor?.images ?? [] : product.image ? [product.image] : [];
+
+  function selectColor(color: ProductColor) {
+    setSelectedColor(color);
+    setActiveIndex(0);
+  }
+
+  function goToProduct() {
+    router.push(`/shop/${product.id}?preview=hwp2025`);
+  }
+
+  function prevImage(e: React.MouseEvent) {
+    e.stopPropagation();
+    setActiveIndex(i => (i === 0 ? images.length - 1 : i - 1));
+  }
+
+  function nextImage(e: React.MouseEvent) {
+    e.stopPropagation();
+    setActiveIndex(i => (i === images.length - 1 ? 0 : i + 1));
+  }
 
   return (
     <div className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
-      <div className="bg-gray-100 aspect-square flex items-center justify-center relative">
-        {image ? (
-          <Image src={image} alt={product.name} fill className="object-cover" />
+      <div
+        onClick={goToProduct}
+        className="bg-gray-100 aspect-square flex items-center justify-center relative cursor-pointer"
+      >
+        {images.length > 0 ? (
+          <>
+            <Image src={images[activeIndex]} alt={product.name} fill className="object-cover" />
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={prevImage}
+                  aria-label="Previous photo"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-[16px]"
+                  style={{ color: '#7956B9', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
+                >
+                  ‹
+                </button>
+                <button
+                  onClick={nextImage}
+                  aria-label="Next photo"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-[16px]"
+                  style={{ color: '#7956B9', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
+                >
+                  ›
+                </button>
+              </>
+            )}
+          </>
         ) : (
           <span className="text-[14px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500 }}>Product photo coming soon</span>
         )}
@@ -30,7 +76,7 @@ function ProductCard({ product }: { product: Product }) {
             {product.colors.map(color => (
               <button
                 key={color.name}
-                onClick={() => setSelectedColor(color)}
+                onClick={() => selectColor(color)}
                 aria-label={color.name}
                 title={color.name}
                 className="w-7 h-7 rounded-full transition-shadow"
