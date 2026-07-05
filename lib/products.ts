@@ -85,7 +85,7 @@ export const products: Product[] = [
       {
         name: 'Black',
         swatch: '#1A1A1A',
-        images: [],
+        images: ['/images/products/compression-black-front.jpg'],
       },
       {
         name: 'White',
@@ -98,6 +98,47 @@ export const products: Product[] = [
         ],
       },
     ],
+  },
+  {
+    id: 5,
+    name: 'HWP Ball Compression Shirt',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      { name: 'Black', swatch: '#1A1A1A', images: [] },
+      { name: 'White', swatch: '#FFFFFF', images: [] },
+    ],
+  },
+  {
+    id: 6,
+    name: 'HWP Sleeveless Compression',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      { name: 'Black', swatch: '#1A1A1A', images: [] },
+      { name: 'White', swatch: '#FFFFFF', images: [] },
+    ],
+  },
+  {
+    id: 7,
+    name: 'HWP Ball Sleeveless Compression',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      { name: 'Black', swatch: '#1A1A1A', images: [] },
+      { name: 'White', swatch: '#FFFFFF', images: [] },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Limited Edition',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    image: null,
   },
 ];
 
