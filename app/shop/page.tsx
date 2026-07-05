@@ -46,7 +46,7 @@ function ProductCard({ product }: { product: Product }) {
                 <button
                   onClick={prevImage}
                   aria-label="Previous photo"
-                  className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-[16px]"
+                  className="absolute left-1.5 md:left-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-[12px] md:text-[16px]"
                   style={{ color: '#7956B9', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
                 >
                   ‹
@@ -54,7 +54,7 @@ function ProductCard({ product }: { product: Product }) {
                 <button
                   onClick={nextImage}
                   aria-label="Next photo"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-[16px]"
+                  className="absolute right-1.5 md:right-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-[12px] md:text-[16px]"
                   style={{ color: '#7956B9', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
                 >
                   ›
@@ -63,23 +63,23 @@ function ProductCard({ product }: { product: Product }) {
             )}
           </>
         ) : (
-          <span className="text-[14px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500 }}>Product photo coming soon</span>
+          <span className="text-[11px] md:text-[16px] text-center px-2" style={{ color: '#999999', fontWeight: 500 }}>Product photo coming soon</span>
         )}
       </div>
-      <div className="p-4 md:p-6 flex flex-col gap-2">
-        <h2 className="text-[19px] md:text-[24px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{product.name}</h2>
-        <p className="text-[15px] md:text-[18px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
-        <p className="text-[17px] md:text-[20px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
+      <div className="p-2.5 md:p-6 flex flex-col gap-1 md:gap-2">
+        <h2 className="text-[13px] md:text-[24px] leading-tight" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em' }}>{product.name}</h2>
+        <p className="text-[10px] md:text-[18px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
+        <p className="text-[12px] md:text-[20px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
 
         {product.colors && (
-          <div className="flex flex-wrap gap-2 mt-2 items-center">
+          <div className="flex flex-wrap gap-1 md:gap-2 mt-1 md:mt-2 items-center">
             {product.colors.map(color => (
               <button
                 key={color.name}
                 onClick={() => selectColor(color)}
                 aria-label={color.name}
                 title={color.name}
-                className="w-7 h-7 rounded-full transition-shadow"
+                className="w-5 h-5 md:w-7 md:h-7 rounded-full transition-shadow"
                 style={{
                   backgroundColor: color.swatch,
                   boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #7956B9' : '0 0 0 1px #E5E5E5',
@@ -91,7 +91,7 @@ function ProductCard({ product }: { product: Product }) {
 
         <Link
           href={`/shop/${product.id}?preview=hwp2025`}
-          className="btn-pill mt-3 px-6 py-2.5 md:py-3 text-[13px] md:text-[15px] text-center"
+          className="btn-pill mt-1.5 md:mt-3 px-3 py-1.5 md:px-6 md:py-3 text-[10px] md:text-[15px] text-center"
         >
           Buy Now
         </Link>
@@ -124,11 +124,11 @@ function ShopContent() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <section className="pt-24 pb-14 md:pt-32 md:pb-20 px-6 max-w-5xl mx-auto">
-        <h1 className="text-center mb-1 text-[28px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
-        <p className="text-center mb-8 md:mb-12 text-[15px] md:text-[22px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Rep the brand. Train with intention.</p>
+      <section className="pt-20 pb-10 md:pt-32 md:pb-20 px-3 md:px-6 max-w-5xl mx-auto">
+        <h1 className="text-center mb-1 text-[20px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
+        <p className="text-center mb-4 md:mb-12 text-[11px] md:text-[22px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Rep the brand. Train with intention.</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 gap-2.5 md:gap-8">
           {products.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
