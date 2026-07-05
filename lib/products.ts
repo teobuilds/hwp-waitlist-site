@@ -55,9 +55,19 @@ export const products: Product[] = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [],
+      },
+      {
         name: 'White',
         swatch: '#FFFFFF',
         images: ['/images/products/classic-tee-white-front.jpg', '/images/products/classic-tee-white-action.jpg'],
+      },
+      {
+        name: 'Grey',
+        swatch: '#9CA3AF',
+        images: ['/images/products/classic-tee-2-grey-front.jpg'],
       },
     ],
   },
