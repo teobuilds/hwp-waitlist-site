@@ -11,8 +11,11 @@ const shirts = [
     name: 'HWP Classic Tee',
     price: '$35',
     description: 'Train with intention.',
-    image: null,
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      { name: 'Black', swatch: '#1A1A1A', image: '/images/products/classic-tee-black-front.jpg' },
+      { name: 'Grey', swatch: '#9CA3AF', image: null },
+    ],
   },
   {
     id: 2,
@@ -27,12 +30,15 @@ const shirts = [
 function ProductCard({ shirt }: { shirt: (typeof shirts)[number] }) {
   const [selectedSize, setSelectedSize] = useState(shirt.sizes[0]);
   const [showNotReady, setShowNotReady] = useState(false);
+  const colors = 'colors' in shirt ? shirt.colors : null;
+  const [selectedColor, setSelectedColor] = useState(colors?.[0]);
+  const image = colors ? selectedColor?.image : shirt.image;
 
   return (
     <div className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
       <div className="bg-gray-100 aspect-square flex items-center justify-center relative">
-        {shirt.image ? (
-          <Image src={shirt.image} alt={shirt.name} fill className="object-cover" />
+        {image ? (
+          <Image src={image} alt={shirt.name} fill className="object-cover" />
         ) : (
           <span className="text-[14px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500 }}>Product photo coming soon</span>
         )}
@@ -41,6 +47,24 @@ function ProductCard({ shirt }: { shirt: (typeof shirts)[number] }) {
         <h2 className="text-[19px] md:text-[24px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>{shirt.name}</h2>
         <p className="text-[15px] md:text-[18px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{shirt.description}</p>
         <p className="text-[17px] md:text-[20px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{shirt.price}</p>
+
+        {colors && (
+          <div className="flex flex-wrap gap-2 mt-2 items-center">
+            {colors.map(color => (
+              <button
+                key={color.name}
+                onClick={() => setSelectedColor(color)}
+                aria-label={color.name}
+                title={color.name}
+                className="w-7 h-7 rounded-full transition-shadow"
+                style={{
+                  backgroundColor: color.swatch,
+                  boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #7956B9' : '0 0 0 1px #E5E5E5',
+                }}
+              />
+            ))}
+          </div>
+        )}
 
         <div className="flex flex-wrap gap-2 mt-2">
           {shirt.sizes.map(size => (
