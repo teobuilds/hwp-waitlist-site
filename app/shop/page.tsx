@@ -36,7 +36,7 @@ function ProductCard({ product }: { product: Product }) {
     <div className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
       <div
         onClick={goToProduct}
-        className="bg-gray-100 aspect-square md:aspect-[5/4] flex items-center justify-center relative cursor-pointer"
+        className="bg-gray-100 aspect-square md:aspect-[4/5] flex items-center justify-center relative cursor-pointer"
       >
         {images.length > 0 ? (
           <>
