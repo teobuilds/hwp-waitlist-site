@@ -72,7 +72,7 @@ function ProductCard({ product }: { product: Product }) {
         <p className="text-[12px] md:text-[16px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
 
         {product.colors && (
-          <div className="flex flex-wrap gap-2.5 md:gap-2 mt-1 items-center">
+          <div className="flex flex-wrap gap-2.5 md:gap-1.5 mt-1 items-center">
             {product.colors.map(color => (
               <button
                 key={color.name}
