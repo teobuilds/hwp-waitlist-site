@@ -57,7 +57,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-6 max-w-5xl mx-auto">
+      <section className="pt-24 pb-16 md:pt-20 md:pb-24 px-6 md:px-4 max-w-6xl mx-auto">
         <Link
           href="/shop?preview=hwp2025"
           className="inline-block mb-6 text-[14px] md:text-[15px]"
@@ -66,7 +66,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
           ← Back to Shop
         </Link>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-8 md:gap-12 items-start">
           <div className="flex gap-3">
             {images.length > 1 && (
               <div className="hidden sm:flex flex-col gap-2 w-16 md:w-20 shrink-0">
