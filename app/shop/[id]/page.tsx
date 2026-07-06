@@ -57,7 +57,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <section className="pt-24 pb-16 md:pt-20 md:pb-24 px-6 md:px-4 max-w-6xl mx-auto">
+      <section className="pt-24 pb-16 md:pt-28 md:pb-24 px-6 md:px-4 max-w-6xl mx-auto">
         <Link
           href="/shop?preview=hwp2025"
           className="inline-block mb-6 text-[14px] md:text-[15px]"
