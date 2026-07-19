@@ -32,6 +32,7 @@ export const products: Product[] = [
           '/images/products/classic-tee-black-back-detail.jpg',
         ],
       },
+      { name: 'White', swatch: '#FFFFFF', images: [] },
       {
         name: 'Grey',
         swatch: '#9CA3AF',
@@ -49,7 +50,10 @@ export const products: Product[] = [
     price: '$65',
     description: 'Hoop With Prezence.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    image: null,
+    colors: [
+      { name: 'Black', swatch: '#1A1A1A', images: [] },
+      { name: 'White', swatch: '#FFFFFF', images: [] },
+    ],
   },
   {
     id: 3,
@@ -138,7 +142,10 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    image: null,
+    colors: [
+      { name: 'Black', swatch: '#1A1A1A', images: [] },
+      { name: 'White', swatch: '#FFFFFF', images: [] },
+    ],
   },
 ];
 

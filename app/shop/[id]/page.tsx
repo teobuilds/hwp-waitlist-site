@@ -18,6 +18,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState(product?.sizes[0]);
   const [showNotReady, setShowNotReady] = useState(false);
+  const [checkingOut, setCheckingOut] = useState(false);
 
   if (!isPreview) {
     return (
@@ -54,6 +55,28 @@ function ProductDetailContent({ productId }: { productId: number }) {
     setActiveIndex(i => (i === images.length - 1 ? 0 : i + 1));
   }
 
+  async function handleAddToBag() {
+    setCheckingOut(true);
+    setShowNotReady(false);
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ productId: product.id, size: selectedSize, color: selectedColor?.name }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+        return;
+      }
+      setShowNotReady(true);
+    } catch {
+      setShowNotReady(true);
+    } finally {
+      setCheckingOut(false);
+    }
+  }
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
@@ -75,7 +98,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
                     key={img}
                     onClick={() => setActiveIndex(i)}
                     className="relative aspect-square rounded-lg overflow-hidden"
-                    style={{ boxShadow: activeIndex === i ? '0 0 0 2px #7956B9' : '0 0 0 1px #E5E5E5' }}
+                    style={{ boxShadow: activeIndex === i ? '0 0 0 2px #AF94E0' : '0 0 0 1px #E5E5E5' }}
                   >
                     <Image src={img} alt="" fill className="object-cover" />
                   </button>
@@ -93,7 +116,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
                         onClick={prevImage}
                         aria-label="Previous photo"
                         className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-[18px]"
-                        style={{ color: '#7956B9', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
+                        style={{ color: '#AF94E0', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
                       >
                         ‹
                       </button>
@@ -101,7 +124,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
                         onClick={nextImage}
                         aria-label="Next photo"
                         className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-[18px]"
-                        style={{ color: '#7956B9', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
+                        style={{ color: '#AF94E0', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
                       >
                         ›
                       </button>
@@ -118,10 +141,10 @@ function ProductDetailContent({ productId }: { productId: number }) {
 
           <div className="flex flex-col gap-4 md:sticky md:top-28">
             <div>
-              <h1 className="text-[26px] md:text-[34px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1 }}>{product.name}</h1>
+              <h1 className="text-[26px] md:text-[34px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1 }}>{product.name}</h1>
               <p className="text-[15px] md:text-[18px] mt-1" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
             </div>
-            <p className="text-[22px] md:text-[26px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
+            <p className="text-[22px] md:text-[26px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
 
             {product.colors && (
               <div>
@@ -138,7 +161,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
                       className="w-9 h-9 rounded-full transition-shadow"
                       style={{
                         backgroundColor: color.swatch,
-                        boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #7956B9' : '0 0 0 1px #E5E5E5',
+                        boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #AF94E0' : '0 0 0 1px #E5E5E5',
                       }}
                     />
                   ))}
@@ -155,8 +178,8 @@ function ProductDetailContent({ productId }: { productId: number }) {
                     onClick={() => setSelectedSize(size)}
                     className="rounded-lg border py-3 text-[14px] md:text-[15px] transition-colors"
                     style={{
-                      borderColor: selectedSize === size ? '#7956B9' : '#E5E5E5',
-                      color: selectedSize === size ? '#7956B9' : '#171717',
+                      borderColor: selectedSize === size ? '#AF94E0' : '#E5E5E5',
+                      color: selectedSize === size ? '#AF94E0' : '#171717',
                       fontWeight: 600,
                     }}
                   >
@@ -167,14 +190,15 @@ function ProductDetailContent({ productId }: { productId: number }) {
             </div>
 
             <button
-              className="btn-pill-filled mt-2 px-6 py-3.5 text-[15px] md:text-[16px] w-full"
-              onClick={() => setShowNotReady(true)}
+              className="btn-pill mt-2 px-6 py-3.5 text-[15px] md:text-[16px] w-full disabled:opacity-60"
+              onClick={handleAddToBag}
+              disabled={checkingOut}
             >
-              Add to Bag
+              {checkingOut ? 'Redirecting…' : 'Add to Bag'}
             </button>
             {showNotReady && (
               <p className="text-[13px] md:text-[14px] text-center" style={{ color: '#999999', fontWeight: 500 }}>
-                Checkout isn&apos;t set up yet — coming soon!
+                Something went wrong starting checkout — try again.
               </p>
             )}
           </div>

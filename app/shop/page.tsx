@@ -47,7 +47,7 @@ function ProductCard({ product }: { product: Product }) {
                   onClick={prevImage}
                   aria-label="Previous photo"
                   className="absolute left-1.5 md:left-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-[12px] md:text-[16px]"
-                  style={{ color: '#7956B9', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
+                  style={{ color: '#AF94E0', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
                 >
                   ‹
                 </button>
@@ -55,7 +55,7 @@ function ProductCard({ product }: { product: Product }) {
                   onClick={nextImage}
                   aria-label="Next photo"
                   className="absolute right-1.5 md:right-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-[12px] md:text-[16px]"
-                  style={{ color: '#7956B9', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
+                  style={{ color: '#AF94E0', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
                 >
                   ›
                 </button>
@@ -67,9 +67,9 @@ function ProductCard({ product }: { product: Product }) {
         )}
       </div>
       <div className="p-2.5 md:p-4 flex flex-col gap-1 md:gap-1.5">
-        <h2 className="text-[13px] md:text-[18px] leading-tight" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em' }}>{product.name}</h2>
+        <h2 className="text-[13px] md:text-[18px] leading-tight" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em' }}>{product.name}</h2>
         <p className="text-[10px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
-        <p className="text-[12px] md:text-[16px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
+        <p className="text-[12px] md:text-[16px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
 
         {product.colors && (
           <div className="flex flex-wrap gap-2.5 md:gap-1.5 mt-1 items-center">
@@ -82,7 +82,7 @@ function ProductCard({ product }: { product: Product }) {
                 className="w-5 h-5 md:w-5 md:h-5 rounded-full transition-shadow"
                 style={{
                   backgroundColor: color.swatch,
-                  boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #7956B9' : '0 0 0 1px #E5E5E5',
+                  boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #AF94E0' : '0 0 0 1px #E5E5E5',
                 }}
               />
             ))}
@@ -125,8 +125,8 @@ function ShopContent() {
     <main className="min-h-screen bg-white">
       <Navbar />
       <section className="pt-20 pb-10 md:pt-24 md:pb-8 px-3 md:px-6 max-w-3xl mx-auto">
-        <h1 className="text-center mb-1 text-[20px] md:text-[32px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
-        <p className="text-center mb-4 md:mb-6 text-[11px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Rep the brand. Train with intention.</p>
+        <h1 className="text-center mb-1 text-[20px] md:text-[32px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
+        <p className="text-center mb-4 md:mb-6 text-[11px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Hoop with Prezence, on and off the court.</p>
 
         <div className="grid grid-cols-2 gap-2.5 md:gap-4">
           {products.map(product => (
