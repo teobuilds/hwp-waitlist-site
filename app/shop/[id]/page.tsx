@@ -56,6 +56,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
   }
 
   async function handleAddToBag() {
+    if (!product) return;
     setCheckingOut(true);
     setShowNotReady(false);
     try {
