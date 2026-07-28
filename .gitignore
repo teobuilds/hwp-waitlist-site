@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.env*
+
+# raw product photos (working folder, not for the site)
+/Shirts/

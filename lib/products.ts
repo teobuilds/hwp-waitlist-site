@@ -26,19 +26,25 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/classic-tee-black-front.jpg',
-          '/images/products/classic-tee-black-action.jpg',
+          '/images/products/classic-tee-black-model-front.jpg',
+          '/images/products/classic-tee-black-print-close.jpg',
           '/images/products/classic-tee-black-back.jpg',
-          '/images/products/classic-tee-black-back-detail.jpg',
+          '/images/products/classic-tee-black-back-close.jpg',
         ],
       },
-      { name: 'White', swatch: '#FFFFFF', images: [] },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/classic-tee-white-model-front.jpg',
+          '/images/products/classic-tee-white-back.jpg',
+        ],
+      },
       {
         name: 'Grey',
         swatch: '#9CA3AF',
         images: [
-          '/images/products/classic-tee-grey-front.jpg',
-          '/images/products/classic-tee-grey-action.jpg',
+          '/images/products/classic-tee-grey-model-front.jpg',
           '/images/products/classic-tee-grey-back.jpg',
         ],
       },
@@ -51,8 +57,14 @@ export const products: Product[] = [
     description: 'Hoop With Prezence.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
-      { name: 'Black', swatch: '#1A1A1A', images: [] },
-      { name: 'White', swatch: '#FFFFFF', images: [] },
+      {
+        name: 'Grey',
+        swatch: '#9CA3AF',
+        images: [
+          '/images/products/hoodie-grey-model-front.jpg',
+          '/images/products/hoodie-grey-print-close.jpg',
+        ],
+      },
     ],
   },
   {
@@ -65,17 +77,20 @@ export const products: Product[] = [
       {
         name: 'Black',
         swatch: '#1A1A1A',
-        images: [],
+        images: ['/images/products/classic-tee-plain-black-print-close.jpg'],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
-        images: ['/images/products/classic-tee-white-front.jpg', '/images/products/classic-tee-white-action.jpg'],
+        images: [
+          '/images/products/classic-tee-plain-white-model-front-2.jpg',
+          '/images/products/classic-tee-plain-white-print-close.jpg',
+        ],
       },
       {
         name: 'Grey',
         swatch: '#9CA3AF',
-        images: ['/images/products/classic-tee-2-grey-front.jpg'],
+        images: ['/images/products/classic-tee-plain-grey-print-close.jpg'],
       },
     ],
   },
@@ -89,16 +104,18 @@ export const products: Product[] = [
       {
         name: 'Black',
         swatch: '#1A1A1A',
-        images: ['/images/products/compression-black-front.jpg'],
+        images: [
+          '/images/products/compression-black-action.jpg',
+          '/images/products/compression-black-print-close.jpg',
+          '/images/products/compression-black-print-close-2.jpg',
+        ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/compression-white-front.jpg',
-          '/images/products/compression-white-action.jpg',
-          '/images/products/compression-white-detail.jpg',
-          '/images/products/compression-white-flatlay.jpg',
+          '/images/products/compression-white-model-front.jpg',
+          '/images/products/compression-white-model-close.jpg',
         ],
       },
     ],
@@ -110,8 +127,20 @@ export const products: Product[] = [
     description: 'Hoop With Prezence.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
-      { name: 'Black', swatch: '#1A1A1A', images: [] },
-      { name: 'White', swatch: '#FFFFFF', images: [] },
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/ball-compression-black-model-front.jpg',
+          '/images/products/ball-compression-black-print-close.jpg',
+          '/images/products/ball-compression-black-print-close-2.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [],
+      },
     ],
   },
   {
@@ -121,8 +150,19 @@ export const products: Product[] = [
     description: 'Hoop With Prezence.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
-      { name: 'Black', swatch: '#1A1A1A', images: [] },
-      { name: 'White', swatch: '#FFFFFF', images: [] },
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/sleeveless-black-model-front.jpg',
+          '/images/products/sleeveless-black-model-front-2.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: ['/images/products/sleeveless-white-model-front.jpg'],
+      },
     ],
   },
   {
@@ -132,19 +172,44 @@ export const products: Product[] = [
     description: 'Hoop With Prezence.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
-      { name: 'Black', swatch: '#1A1A1A', images: [] },
-      { name: 'White', swatch: '#FFFFFF', images: [] },
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/ball-sleeveless-black-model-front.jpg',
+          '/images/products/ball-sleeveless-black-print-close.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: ['/images/products/ball-sleeveless-white-model-front.jpg'],
+      },
     ],
   },
   {
     id: 8,
     name: 'Limited Edition',
     price: '$35',
-    description: 'Hoop With Prezence.',
+    description: 'Breast Cancer Awareness Edition.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
-      { name: 'Black', swatch: '#1A1A1A', images: [] },
-      { name: 'White', swatch: '#FFFFFF', images: [] },
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/limited-black-model-front.jpg',
+          '/images/products/limited-black-print-close.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/limited-white-model-front.jpg',
+          '/images/products/limited-white-print-close.jpg',
+        ],
+      },
     ],
   },
 ];
