@@ -77,7 +77,10 @@ export const products: Product[] = [
       {
         name: 'Black',
         swatch: '#1A1A1A',
-        images: ['/images/products/classic-tee-plain-black-print-close.jpg'],
+        images: [
+          '/images/products/classic-tee-plain-black-model-front.jpg',
+          '/images/products/classic-tee-plain-black-print-close.jpg',
+        ],
       },
       {
         name: 'White',
@@ -90,7 +93,10 @@ export const products: Product[] = [
       {
         name: 'Grey',
         swatch: '#9CA3AF',
-        images: ['/images/products/classic-tee-plain-grey-print-close.jpg'],
+        images: [
+          '/images/products/classic-tee-plain-grey-model-front.jpg',
+          '/images/products/classic-tee-plain-grey-print-close.jpg',
+        ],
       },
     ],
   },
@@ -106,7 +112,6 @@ export const products: Product[] = [
         swatch: '#1A1A1A',
         images: [
           '/images/products/compression-black-action.jpg',
-          '/images/products/compression-black-print-close.jpg',
           '/images/products/compression-black-print-close-2.jpg',
         ],
       },
@@ -136,11 +141,6 @@ export const products: Product[] = [
           '/images/products/ball-compression-black-print-close-2.jpg',
         ],
       },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [],
-      },
     ],
   },
   {
@@ -156,12 +156,16 @@ export const products: Product[] = [
         images: [
           '/images/products/sleeveless-black-model-front.jpg',
           '/images/products/sleeveless-black-model-front-2.jpg',
+          '/images/products/sleeveless-black-print-close.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
-        images: ['/images/products/sleeveless-white-model-front.jpg'],
+        images: [
+          '/images/products/sleeveless-white-model-front.jpg',
+          '/images/products/sleeveless-white-print-close.jpg',
+        ],
       },
     ],
   },

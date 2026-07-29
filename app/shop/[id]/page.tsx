@@ -5,7 +5,95 @@ import Link from 'next/link';
 import { notFound, useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
-import { getProduct, type ProductColor } from '@/lib/products';
+import FavoriteButton from '@/components/FavoriteButton';
+import { getProduct, products, type ProductColor } from '@/lib/products';
+import { useCart } from '@/lib/cart-context';
+
+function ShippingReturns() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-t pt-3" style={{ borderColor: '#F0F0F0' }}>
+      <button
+        onClick={() => setOpen(o => !o)}
+        className="flex items-center justify-between w-full text-[14px] md:text-[15px]"
+        style={{ color: '#171717', fontWeight: 600 }}
+      >
+        Shipping &amp; Returns
+        <span style={{ color: '#AF94E0' }}>{open ? '−' : '+'}</span>
+      </button>
+      {open && (
+        <div className="mt-2 text-[13px] md:text-[14px] leading-relaxed" style={{ color: '#999999', fontWeight: 500 }}>
+          <p>Orders are processed and shipped after purchase. You&apos;ll receive a confirmation email with tracking once your order ships.</p>
+          <p className="mt-2">Have an issue with your order? Reach out and we&apos;ll make it right.</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ReviewsSection() {
+  return (
+    <div className="mt-16 pt-8 border-t" style={{ borderColor: '#F0F0F0' }}>
+      <h2 className="text-[20px] md:text-[24px] mb-3" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em' }}>
+        Reviews
+      </h2>
+      <div className="flex items-center gap-2 mb-2">
+        <div className="flex" style={{ color: '#E5E5E5' }}>
+          {[0, 1, 2, 3, 4].map(i => (
+            <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          ))}
+        </div>
+        <span className="text-[13px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500 }}>No reviews yet</span>
+      </div>
+      <p className="text-[13px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500 }}>
+        Be the first to try this piece — reviews will show up here.
+      </p>
+    </div>
+  );
+}
+
+function RelatedProducts({ currentId }: { currentId: number }) {
+  const related = products.filter(p => p.id !== currentId).slice(0, 4);
+  if (related.length === 0) return null;
+
+  return (
+    <div className="mt-16 pt-8 border-t" style={{ borderColor: '#F0F0F0' }}>
+      <h2 className="text-[20px] md:text-[24px] mb-4" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em' }}>
+        You Might Also Like
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        {related.map(product => {
+          const image = product.colors?.[0]?.images?.[0] ?? product.image;
+          return (
+            <Link
+              key={product.id}
+              href={`/shop/${product.id}?preview=hwp2025`}
+              className="flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+            >
+              <div className="bg-gray-100 aspect-square relative">
+                {image ? (
+                  <Image src={image} alt={product.name} fill className="object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-[11px] text-center px-2" style={{ color: '#999999', fontWeight: 500 }}>
+                      Photo coming soon
+                    </span>
+                  </div>
+                )}
+              </div>
+              <div className="p-2.5 md:p-3">
+                <p className="text-[12px] md:text-[14px] leading-tight" style={{ color: '#AF94E0', fontWeight: 700 }}>{product.name}</p>
+                <p className="text-[12px] md:text-[13px] mt-0.5" style={{ color: '#AF94E0', fontWeight: 700 }}>{product.price}</p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 function ProductDetailContent({ productId }: { productId: number }) {
   const searchParams = useSearchParams();
@@ -13,12 +101,21 @@ function ProductDetailContent({ productId }: { productId: number }) {
   const isPreview = preview === 'hwp2025';
 
   const product = getProduct(productId);
+  const preferredColor = searchParams.get('color');
+  const preferredSize = searchParams.get('size');
+  const preferredQty = Number(searchParams.get('qty'));
 
-  const [selectedColor, setSelectedColor] = useState<ProductColor | undefined>(product?.colors?.[0]);
+  const [selectedColor, setSelectedColor] = useState<ProductColor | undefined>(
+    () => product?.colors?.find(c => c.name === preferredColor) ?? product?.colors?.[0]
+  );
   const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedSize, setSelectedSize] = useState(product?.sizes[0]);
-  const [showNotReady, setShowNotReady] = useState(false);
-  const [checkingOut, setCheckingOut] = useState(false);
+  const [selectedSize, setSelectedSize] = useState(() => {
+    if (preferredSize && product?.sizes.includes(preferredSize)) return preferredSize;
+    return product?.sizes[0];
+  });
+  const [quantity, setQuantity] = useState(() => (preferredQty > 0 ? preferredQty : 1));
+  const [justAdded, setJustAdded] = useState(false);
+  const { addItem, openCart } = useCart();
 
   if (!isPreview) {
     return (
@@ -55,27 +152,23 @@ function ProductDetailContent({ productId }: { productId: number }) {
     setActiveIndex(i => (i === images.length - 1 ? 0 : i + 1));
   }
 
-  async function handleAddToBag() {
+  function handleAddToBag() {
     if (!product) return;
-    setCheckingOut(true);
-    setShowNotReady(false);
-    try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: product.id, size: selectedSize, color: selectedColor?.name }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-        return;
-      }
-      setShowNotReady(true);
-    } catch {
-      setShowNotReady(true);
-    } finally {
-      setCheckingOut(false);
-    }
+    addItem(
+      {
+        productId: product.id,
+        name: product.name,
+        price: product.price,
+        image: images[0],
+        color: selectedColor?.name,
+        size: selectedSize,
+      },
+      quantity
+    );
+    openCart();
+    setJustAdded(true);
+    setQuantity(1);
+    setTimeout(() => setJustAdded(false), 2000);
   }
 
   return (
@@ -141,9 +234,19 @@ function ProductDetailContent({ productId }: { productId: number }) {
           </div>
 
           <div className="flex flex-col gap-4 md:sticky md:top-28">
-            <div>
-              <h1 className="text-[26px] md:text-[34px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1 }}>{product.name}</h1>
-              <p className="text-[15px] md:text-[18px] mt-1" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <h1 className="text-[26px] md:text-[34px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1 }}>{product.name}</h1>
+                <p className="text-[15px] md:text-[18px] mt-1" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
+              </div>
+              <FavoriteButton
+                productId={product.id}
+                color={selectedColor?.name}
+                variantSize={selectedSize}
+                quantity={quantity}
+                image={images[0]}
+                className="shrink-0"
+              />
             </div>
             <p className="text-[22px] md:text-[26px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
 
@@ -190,20 +293,47 @@ function ProductDetailContent({ productId }: { productId: number }) {
               </div>
             </div>
 
+            <div>
+              <p className="text-[14px] md:text-[15px] mb-2" style={{ color: '#171717', fontWeight: 600 }}>Quantity</p>
+              <div className="flex items-center gap-3 rounded-lg border px-3 py-2 w-fit" style={{ borderColor: '#E5E5E5' }}>
+                <button
+                  onClick={() => setQuantity(q => Math.max(1, q - 1))}
+                  aria-label="Decrease quantity"
+                  className="w-7 h-7 flex items-center justify-center text-[18px]"
+                  style={{ color: '#AF94E0' }}
+                >
+                  −
+                </button>
+                <span className="text-[15px] w-5 text-center" style={{ color: '#171717', fontWeight: 700 }}>{quantity}</span>
+                <button
+                  onClick={() => setQuantity(q => q + 1)}
+                  aria-label="Increase quantity"
+                  className="w-7 h-7 flex items-center justify-center text-[18px]"
+                  style={{ color: '#AF94E0' }}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
             <button
-              className="btn-pill mt-2 px-6 py-3.5 text-[15px] md:text-[16px] w-full disabled:opacity-60"
+              className="btn-pill mt-2 px-6 py-3.5 text-[15px] md:text-[16px] w-full"
               onClick={handleAddToBag}
-              disabled={checkingOut}
             >
-              {checkingOut ? 'Redirecting…' : 'Add to Bag'}
+              Add to Bag
             </button>
-            {showNotReady && (
-              <p className="text-[13px] md:text-[14px] text-center" style={{ color: '#999999', fontWeight: 500 }}>
-                Something went wrong starting checkout — try again.
+            {justAdded && (
+              <p className="text-[13px] md:text-[14px] text-center" style={{ color: '#AF94E0', fontWeight: 600 }}>
+                Added to your bag!
               </p>
             )}
+
+            <ShippingReturns />
           </div>
         </div>
+
+        <ReviewsSection />
+        <RelatedProducts currentId={product.id} />
       </section>
     </main>
   );

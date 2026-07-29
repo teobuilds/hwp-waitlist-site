@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
+import FavoriteButton from '@/components/FavoriteButton';
 import { products, type Product, type ProductColor } from '@/lib/products';
 
 function ProductCard({ product }: { product: Product }) {
@@ -38,6 +39,14 @@ function ProductCard({ product }: { product: Product }) {
         onClick={goToProduct}
         className="bg-gray-100 aspect-square md:aspect-[4/5] flex items-center justify-center relative cursor-pointer"
       >
+        <FavoriteButton
+          productId={product.id}
+          color={selectedColor?.name}
+          variantSize={product.sizes[0]}
+          image={images[0]}
+          uiSize="sm"
+          className="absolute top-1.5 right-1.5 md:top-2 md:right-2 z-10"
+        />
         {images.length > 0 ? (
           <>
             <Image src={images[activeIndex]} alt={product.name} fill className="object-cover" />
