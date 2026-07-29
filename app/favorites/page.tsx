@@ -22,13 +22,13 @@ export default function FavoritesPage() {
           Favorites
         </h1>
         <p className="text-center mb-4 md:mb-6 text-[11px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
-          Shirts you've saved for later.
+          Shirts you&apos;ve saved for later.
         </p>
 
         {entries.length === 0 ? (
           <div className="flex flex-col items-center justify-center text-center gap-3 py-16">
             <p className="text-[14px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500 }}>
-              You haven't favorited anything yet.
+              You haven&apos;t favorited anything yet.
             </p>
             <Link href="/shop?preview=hwp2025" className="btn-pill px-5 py-2.5 text-[14px]">
               Browse the Shop
