@@ -50,6 +50,9 @@ export async function POST(req: NextRequest) {
     mode: 'payment',
     line_items,
     allow_promotion_codes: true,
+    shipping_address_collection: {
+      allowed_countries: ['US'],
+    },
     success_url: `${origin}/shop?preview=hwp2025&checkout=success`,
     cancel_url: `${origin}/shop?preview=hwp2025&checkout=canceled`,
   });
