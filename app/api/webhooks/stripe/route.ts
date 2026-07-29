@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
         : 'No shipping address on file';
 
       await resend.emails.send({
-        from: 'HWP Orders <onboarding@resend.dev>',
+        from: 'HWP Orders <orders@hoopwithprezence.com>',
         to: process.env.ORDER_NOTIFICATION_EMAIL,
         subject: `New order — $${((session.amount_total ?? 0) / 100).toFixed(2)}`,
         text: `New order from ${session.customer_details?.name ?? 'unknown'} (${session.customer_details?.email ?? 'no email'})\n\n${itemsSummary}\n\nShip to:\n${addressSummary}`,
