@@ -2,17 +2,39 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import Navbar from '@/components/Navbar';
 import FavoriteButton from '@/components/FavoriteButton';
 import { useFavorites } from '@/lib/favorites-context';
 import { getProduct } from '@/lib/products';
 
-export default function FavoritesPage() {
+function FavoritesContent() {
+  const searchParams = useSearchParams();
+  const preview = searchParams.get('preview');
+  const isPreview = preview === 'hwp2025';
+
   const { favorites } = useFavorites();
 
   const entries = favorites
     .map(fav => ({ fav, product: getProduct(fav.productId) }))
     .filter((e): e is { fav: typeof e.fav; product: NonNullable<typeof e.product> } => Boolean(e.product));
+
+  if (!isPreview) {
+    return (
+      <main className="h-[100dvh] overflow-hidden md:h-auto md:min-h-screen bg-white">
+        <Navbar />
+        <section className="h-full md:h-screen flex flex-col items-center justify-center text-center px-6 gap-3 md:gap-4 relative">
+          <h1 className="text-[28px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
+            Coming Soon.
+          </h1>
+          <h2 className="text-[24px] md:text-[40px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1.2 }}>
+            The HWP shop is almost here.
+          </h2>
+        </section>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-white">
@@ -88,5 +110,13 @@ export default function FavoritesPage() {
         )}
       </section>
     </main>
+  );
+}
+
+export default function FavoritesPage() {
+  return (
+    <Suspense>
+      <FavoritesContent />
+    </Suspense>
   );
 }
