@@ -200,10 +200,15 @@ function ProductDetailContent({ productId }: { productId: number }) {
               </div>
             )}
 
-            <div className="relative flex-1 aspect-square bg-gray-100 rounded-2xl overflow-hidden">
+            <div className="group relative flex-1 aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden">
               {images.length > 0 ? (
                 <>
-                  <Image src={images[activeIndex]} alt={product.name} fill className="object-cover" />
+                  <Image
+                    src={images[activeIndex]}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition-transform duration-300 ease-out group-hover:scale-110"
+                  />
                   {images.length > 1 && (
                     <>
                       <button
