@@ -18,7 +18,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: 'HWP Ball Classic Tee',
-    price: '$35',
+    price: '$25',
     description: 'Train with intention.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -70,7 +70,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: 'HWP Classic Tee',
-    price: '$35',
+    price: '$25',
     description: 'Hoop With Prezence.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
