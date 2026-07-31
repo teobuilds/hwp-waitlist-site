@@ -3,6 +3,27 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useCart } from '@/lib/cart-context';
+import { FREE_SHIPPING_THRESHOLD } from '@/lib/shipping';
+
+function FreeShippingBar({ subtotal }: { subtotal: number }) {
+  const remaining = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
+  const progressPct = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
+  const unlocked = remaining === 0;
+
+  return (
+    <div className="mb-4">
+      <p className="text-[13px] mb-2" style={{ color: unlocked ? '#AF94E0' : '#171717', fontWeight: 600 }}>
+        {unlocked ? 'You’ve unlocked free shipping 🎉' : `You're $${Math.ceil(remaining)} away from free shipping`}
+      </p>
+      <div className="h-1.5 rounded-full overflow-hidden" style={{ backgroundColor: '#F0F0F0' }}>
+        <div
+          className="h-full rounded-full transition-all duration-300"
+          style={{ width: `${progressPct}%`, backgroundColor: '#AF94E0' }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function CartDrawer() {
   const { items, isOpen, closeCart, removeItem, updateQuantity, subtotal } = useCart();
@@ -59,6 +80,7 @@ export default function CartDrawer() {
         </div>
 
         <div className="flex-1 overflow-y-auto px-5 py-4">
+          {items.length > 0 && <FreeShippingBar subtotal={subtotal} />}
           {items.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center gap-2">
               <p className="text-[15px]" style={{ color: '#999999', fontWeight: 500 }}>Your bag is empty.</p>
