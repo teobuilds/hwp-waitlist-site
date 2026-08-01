@@ -72,6 +72,15 @@ export const products: Product[] = [
     name: 'HWP Logo Hoodie',
     price: '$65',
     description: 'Hoop With Prezence.',
+    about:
+      'An ultra-soft cotton-blend fleece hoodie with a brushed interior for extra warmth. Finished with a front kangaroo pocket and ribbed cuffs and hem for a comfortable, locked-in fit — built for cold mornings, travel days, or just staying cozy off the court.',
+    details: [
+      { label: 'Material', value: '80% Cotton / 20% Polyester' },
+      { label: 'Lining', value: 'Brushed Fleece' },
+      { label: 'Pocket', value: 'Front Kangaroo Pocket' },
+      { label: 'Cuffs/Hem', value: 'Ribbed' },
+      { label: 'Care', value: 'Machine Wash Cold, Tumble Dry Low' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
