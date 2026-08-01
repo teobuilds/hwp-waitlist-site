@@ -54,19 +54,38 @@ function ShippingReturns() {
   );
 }
 
+const STAR_PATH = 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z';
+
 function StarRow({ rating, size = 18 }: { rating: number; size?: number }) {
   return (
     <div className="flex" style={{ gap: 1 }}>
-      {[0, 1, 2, 3, 4].map(i => (
-        <svg key={i} width={size} height={size} viewBox="0 0 24 24" fill={i < rating ? '#FBBF24' : '#E5E5E5'}>
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-        </svg>
-      ))}
+      {[0, 1, 2, 3, 4].map(i => {
+        const fill = Math.max(0, Math.min(1, rating - i));
+        return (
+          <span key={i} style={{ position: 'relative', display: 'inline-block', width: size, height: size }}>
+            <svg width={size} height={size} viewBox="0 0 24 24" fill="#E5E5E5">
+              <path d={STAR_PATH} />
+            </svg>
+            {fill > 0 && (
+              <svg
+                width={size}
+                height={size}
+                viewBox="0 0 24 24"
+                fill="#FBBF24"
+                style={{ position: 'absolute', top: 0, left: 0, clipPath: `inset(0 ${100 - fill * 100}% 0 0)` }}
+              >
+                <path d={STAR_PATH} />
+              </svg>
+            )}
+          </span>
+        );
+      })}
     </div>
   );
 }
 
 function ReviewsSection({ reviews }: { reviews?: ProductReview[] }) {
+  const [open, setOpen] = useState(false);
   const hasReviews = !!reviews && reviews.length > 0;
   const average = hasReviews ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length : 0;
 
@@ -78,22 +97,32 @@ function ReviewsSection({ reviews }: { reviews?: ProductReview[] }) {
       {hasReviews ? (
         <>
           <div className="flex items-center gap-2 mb-4">
-            <StarRow rating={Math.round(average)} />
+            <StarRow rating={average} />
             <span className="text-[13px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500 }}>
               {average.toFixed(1)} out of 5 ({reviews.length} review{reviews.length === 1 ? '' : 's'})
             </span>
           </div>
-          <div className="flex flex-col gap-4">
-            {reviews.map((review, i) => (
-              <div key={i} className="border-b pb-4" style={{ borderColor: '#F0F0F0' }}>
-                <div className="flex items-center gap-2 mb-1">
-                  <StarRow rating={review.rating} size={14} />
-                  <span className="text-[13px] md:text-[14px]" style={{ color: '#171717', fontWeight: 600 }}>{review.name}</span>
+          <button
+            onClick={() => setOpen(o => !o)}
+            className="flex items-center justify-between w-full text-[14px] md:text-[15px] pb-2 border-b"
+            style={{ borderColor: '#F0F0F0', color: '#171717', fontWeight: 600 }}
+          >
+            {open ? 'Hide Reviews' : `See Reviews (${reviews.length})`}
+            <span style={{ color: '#AF94E0' }}>{open ? '−' : '+'}</span>
+          </button>
+          {open && (
+            <div className="flex flex-col gap-4 mt-4">
+              {reviews.map((review, i) => (
+                <div key={i} className="border-b pb-4" style={{ borderColor: '#F0F0F0' }}>
+                  <div className="flex items-center gap-2 mb-1">
+                    <StarRow rating={review.rating} size={14} />
+                    <span className="text-[13px] md:text-[14px]" style={{ color: '#171717', fontWeight: 600 }}>{review.name}</span>
+                  </div>
+                  <p className="text-[13px] md:text-[14px] leading-relaxed" style={{ color: '#999999', fontWeight: 500 }}>{review.text}</p>
                 </div>
-                <p className="text-[13px] md:text-[14px] leading-relaxed" style={{ color: '#999999', fontWeight: 500 }}>{review.text}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </>
       ) : (
         <>
