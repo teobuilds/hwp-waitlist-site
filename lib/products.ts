@@ -27,6 +27,16 @@ export const products: Product[] = [
     name: 'HWP Ball Classic Tee',
     price: '$25',
     description: 'Train with intention.',
+    about:
+      "Built for whatever's on the agenda — workouts, errands, or a lounge-around day. This soft, lightweight tee is cut from a breathable tri-blend knit that moves with you and stays comfortable all day. Moisture-wicking and quick-drying, it keeps you cool at the gym and looks just as good with joggers on your day off.",
+    details: [
+      { label: 'Material', value: '50% Polyester / 25% Cotton / 25% Rayon' },
+      { label: 'Collar', value: 'Crewneck' },
+      { label: 'Fit', value: 'Active' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pullover' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
@@ -79,6 +89,16 @@ export const products: Product[] = [
     name: 'HWP Classic Tee',
     price: '$25',
     description: 'Hoop With Prezence.',
+    about:
+      "Built for whatever's on the agenda — workouts, errands, or a lounge-around day. This soft, lightweight tee is cut from a breathable tri-blend knit that moves with you and stays comfortable all day. Moisture-wicking and quick-drying, it keeps you cool at the gym and looks just as good with joggers on your day off.",
+    details: [
+      { label: 'Material', value: '50% Polyester / 25% Cotton / 25% Rayon' },
+      { label: 'Collar', value: 'Crewneck' },
+      { label: 'Fit', value: 'Active' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pullover' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
@@ -112,6 +132,16 @@ export const products: Product[] = [
     name: 'HWP Compression Shirt',
     price: '$35',
     description: 'Hoop With Prezence.',
+    about:
+      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Fit', value: 'Regular Fit' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
@@ -137,6 +167,16 @@ export const products: Product[] = [
     name: 'HWP Ball Compression Shirt',
     price: '$35',
     description: 'Hoop With Prezence.',
+    about:
+      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Fit', value: 'Regular Fit' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
