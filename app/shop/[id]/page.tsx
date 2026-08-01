@@ -6,8 +6,31 @@ import { notFound, useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import FavoriteButton from '@/components/FavoriteButton';
-import { getProduct, products, type ProductColor } from '@/lib/products';
+import { getProduct, products, type ProductColor, type ProductSpec } from '@/lib/products';
 import { useCart } from '@/lib/cart-context';
+
+function ProductDetails({ about, details }: { about?: string; details?: ProductSpec[] }) {
+  if (!about && (!details || details.length === 0)) return null;
+  return (
+    <div className="border-t pt-3" style={{ borderColor: '#F0F0F0' }}>
+      {about && (
+        <p className="text-[13px] md:text-[14px] leading-relaxed mb-3" style={{ color: '#999999', fontWeight: 500 }}>
+          {about}
+        </p>
+      )}
+      {details && details.length > 0 && (
+        <dl className="grid grid-cols-1 gap-1.5">
+          {details.map(d => (
+            <div key={d.label} className="flex items-center justify-between text-[13px] md:text-[14px] py-1 border-b" style={{ borderColor: '#F5F5F5' }}>
+              <dt style={{ color: '#171717', fontWeight: 600 }}>{d.label}</dt>
+              <dd style={{ color: '#999999', fontWeight: 500 }}>{d.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+    </div>
+  );
+}
 
 function ShippingReturns() {
   const [open, setOpen] = useState(false);
@@ -333,6 +356,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
               </p>
             )}
 
+            <ProductDetails about={product.about} details={product.details} />
             <ShippingReturns />
           </div>
         </div>

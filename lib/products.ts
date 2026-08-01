@@ -4,11 +4,18 @@ export type ProductColor = {
   images: string[];
 };
 
+export type ProductSpec = {
+  label: string;
+  value: string;
+};
+
 export type Product = {
   id: number;
   name: string;
   price: string;
   description: string;
+  about?: string;
+  details?: ProductSpec[];
   sizes: string[];
   colors?: ProductColor[];
   image?: string | null;
@@ -148,6 +155,15 @@ export const products: Product[] = [
     name: 'HWP Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'O-Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
