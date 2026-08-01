@@ -230,6 +230,15 @@ export const products: Product[] = [
     name: 'HWP Ball Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'O-Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
@@ -252,6 +261,15 @@ export const products: Product[] = [
     name: 'Limited Edition',
     price: '$35',
     description: 'Breast Cancer Awareness Edition.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'O-Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
