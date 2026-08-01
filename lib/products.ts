@@ -2,6 +2,7 @@ export type ProductColor = {
   name: string;
   swatch: string;
   images: string[];
+  inStock?: boolean;
 };
 
 export type ProductSpec = {
@@ -245,6 +246,7 @@ export const products: Product[] = [
           '/images/products/compression-white-model-front.jpg',
           '/images/products/compression-white-model-close.jpg',
         ],
+        inStock: false,
       },
     ],
   },

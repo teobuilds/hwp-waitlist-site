@@ -161,6 +161,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
   }
 
   const images = product.colors ? selectedColor?.images ?? [] : product.image ? [product.image] : [];
+  const isOutOfStock = selectedColor?.inStock === false;
 
   function selectColor(color: ProductColor) {
     setSelectedColor(color);
@@ -176,7 +177,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
   }
 
   function handleAddToBag() {
-    if (!product) return;
+    if (!product || isOutOfStock) return;
     addItem(
       {
         productId: product.id,
@@ -307,12 +308,16 @@ function ProductDetailContent({ productId }: { productId: number }) {
                 {product.sizes.map(size => (
                   <button
                     key={size}
-                    onClick={() => setSelectedSize(size)}
-                    className="rounded-lg border py-3 text-[14px] md:text-[15px] transition-colors"
+                    onClick={() => !isOutOfStock && setSelectedSize(size)}
+                    disabled={isOutOfStock}
+                    className="relative rounded-lg border py-3 text-[14px] md:text-[15px] transition-colors"
                     style={{
-                      borderColor: selectedSize === size ? '#AF94E0' : '#E5E5E5',
-                      color: selectedSize === size ? '#AF94E0' : '#171717',
+                      borderColor: isOutOfStock ? '#E5E5E5' : selectedSize === size ? '#AF94E0' : '#E5E5E5',
+                      color: isOutOfStock ? '#CCCCCC' : selectedSize === size ? '#AF94E0' : '#171717',
                       fontWeight: 600,
+                      backgroundColor: isOutOfStock ? '#FAFAFA' : undefined,
+                      cursor: isOutOfStock ? 'not-allowed' : 'pointer',
+                      textDecoration: isOutOfStock ? 'line-through' : undefined,
                     }}
                   >
                     {size}
@@ -347,8 +352,14 @@ function ProductDetailContent({ productId }: { productId: number }) {
             <button
               className="btn-pill mt-2 px-6 py-3.5 text-[15px] md:text-[16px] w-full"
               onClick={handleAddToBag}
+              disabled={isOutOfStock}
+              style={
+                isOutOfStock
+                  ? { backgroundColor: '#E5E5E5', borderColor: '#E5E5E5', color: '#999999', cursor: 'not-allowed', pointerEvents: 'none' }
+                  : undefined
+              }
             >
-              Add to Bag
+              {isOutOfStock ? 'Out of Stock' : 'Add to Bag'}
             </button>
             {justAdded && (
               <p className="text-[13px] md:text-[14px] text-center" style={{ color: '#AF94E0', fontWeight: 600 }}>
