@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import FavoriteButton from '@/components/FavoriteButton';
 import { products, type Product, type ProductColor } from '@/lib/products';
 import { useFavorites } from '@/lib/favorites-context';
@@ -183,6 +184,7 @@ function ShopContent() {
           ))}
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
