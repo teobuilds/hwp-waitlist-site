@@ -76,6 +76,9 @@ function ProductCard({ product }: { product: Product }) {
         )}
       </div>
       <div className="p-2.5 md:p-4 flex flex-col gap-1 md:gap-1.5">
+        {product.badge && (
+          <p className="text-[10px] md:text-[14px]" style={{ color: '#EA580C', fontWeight: 700, letterSpacing: '-0.01em' }}>{product.badge}</p>
+        )}
         <h2 className="text-[13px] md:text-[18px] leading-tight" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em' }}>{product.name}</h2>
         {product.cardBlurb && (
           <p className="text-[10px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.cardBlurb}</p>

@@ -14,6 +14,7 @@ export type Product = {
   name: string;
   price: string;
   description: string;
+  badge?: string;
   cardBlurb?: string;
   about?: string;
   details?: ProductSpec[];
@@ -28,6 +29,7 @@ export const products: Product[] = [
     name: 'HWP Ball Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
+    badge: 'Best Seller',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
@@ -57,9 +59,10 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: 'Breast Cancer Awareness Edition',
+    name: 'Breast Cancer Awareness',
     price: '$35',
     description: 'Breast Cancer Awareness Edition.',
+    badge: 'Limited Edition',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
