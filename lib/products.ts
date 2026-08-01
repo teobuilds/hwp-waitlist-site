@@ -14,6 +14,7 @@ export type Product = {
   name: string;
   price: string;
   description: string;
+  cardBlurb?: string;
   about?: string;
   details?: ProductSpec[];
   sizes: string[];
@@ -27,6 +28,7 @@ export const products: Product[] = [
     name: 'HWP Ball Classic Tee',
     price: '$25',
     description: 'Train with intention.',
+    cardBlurb: 'Soft tri-blend tee for gym days and lounging.',
     about:
       "Built for whatever's on the agenda — workouts, errands, or a lounge-around day. This soft, lightweight tee is cut from a breathable tri-blend knit that moves with you and stays comfortable all day. Moisture-wicking and quick-drying, it keeps you cool at the gym and looks just as good with joggers on your day off.",
     details: [
@@ -72,6 +74,7 @@ export const products: Product[] = [
     name: 'HWP Logo Hoodie',
     price: '$65',
     description: 'Hoop With Prezence.',
+    cardBlurb: 'Brushed fleece hoodie built for cold mornings.',
     about:
       'An ultra-soft cotton-blend fleece hoodie with a brushed interior for extra warmth. Finished with a front kangaroo pocket and ribbed cuffs and hem for a comfortable, locked-in fit — built for cold mornings, travel days, or just staying cozy off the court.',
     details: [
@@ -98,6 +101,7 @@ export const products: Product[] = [
     name: 'HWP Classic Tee',
     price: '$25',
     description: 'Hoop With Prezence.',
+    cardBlurb: 'Soft tri-blend tee for gym days and lounging.',
     about:
       "Built for whatever's on the agenda — workouts, errands, or a lounge-around day. This soft, lightweight tee is cut from a breathable tri-blend knit that moves with you and stays comfortable all day. Moisture-wicking and quick-drying, it keeps you cool at the gym and looks just as good with joggers on your day off.",
     details: [
@@ -141,6 +145,7 @@ export const products: Product[] = [
     name: 'HWP Compression Shirt',
     price: '$35',
     description: 'Hoop With Prezence.',
+    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
     about:
       "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
     details: [
@@ -176,6 +181,7 @@ export const products: Product[] = [
     name: 'HWP Ball Compression Shirt',
     price: '$35',
     description: 'Hoop With Prezence.',
+    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
     about:
       "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
     details: [
@@ -204,6 +210,7 @@ export const products: Product[] = [
     name: 'HWP Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
+    cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
@@ -239,6 +246,7 @@ export const products: Product[] = [
     name: 'HWP Ball Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
+    cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
@@ -270,6 +278,7 @@ export const products: Product[] = [
     name: 'Limited Edition',
     price: '$35',
     description: 'Breast Cancer Awareness Edition.',
+    cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [

@@ -79,6 +79,14 @@ function ProductCard({ product }: { product: Product }) {
         <h2 className="text-[13px] md:text-[18px] leading-tight" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em' }}>{product.name}</h2>
         <p className="text-[10px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
         <p className="text-[12px] md:text-[16px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
+        {product.cardBlurb && (
+          <p
+            className="text-[10px] md:text-[13px] overflow-hidden text-ellipsis whitespace-nowrap"
+            style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em' }}
+          >
+            {product.cardBlurb}
+          </p>
+        )}
 
         {product.colors && (
           <div className="flex flex-wrap gap-2.5 md:gap-1.5 mt-1 items-center">
