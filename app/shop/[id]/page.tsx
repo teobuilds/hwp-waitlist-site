@@ -274,6 +274,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-8 md:gap-12 items-start">
+          <div>
           <div className="flex gap-3">
             {images.length > 1 && (
               <div className="hidden sm:flex flex-col gap-2 w-16 md:w-20 shrink-0">
@@ -326,6 +327,12 @@ function ProductDetailContent({ productId }: { productId: number }) {
                 </div>
               )}
             </div>
+          </div>
+          {product.showsThirdPartyApparel && (
+            <p className="mt-2 text-[11px] md:text-[12px]" style={{ color: '#999999', fontWeight: 500 }}>
+              Shown on sample apparel for fit reference &mdash; HWP shirts ship with HWP branding only, no third-party logos.
+            </p>
+          )}
           </div>
 
           <div className="flex flex-col gap-4 md:sticky md:top-28">

@@ -30,6 +30,7 @@ export type Product = {
   sizes: string[];
   colors?: ProductColor[];
   image?: string | null;
+  showsThirdPartyApparel?: boolean;
 };
 
 export const products: Product[] = [
@@ -40,6 +41,7 @@ export const products: Product[] = [
     description: 'Hoop With Prezence.',
     badge: 'Best Seller',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
+    showsThirdPartyApparel: true,
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
@@ -79,6 +81,7 @@ export const products: Product[] = [
     description: 'Breast Cancer Awareness Edition.',
     badge: 'Limited Edition',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
+    showsThirdPartyApparel: true,
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
