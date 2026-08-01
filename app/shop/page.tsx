@@ -13,6 +13,8 @@ function ProductCard({ product }: { product: Product }) {
   const [selectedColor, setSelectedColor] = useState(product.colors?.[0]);
   const [activeIndex, setActiveIndex] = useState(0);
   const images = product.colors ? selectedColor?.images ?? [] : product.image ? [product.image] : [];
+  const isOutOfStock = selectedColor?.inStock === false;
+  const productHref = `/shop/${product.id}?preview=hwp2025${selectedColor ? `&color=${encodeURIComponent(selectedColor.name)}` : ''}`;
 
   function selectColor(color: ProductColor) {
     setSelectedColor(color);
@@ -20,7 +22,7 @@ function ProductCard({ product }: { product: Product }) {
   }
 
   function goToProduct() {
-    router.push(`/shop/${product.id}?preview=hwp2025`);
+    router.push(productHref);
   }
 
   function prevImage(e: React.MouseEvent) {
@@ -49,7 +51,13 @@ function ProductCard({ product }: { product: Product }) {
         />
         {images.length > 0 ? (
           <>
-            <Image src={images[activeIndex]} alt={product.name} fill className="object-cover" />
+            <Image
+              src={images[activeIndex]}
+              alt={product.name}
+              fill
+              className="object-cover"
+              style={isOutOfStock ? { filter: 'grayscale(70%) brightness(0.85)', opacity: 0.7 } : undefined}
+            />
             {images.length > 1 && (
               <>
                 <button
@@ -76,8 +84,10 @@ function ProductCard({ product }: { product: Product }) {
         )}
       </div>
       <div className="p-2.5 md:p-4 flex flex-col gap-1 md:gap-1.5">
-        {product.badge && (
-          <p className="text-[10px] md:text-[14px]" style={{ color: '#EA580C', fontWeight: 700, letterSpacing: '-0.01em' }}>{product.badge}</p>
+        {(isOutOfStock || product.badge) && (
+          <p className="text-[10px] md:text-[14px]" style={{ color: '#EA580C', fontWeight: 700, letterSpacing: '-0.01em' }}>
+            {isOutOfStock ? 'Sold Out' : product.badge}
+          </p>
         )}
         <h2 className="text-[13px] md:text-[18px] leading-tight" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em' }}>{product.name}</h2>
         {product.cardBlurb && (
@@ -88,26 +98,40 @@ function ProductCard({ product }: { product: Product }) {
         {product.colors && (
           <div className="flex flex-wrap gap-2.5 md:gap-1.5 mt-1 items-center">
             {product.colors.map(color => (
-              <button
-                key={color.name}
-                onClick={() => selectColor(color)}
-                aria-label={color.name}
-                title={color.name}
-                className="w-5 h-5 md:w-5 md:h-5 rounded-full transition-shadow"
-                style={{
-                  backgroundColor: color.swatch,
-                  boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #AF94E0' : '0 0 0 1px #E5E5E5',
-                }}
-              />
+              <div key={color.name} className="relative w-5 h-5 md:w-5 md:h-5">
+                <button
+                  onClick={() => selectColor(color)}
+                  aria-label={color.name}
+                  title={color.inStock === false ? `${color.name} (Sold Out)` : color.name}
+                  className="w-5 h-5 md:w-5 md:h-5 rounded-full transition-shadow"
+                  style={{
+                    backgroundColor: color.swatch,
+                    boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #AF94E0' : '0 0 0 1px #E5E5E5',
+                  }}
+                />
+                {color.inStock === false && (
+                  <div
+                    className="absolute top-1/2 left-1/2 pointer-events-none"
+                    style={{
+                      width: '140%',
+                      height: 2,
+                      backgroundColor: '#999999',
+                      transform: 'translate(-50%, -50%) rotate(45deg)',
+                      borderRadius: 1,
+                    }}
+                  />
+                )}
+              </div>
             ))}
           </div>
         )}
 
         <Link
-          href={`/shop/${product.id}?preview=hwp2025`}
+          href={productHref}
           className="btn-pill mt-1.5 md:mt-2 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[13px] text-center"
+          style={isOutOfStock ? { backgroundColor: '#E5E5E5', borderColor: '#E5E5E5', color: '#999999' } : undefined}
         >
-          Buy Now
+          {isOutOfStock ? 'Out of Stock' : 'Buy Now'}
         </Link>
       </div>
     </div>
