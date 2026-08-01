@@ -10,6 +10,12 @@ export type ProductSpec = {
   value: string;
 };
 
+export type ProductReview = {
+  name: string;
+  rating: number;
+  text: string;
+};
+
 export type Product = {
   id: number;
   name: string;
@@ -19,6 +25,7 @@ export type Product = {
   cardBlurb?: string;
   about?: string;
   details?: ProductSpec[];
+  reviews?: ProductReview[];
   sizes: string[];
   colors?: ProductColor[];
   image?: string | null;
@@ -40,6 +47,12 @@ export const products: Product[] = [
       { label: 'Fit', value: 'Slim Fit' },
       { label: 'Length', value: 'Regular' },
       { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Marcus T.', rating: 5, text: "Wear this under my jersey every game. Doesn't ride up or get see-through when I sweat. Ordered a medium and it's snug in the right way." },
+      { name: 'Jordan K.', rating: 4, text: "Good quality for the price. Runs a little small so I'd size up if you're in between." },
+      { name: 'DeShawn R.', rating: 5, text: "Finally a compression shirt that doesn't dig into my armpits. Wearing it 3x a week for training." },
+      { name: 'Alex P.', rating: 4, text: 'Solid layering piece. Wish it came in more colors but the fit is exactly what I wanted.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -73,6 +86,11 @@ export const products: Product[] = [
       { label: 'Fit', value: 'Slim Fit' },
       { label: 'Length', value: 'Regular' },
       { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Nicole B.', rating: 5, text: 'Bought this for my mom, a survivor. She loves it, and being a limited run makes it feel special.' },
+      { name: 'Terrell M.', rating: 5, text: 'Great cause, great shirt. Fits true to size and the material is soft.' },
+      { name: 'Casey L.', rating: 4, text: 'Love the design, hope they bring it back after it sells out.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -109,6 +127,13 @@ export const products: Product[] = [
       { label: 'Sleeve', value: 'Short Sleeve' },
       { label: 'Closure', value: 'Pullover' },
       { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Brian H.', rating: 5, text: "My go-to tee now. Doesn't shrink after washing and the print hasn't cracked after a bunch of washes." },
+      { name: 'Priya S.', rating: 4, text: 'Comfortable and true to size. Black is a nice deep black, not faded.' },
+      { name: 'Malik W.', rating: 5, text: 'Wear it to the gym and just around town. Holds up well.' },
+      { name: 'Tyler F.', rating: 3, text: "Shirt's fine but shrunk slightly after the first wash. Would size up next time." },
+      { name: 'Renee C.', rating: 5, text: 'Great everyday tee, love the ball logo on the front.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -156,6 +181,11 @@ export const products: Product[] = [
       { label: 'Closure', value: 'Pullover' },
       { label: 'Care', value: 'Machine Wash' },
     ],
+    reviews: [
+      { name: 'Sam O.', rating: 5, text: 'Simple, clean, comfortable. Exactly what I wanted.' },
+      { name: 'Devon K.', rating: 4, text: 'Good basic tee. Fits true to size in a medium.' },
+      { name: 'Ashley N.', rating: 4, text: 'Soft material, held up well after a few washes.' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
@@ -200,6 +230,12 @@ export const products: Product[] = [
       { label: 'Closure', value: 'Pull On' },
       { label: 'Care', value: 'Machine Wash' },
     ],
+    reviews: [
+      { name: 'Chris B.', rating: 5, text: "Wear it under my jersey for every practice. Keeps me cool and doesn't stink after games like other brands." },
+      { name: 'Isaiah G.', rating: 4, text: 'Fits snug like a compression shirt should. Sizing runs true.' },
+      { name: 'Marcus D.', rating: 5, text: 'Great for training in the heat, wicks sweat fast.' },
+      { name: 'Jake T.', rating: 3, text: 'Good shirt but the sleeves feel a little tight on my arms. Otherwise solid.' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
@@ -228,6 +264,10 @@ export const products: Product[] = [
       { label: 'Sleeve', value: 'Short Sleeve' },
       { label: 'Closure', value: 'Pull On' },
       { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Andre P.', rating: 5, text: "Perfect base layer. Doesn't bunch up under my jersey." },
+      { name: 'Kevin M.', rating: 4, text: 'Good quality, fits true to size. Would buy another color if available.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -265,6 +305,11 @@ export const products: Product[] = [
       { label: 'Length', value: 'Regular' },
       { label: 'Fabric', value: 'Knitted' },
     ],
+    reviews: [
+      { name: 'Trevor H.', rating: 5, text: "Wear this to every training session. Doesn't ride up and dries fast." },
+      { name: 'Diego R.', rating: 4, text: "Comfortable fit, though I'd size up if you're in between." },
+      { name: 'Malik S.', rating: 5, text: 'Great for layering under a hoodie in the winter.' },
+    ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
@@ -300,6 +345,12 @@ export const products: Product[] = [
       { label: 'Pocket', value: 'Front Kangaroo Pocket' },
       { label: 'Cuffs/Hem', value: 'Ribbed' },
       { label: 'Care', value: 'Machine Wash Cold, Tumble Dry Low' },
+    ],
+    reviews: [
+      { name: 'Emily R.', rating: 5, text: "So soft and warm. Wear it constantly now that it's getting cold out." },
+      { name: 'Marcus L.', rating: 4, text: 'Good quality hoodie, true to size, pocket is a nice touch.' },
+      { name: 'Jasmine T.', rating: 5, text: "My favorite hoodie I own now. Doesn't pill after washing." },
+      { name: 'Ryan C.', rating: 4, text: 'Warm and comfortable, a bit pricier than expected but worth it.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [

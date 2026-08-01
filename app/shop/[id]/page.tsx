@@ -6,7 +6,7 @@ import { notFound, useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import FavoriteButton from '@/components/FavoriteButton';
-import { getProduct, products, type ProductColor, type ProductSpec } from '@/lib/products';
+import { getProduct, products, type ProductColor, type ProductSpec, type ProductReview } from '@/lib/products';
 import { useCart } from '@/lib/cart-context';
 
 function ProductDetails({ about, details }: { about?: string; details?: ProductSpec[] }) {
@@ -54,25 +54,58 @@ function ShippingReturns() {
   );
 }
 
-function ReviewsSection() {
+function StarRow({ rating, size = 18 }: { rating: number; size?: number }) {
+  return (
+    <div className="flex" style={{ gap: 1 }}>
+      {[0, 1, 2, 3, 4].map(i => (
+        <svg key={i} width={size} height={size} viewBox="0 0 24 24" fill={i < rating ? '#FBBF24' : '#E5E5E5'}>
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function ReviewsSection({ reviews }: { reviews?: ProductReview[] }) {
+  const hasReviews = !!reviews && reviews.length > 0;
+  const average = hasReviews ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length : 0;
+
   return (
     <div className="mt-16 pt-8 border-t" style={{ borderColor: '#F0F0F0' }}>
       <h2 className="text-[20px] md:text-[24px] mb-3" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em' }}>
         Reviews
       </h2>
-      <div className="flex items-center gap-2 mb-2">
-        <div className="flex" style={{ color: '#E5E5E5' }}>
-          {[0, 1, 2, 3, 4].map(i => (
-            <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
-          ))}
-        </div>
-        <span className="text-[13px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500 }}>No reviews yet</span>
-      </div>
-      <p className="text-[13px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500 }}>
-        Be the first to try this piece — reviews will show up here.
-      </p>
+      {hasReviews ? (
+        <>
+          <div className="flex items-center gap-2 mb-4">
+            <StarRow rating={Math.round(average)} />
+            <span className="text-[13px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500 }}>
+              {average.toFixed(1)} out of 5 ({reviews.length} review{reviews.length === 1 ? '' : 's'})
+            </span>
+          </div>
+          <div className="flex flex-col gap-4">
+            {reviews.map((review, i) => (
+              <div key={i} className="border-b pb-4" style={{ borderColor: '#F0F0F0' }}>
+                <div className="flex items-center gap-2 mb-1">
+                  <StarRow rating={review.rating} size={14} />
+                  <span className="text-[13px] md:text-[14px]" style={{ color: '#171717', fontWeight: 600 }}>{review.name}</span>
+                </div>
+                <p className="text-[13px] md:text-[14px] leading-relaxed" style={{ color: '#999999', fontWeight: 500 }}>{review.text}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="flex items-center gap-2 mb-2">
+            <StarRow rating={0} />
+            <span className="text-[13px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500 }}>No reviews yet</span>
+          </div>
+          <p className="text-[13px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500 }}>
+            Be the first to try this piece — reviews will show up here.
+          </p>
+        </>
+      )}
     </div>
   );
 }
@@ -372,7 +405,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
           </div>
         </div>
 
-        <ReviewsSection />
+        <ReviewsSection reviews={product.reviews} />
         <RelatedProducts currentId={product.id} />
       </section>
     </main>
