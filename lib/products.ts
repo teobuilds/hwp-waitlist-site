@@ -275,7 +275,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: 'Limited Edition',
+    name: 'Breast Cancer Awareness Edition',
     price: '$35',
     description: 'Breast Cancer Awareness Edition.',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
