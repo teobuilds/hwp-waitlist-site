@@ -22,6 +22,7 @@ export type Product = {
   price: string;
   description: string;
   badge?: string;
+  comingSoon?: boolean;
   cardBlurb?: string;
   about?: string;
   details?: ProductSpec[];
@@ -336,6 +337,7 @@ export const products: Product[] = [
     name: 'HWP Logo Hoodie',
     price: '$65',
     description: 'Hoop With Prezence.',
+    comingSoon: true,
     cardBlurb: 'Brushed fleece hoodie built for cold mornings.',
     about:
       'An ultra-soft cotton-blend fleece hoodie with a brushed interior for extra warmth. Finished with a front kangaroo pocket and ribbed cuffs and hem for a comfortable, locked-in fit — built for cold mornings, travel days, or just staying cozy off the court.',

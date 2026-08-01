@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import FavoriteButton from '@/components/FavoriteButton';
 import { getProduct, products, type ProductColor, type ProductSpec, type ProductReview } from '@/lib/products';
 import { useCart } from '@/lib/cart-context';
+import { useFavorites } from '@/lib/favorites-context';
 
 function ProductDetails({ about, details }: { about?: string; details?: ProductSpec[] }) {
   if (!about && (!details || details.length === 0)) return null;
@@ -201,6 +202,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
   const [quantity, setQuantity] = useState(() => (preferredQty > 0 ? preferredQty : 1));
   const [justAdded, setJustAdded] = useState(false);
   const { addItem, openCart } = useCart();
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   if (!isPreview) {
     return (
@@ -224,6 +226,8 @@ function ProductDetailContent({ productId }: { productId: number }) {
 
   const images = product.colors ? selectedColor?.images ?? [] : product.image ? [product.image] : [];
   const isOutOfStock = selectedColor?.inStock === false;
+  const isComingSoon = product.comingSoon === true;
+  const favorited = isFavorite(product.id, selectedColor?.name, selectedSize);
 
   function selectColor(color: ProductColor) {
     setSelectedColor(color);
@@ -327,6 +331,11 @@ function ProductDetailContent({ productId }: { productId: number }) {
           <div className="flex flex-col gap-4 md:sticky md:top-28">
             <div className="flex items-start justify-between gap-3">
               <div>
+                {(isComingSoon || product.badge) && (
+                  <p className="text-[13px] md:text-[15px] mb-1" style={{ color: '#EA580C', fontWeight: 700, letterSpacing: '-0.01em' }}>
+                    {isComingSoon ? 'Coming Soon' : product.badge}
+                  </p>
+                )}
                 <h1 className="text-[26px] md:text-[34px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1 }}>{product.name}</h1>
                 <p className="text-[15px] md:text-[18px] mt-1" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.description}</p>
               </div>
@@ -411,18 +420,30 @@ function ProductDetailContent({ productId }: { productId: number }) {
               </div>
             </div>
 
-            <button
-              className="btn-pill mt-2 px-6 py-3.5 text-[15px] md:text-[16px] w-full"
-              onClick={handleAddToBag}
-              disabled={isOutOfStock}
-              style={
-                isOutOfStock
-                  ? { backgroundColor: '#E5E5E5', borderColor: '#E5E5E5', color: '#999999', cursor: 'not-allowed', pointerEvents: 'none' }
-                  : undefined
-              }
-            >
-              {isOutOfStock ? 'Out of Stock' : 'Add to Bag'}
-            </button>
+            {isComingSoon ? (
+              <button
+                className="btn-pill mt-2 px-6 py-3.5 text-[15px] md:text-[16px] w-full"
+                onClick={() =>
+                  toggleFavorite({ productId: product.id, color: selectedColor?.name, size: selectedSize, quantity, image: images[0] })
+                }
+                style={favorited ? { backgroundColor: '#AF94E0', borderColor: '#AF94E0', color: 'white' } : undefined}
+              >
+                {favorited ? 'Added to Favorites' : 'Add to Favorites'}
+              </button>
+            ) : (
+              <button
+                className="btn-pill mt-2 px-6 py-3.5 text-[15px] md:text-[16px] w-full"
+                onClick={handleAddToBag}
+                disabled={isOutOfStock}
+                style={
+                  isOutOfStock
+                    ? { backgroundColor: '#E5E5E5', borderColor: '#E5E5E5', color: '#999999', cursor: 'not-allowed', pointerEvents: 'none' }
+                    : undefined
+                }
+              >
+                {isOutOfStock ? 'Out of Stock' : 'Add to Bag'}
+              </button>
+            )}
             {justAdded && (
               <p className="text-[13px] md:text-[14px] text-center" style={{ color: '#AF94E0', fontWeight: 600 }}>
                 Added to your bag!

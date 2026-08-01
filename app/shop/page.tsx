@@ -7,13 +7,17 @@ import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import FavoriteButton from '@/components/FavoriteButton';
 import { products, type Product, type ProductColor } from '@/lib/products';
+import { useFavorites } from '@/lib/favorites-context';
 
 function ProductCard({ product }: { product: Product }) {
   const router = useRouter();
+  const { isFavorite, toggleFavorite } = useFavorites();
   const [selectedColor, setSelectedColor] = useState(product.colors?.[0]);
   const [activeIndex, setActiveIndex] = useState(0);
   const images = product.colors ? selectedColor?.images ?? [] : product.image ? [product.image] : [];
   const isOutOfStock = selectedColor?.inStock === false;
+  const isComingSoon = product.comingSoon === true;
+  const favorited = isFavorite(product.id, selectedColor?.name, product.sizes[0]);
   const productHref = `/shop/${product.id}?preview=hwp2025${selectedColor ? `&color=${encodeURIComponent(selectedColor.name)}` : ''}`;
 
   function selectColor(color: ProductColor) {
@@ -51,13 +55,7 @@ function ProductCard({ product }: { product: Product }) {
         />
         {images.length > 0 ? (
           <>
-            <Image
-              src={images[activeIndex]}
-              alt={product.name}
-              fill
-              className="object-cover"
-              style={isOutOfStock ? { filter: 'grayscale(70%) brightness(0.85)', opacity: 0.7 } : undefined}
-            />
+            <Image src={images[activeIndex]} alt={product.name} fill className="object-cover" />
             {images.length > 1 && (
               <>
                 <button
@@ -84,9 +82,9 @@ function ProductCard({ product }: { product: Product }) {
         )}
       </div>
       <div className="p-2.5 md:p-4 flex flex-col gap-1 md:gap-1.5">
-        {(isOutOfStock || product.badge) && (
+        {(isComingSoon || isOutOfStock || product.badge) && (
           <p className="text-[10px] md:text-[14px]" style={{ color: '#EA580C', fontWeight: 700, letterSpacing: '-0.01em' }}>
-            {isOutOfStock ? 'Sold Out' : product.badge}
+            {isComingSoon ? 'Coming Soon' : isOutOfStock ? 'Sold Out' : product.badge}
           </p>
         )}
         <h2 className="text-[13px] md:text-[18px] leading-tight" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.03em' }}>{product.name}</h2>
@@ -126,13 +124,25 @@ function ProductCard({ product }: { product: Product }) {
           </div>
         )}
 
-        <Link
-          href={productHref}
-          className="btn-pill mt-1.5 md:mt-2 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[13px] text-center"
-          style={isOutOfStock ? { backgroundColor: '#E5E5E5', borderColor: '#E5E5E5', color: '#999999' } : undefined}
-        >
-          {isOutOfStock ? 'Out of Stock' : 'Buy Now'}
-        </Link>
+        {isComingSoon ? (
+          <button
+            onClick={() =>
+              toggleFavorite({ productId: product.id, color: selectedColor?.name, size: product.sizes[0], quantity: 1, image: images[0] })
+            }
+            className="btn-pill mt-1.5 md:mt-2 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[13px] text-center"
+            style={favorited ? { backgroundColor: '#AF94E0', borderColor: '#AF94E0', color: 'white' } : undefined}
+          >
+            {favorited ? 'Added to Favorites' : 'Add to Favorites'}
+          </button>
+        ) : (
+          <Link
+            href={productHref}
+            className="btn-pill mt-1.5 md:mt-2 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[13px] text-center"
+            style={isOutOfStock ? { backgroundColor: '#E5E5E5', borderColor: '#E5E5E5', color: '#999999' } : undefined}
+          >
+            {isOutOfStock ? 'Out of Stock' : 'Buy Now'}
+          </Link>
+        )}
       </div>
     </div>
   );
