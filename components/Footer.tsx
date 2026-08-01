@@ -14,6 +14,8 @@ export default function Footer() {
         <div className="flex flex-col gap-2 md:gap-2.5">
           <h3 className="text-[12px] md:text-[14px] mb-1" style={{ color: '#171717', fontWeight: 700 }}>Quick Links</h3>
           <Link href="/shipping-returns" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>Shipping &amp; Returns</Link>
+          <Link href="/privacy-policy" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>Privacy Policy</Link>
+          <Link href="/terms-of-service" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>Terms of Service</Link>
         </div>
 
         <div className="flex flex-col gap-2 md:gap-2.5 col-span-2 md:col-span-1">
