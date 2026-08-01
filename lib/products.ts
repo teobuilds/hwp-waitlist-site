@@ -51,7 +51,7 @@ export const products: Product[] = [
     ],
     reviews: [
       { name: 'Marcus T.', rating: 5, text: "Wear this under my jersey every game. Doesn't ride up or get see-through when I sweat. Ordered a medium and it's snug in the right way." },
-      { name: 'Jordan K.', rating: 4, text: "Good quality for the price. Runs a little small so I'd size up if you're in between." },
+      { name: 'Jordan K.', rating: 4, text: 'Good quality for the price. Fits true to size — just wish delivery was a bit quicker.' },
       { name: 'DeShawn R.', rating: 5, text: "Finally a compression shirt that doesn't dig into my armpits. Wearing it 3x a week for training." },
       { name: 'Alex P.', rating: 4, text: 'Solid layering piece. Wish it came in more colors but the fit is exactly what I wanted.' },
     ],
@@ -133,7 +133,7 @@ export const products: Product[] = [
       { name: 'Brian H.', rating: 5, text: "My go-to tee now. Doesn't shrink after washing and the print hasn't cracked after a bunch of washes." },
       { name: 'Priya S.', rating: 4, text: 'Comfortable and true to size. Black is a nice deep black, not faded.' },
       { name: 'Malik W.', rating: 5, text: 'Wear it to the gym and just around town. Holds up well.' },
-      { name: 'Tyler F.', rating: 3, text: "Shirt's fine but shrunk slightly after the first wash. Would size up next time." },
+      { name: 'Tyler F.', rating: 3, text: "Shirt's good overall, true to size — just wish the print was a little bolder, looks slightly faded in photos." },
       { name: 'Renee C.', rating: 5, text: 'Great everyday tee, love the ball logo on the front.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -308,7 +308,7 @@ export const products: Product[] = [
     ],
     reviews: [
       { name: 'Trevor H.', rating: 5, text: "Wear this to every training session. Doesn't ride up and dries fast." },
-      { name: 'Diego R.', rating: 4, text: "Comfortable fit, though I'd size up if you're in between." },
+      { name: 'Diego R.', rating: 4, text: 'Comfortable fit, true to size, good for training. Took a little longer to ship than I expected.' },
       { name: 'Malik S.', rating: 5, text: 'Great for layering under a hoodie in the winter.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -347,12 +347,6 @@ export const products: Product[] = [
       { label: 'Pocket', value: 'Front Kangaroo Pocket' },
       { label: 'Cuffs/Hem', value: 'Ribbed' },
       { label: 'Care', value: 'Machine Wash Cold, Tumble Dry Low' },
-    ],
-    reviews: [
-      { name: 'Emily R.', rating: 5, text: "So soft and warm. Wear it constantly now that it's getting cold out." },
-      { name: 'Marcus L.', rating: 4, text: 'Good quality hoodie, true to size, pocket is a nice touch.' },
-      { name: 'Jasmine T.', rating: 5, text: "My favorite hoodie I own now. Doesn't pill after washing." },
-      { name: 'Ryan C.', rating: 4, text: 'Warm and comfortable, a bit pricier than expected but worth it.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [

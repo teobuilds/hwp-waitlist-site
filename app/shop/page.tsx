@@ -108,16 +108,17 @@ function ProductCard({ product }: { product: Product }) {
                   }}
                 />
                 {color.inStock === false && (
-                  <div
-                    className="absolute top-1/2 left-1/2 pointer-events-none"
-                    style={{
-                      width: '140%',
-                      height: 2,
-                      backgroundColor: '#999999',
-                      transform: 'translate(-50%, -50%) rotate(45deg)',
-                      borderRadius: 1,
-                    }}
-                  />
+                  <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+                    <div
+                      className="absolute top-1/2 left-1/2"
+                      style={{
+                        width: '150%',
+                        height: 2,
+                        backgroundColor: '#999999',
+                        transform: 'translate(-50%, -50%) rotate(45deg)',
+                      }}
+                    />
+                  </div>
                 )}
               </div>
             ))}
