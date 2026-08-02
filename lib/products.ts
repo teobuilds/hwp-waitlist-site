@@ -175,6 +175,7 @@ export const products: Product[] = [
     price: '$25',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Soft tri-blend tee for gym days and lounging.',
+    showsThirdPartyApparel: true,
     about:
       "Built for whatever's on the agenda — workouts, errands, or a lounge-around day. This soft, lightweight tee is cut from a breathable tri-blend knit that moves with you and stays comfortable all day. Moisture-wicking and quick-drying, it keeps you cool at the gym and looks just as good with joggers on your day off.",
     details: [
@@ -224,6 +225,7 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Compression fit that wicks moisture mid-workout.',
+    showsThirdPartyApparel: true,
     about:
       "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
     details: [
@@ -259,6 +261,7 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Compression fit that wicks moisture mid-workout.',
+    showsThirdPartyApparel: true,
     about:
       "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
     details: [
@@ -300,6 +303,7 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
+    showsThirdPartyApparel: true,
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
@@ -342,6 +346,7 @@ export const products: Product[] = [
     description: 'Hoop With Prezence.',
     comingSoon: true,
     cardBlurb: 'Brushed fleece hoodie built for cold mornings.',
+    showsThirdPartyApparel: true,
     about:
       'An ultra-soft cotton-blend fleece hoodie with a brushed interior for extra warmth. Finished with a front kangaroo pocket and ribbed cuffs and hem for a comfortable, locked-in fit — built for cold mornings, travel days, or just staying cozy off the court.',
     details: [
