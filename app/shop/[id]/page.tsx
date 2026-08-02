@@ -298,7 +298,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
                       src={images[activeIndex]}
                       alt={product.name}
                       fill
-                      className="object-cover transition-transform duration-300 ease-out group-hover:scale-110"
+                      className="object-cover transition-transform duration-300 ease-out md:group-hover:scale-110"
                     />
                     {images.length > 1 && (
                       <>
