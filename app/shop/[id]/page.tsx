@@ -274,7 +274,6 @@ function ProductDetailContent({ productId }: { productId: number }) {
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-8 md:gap-12 items-start">
-          <div>
           <div className="flex gap-3">
             {images.length > 1 && (
               <div className="hidden sm:flex flex-col gap-2 w-16 md:w-20 shrink-0">
@@ -291,48 +290,49 @@ function ProductDetailContent({ productId }: { productId: number }) {
               </div>
             )}
 
-            <div className="group relative flex-1 aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden">
-              {images.length > 0 ? (
-                <>
-                  <Image
-                    src={images[activeIndex]}
-                    alt={product.name}
-                    fill
-                    className="object-cover transition-transform duration-300 ease-out group-hover:scale-110"
-                  />
-                  {images.length > 1 && (
-                    <>
-                      <button
-                        onClick={prevImage}
-                        aria-label="Previous photo"
-                        className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-[18px]"
-                        style={{ color: '#AF94E0', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
-                      >
-                        ‹
-                      </button>
-                      <button
-                        onClick={nextImage}
-                        aria-label="Next photo"
-                        className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-[18px]"
-                        style={{ color: '#AF94E0', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
-                      >
-                        ›
-                      </button>
-                    </>
-                  )}
-                </>
-              ) : (
-                <div className="w-full h-full flex items-center justify-center">
-                  <span className="text-[14px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500 }}>Product photo coming soon</span>
-                </div>
+            <div className="flex-1 flex flex-col gap-1.5 min-w-0">
+              <div className="group relative aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden">
+                {images.length > 0 ? (
+                  <>
+                    <Image
+                      src={images[activeIndex]}
+                      alt={product.name}
+                      fill
+                      className="object-cover transition-transform duration-300 ease-out group-hover:scale-110"
+                    />
+                    {images.length > 1 && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          aria-label="Previous photo"
+                          className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-[18px]"
+                          style={{ color: '#AF94E0', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
+                        >
+                          ‹
+                        </button>
+                        <button
+                          onClick={nextImage}
+                          aria-label="Next photo"
+                          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-[18px]"
+                          style={{ color: '#AF94E0', boxShadow: '0 1px 6px rgba(0,0,0,0.15)' }}
+                        >
+                          ›
+                        </button>
+                      </>
+                    )}
+                  </>
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-[14px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500 }}>Product photo coming soon</span>
+                  </div>
+                )}
+              </div>
+              {product.showsThirdPartyApparel && (
+                <p className="text-[10px] leading-snug" style={{ color: '#999999', fontWeight: 500 }}>
+                  Shown on sample apparel for fit reference &mdash; HWP shirts ship with HWP branding only, no third-party logos.
+                </p>
               )}
             </div>
-          </div>
-          {product.showsThirdPartyApparel && (
-            <p className="mt-2 text-[11px] md:text-[12px]" style={{ color: '#999999', fontWeight: 500 }}>
-              Shown on sample apparel for fit reference &mdash; HWP shirts ship with HWP branding only, no third-party logos.
-            </p>
-          )}
           </div>
 
           <div className="flex flex-col gap-4 md:sticky md:top-28">
