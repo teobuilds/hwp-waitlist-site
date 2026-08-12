@@ -336,8 +336,8 @@ export const products: Product[] = [
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/sleeveless-white-model-front.jpg',
-          '/images/products/sleeveless-white-print-close.jpg',
+          '/images/products/sleeveless-white-wordmark-front.jpg',
+          '/images/products/sleeveless-white-wordmark-side.jpg',
         ],
       },
     ],
@@ -367,6 +367,39 @@ export const products: Product[] = [
         images: [
           '/images/products/hoodie-grey-model-front.jpg',
           '/images/products/hoodie-grey-print-close.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: 'HWP New Sleeveless Compression',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    badge: 'New',
+    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'O-Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Xavier B.', rating: 5, text: "Clean look, fits snug like a compression shirt should. This is my go-to for practice." },
+      { name: 'Noah P.', rating: 4, text: 'Good quality material, true to size. Would like to see more colors.' },
+      { name: 'Cam D.', rating: 5, text: "Lightweight and breathable, doesn't hold onto sweat." },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/new-sleeveless-ball-white-front.jpg',
+          '/images/products/new-sleeveless-ball-white-side.jpg',
         ],
       },
     ],
