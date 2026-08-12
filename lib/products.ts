@@ -70,7 +70,10 @@ export const products: Product[] = [
       {
         name: 'White',
         swatch: '#FFFFFF',
-        images: ['/images/products/ball-sleeveless-white-model-front.jpg'],
+        images: [
+          '/images/products/ball-sleeveless-white-model-front-v2.jpg',
+          '/images/products/ball-sleeveless-white-model-side-v2.jpg',
+        ],
       },
     ],
   },
