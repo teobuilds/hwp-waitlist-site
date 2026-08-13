@@ -7,6 +7,7 @@ import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FavoriteButton from '@/components/FavoriteButton';
+import RotationBanner from '@/components/RotationBanner';
 import { products, type Product, type ProductColor } from '@/lib/products';
 import { useFavorites } from '@/lib/favorites-context';
 
@@ -179,6 +180,7 @@ function ShopContent() {
         <p className="text-center mb-4 md:mb-6 text-[11px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Hoop with Prezence, on and off the court.</p>
 
         <div className="grid grid-cols-2 gap-2.5 md:gap-4">
+          <RotationBanner />
           {products.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
