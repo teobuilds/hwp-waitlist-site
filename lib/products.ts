@@ -459,6 +459,124 @@ export const products: Product[] = [
       },
     ],
   },
+  {
+    id: 11,
+    name: 'Undershirt HWP Ball',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Elijah W.', rating: 5, text: 'Great layering piece, fits snug and true to size.' },
+      { name: 'Tony R.', rating: 4, text: 'Good quality, wish it came in more colors.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/undershirt-ball-black-front.jpg',
+          '/images/products/undershirt-ball-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/undershirt-ball-white-front.jpg',
+          '/images/products/undershirt-ball-white-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 12,
+    name: 'Undershirt HWP',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Bryce H.', rating: 5, text: 'Clean and simple, exactly what I wanted for layering.' },
+      { name: 'Omar F.', rating: 4, text: 'Comfortable fit, true to size.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/undershirt-wordmark-black-front.jpg',
+          '/images/products/undershirt-wordmark-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/undershirt-wordmark-white-front.jpg',
+          '/images/products/undershirt-wordmark-white-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 13,
+    name: 'Undershirt HWP New',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    badge: 'New',
+    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Julian K.', rating: 5, text: "Love this one, it's my new go-to for training." },
+      { name: 'Devin C.', rating: 4, text: 'Solid fit and material, true to size.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/undershirt-new-black-front.jpg',
+          '/images/products/undershirt-new-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/undershirt-new-white-front.jpg',
+          '/images/products/undershirt-new-white-side.jpg',
+        ],
+      },
+    ],
+  },
 ];
 
 export function getProduct(id: number) {
