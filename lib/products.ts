@@ -63,8 +63,8 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/ball-sleeveless-black-model-front.jpg',
-          '/images/products/ball-sleeveless-black-print-close.jpg',
+          '/images/products/tank-ball-black-front.jpg',
+          '/images/products/tank-ball-black-side.jpg',
         ],
       },
       {
@@ -251,9 +251,16 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/ball-compression-black-model-front.jpg',
-          '/images/products/ball-compression-black-print-close.jpg',
-          '/images/products/ball-compression-black-print-close-2.jpg',
+          '/images/products/ball-compression-black-model-front-v2.jpg',
+          '/images/products/ball-compression-black-model-side-v2.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/ball-compression-white-model-front.jpg',
+          '/images/products/ball-compression-white-model-side.jpg',
         ],
       },
     ],
@@ -285,16 +292,16 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/compression-black-action.jpg',
-          '/images/products/compression-black-print-close-2.jpg',
+          '/images/products/compression-black-model-front-v2.jpg',
+          '/images/products/compression-black-model-side-v2.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/compression-white-model-front.jpg',
-          '/images/products/compression-white-model-close.jpg',
+          '/images/products/compression-white-model-front-v2.jpg',
+          '/images/products/compression-white-model-side-v2.jpg',
         ],
         inStock: false,
       },
@@ -327,17 +334,16 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/sleeveless-black-model-front.jpg',
-          '/images/products/sleeveless-black-model-front-2.jpg',
-          '/images/products/sleeveless-black-print-close.jpg',
+          '/images/products/tank-wordmark-black-front.jpg',
+          '/images/products/tank-wordmark-black-side.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/sleeveless-white-wordmark-front.jpg',
-          '/images/products/sleeveless-white-wordmark-side.jpg',
+          '/images/products/tank-wordmark-white-front.jpg',
+          '/images/products/tank-wordmark-white-side.jpg',
         ],
       },
     ],
@@ -395,11 +401,60 @@ export const products: Product[] = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/tank-new-black-front.jpg',
+          '/images/products/tank-new-black-side.jpg',
+        ],
+      },
+      {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/new-sleeveless-ball-white-front.jpg',
-          '/images/products/new-sleeveless-ball-white-side.jpg',
+          '/images/products/sleeveless-white-wordmark-front.jpg',
+          '/images/products/sleeveless-white-wordmark-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: 'HWP New Compression Shirt',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    badge: 'New',
+    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
+    about:
+      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Fit', value: 'Regular Fit' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Darius L.', rating: 5, text: 'Fits perfect, moves with you. Been wearing it for every workout.' },
+      { name: 'Miguel S.', rating: 4, text: 'Solid compression fit, true to size, dries fast.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/new-compression-black-front.jpg',
+          '/images/products/new-compression-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/new-compression-white-front.jpg',
+          '/images/products/new-compression-white-side.jpg',
         ],
       },
     ],
