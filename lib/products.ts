@@ -41,7 +41,6 @@ export const products: Product[] = [
     description: 'Hoop With Prezence.',
     badge: 'Best Seller',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
-    showsThirdPartyApparel: true,
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
@@ -84,7 +83,6 @@ export const products: Product[] = [
     description: 'Breast Cancer Awareness Edition.',
     badge: 'Limited Edition',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
-    showsThirdPartyApparel: true,
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
@@ -105,16 +103,16 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/limited-black-model-front.jpg',
-          '/images/products/limited-black-print-close.jpg',
+          '/images/products/limited-black-model-front-v2.jpg',
+          '/images/products/limited-black-model-side-v2.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/limited-white-model-front.jpg',
-          '/images/products/limited-white-print-close.jpg',
+          '/images/products/limited-white-model-front-v2.jpg',
+          '/images/products/limited-white-model-side-v2.jpg',
         ],
       },
     ],
@@ -228,7 +226,6 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Compression fit that wicks moisture mid-workout.',
-    showsThirdPartyApparel: true,
     about:
       "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
     details: [
@@ -271,7 +268,6 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Compression fit that wicks moisture mid-workout.',
-    showsThirdPartyApparel: true,
     about:
       "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
     details: [
@@ -313,7 +309,6 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
-    showsThirdPartyApparel: true,
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
