@@ -39,6 +39,7 @@ export const products: Product[] = [
     name: 'HWP Ball Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
+    badge: 'Best Seller',
     cardBlurb: 'Slim compression layer to wear under your jersey.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
@@ -322,7 +323,6 @@ export const products: Product[] = [
     name: 'HWP Ball Tank',
     price: '$35',
     description: 'Hoop With Prezence.',
-    badge: 'Best Seller',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
       "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
