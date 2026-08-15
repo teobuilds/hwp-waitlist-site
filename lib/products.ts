@@ -35,6 +35,289 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    id: 11,
+    name: 'HWP Ball Sleeveless Compression',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    cardBlurb: 'Slim compression layer to wear under your jersey.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Elijah W.', rating: 5, text: 'Great layering piece, fits snug and true to size.' },
+      { name: 'Tony R.', rating: 4, text: 'Good quality, wish it came in more colors.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/undershirt-ball-black-front.jpg',
+          '/images/products/undershirt-ball-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/undershirt-ball-white-front.jpg',
+          '/images/products/undershirt-ball-white-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Breast Cancer Awareness',
+    price: '$35',
+    description: 'Breast Cancer Awareness Edition.',
+    badge: 'Limited Edition',
+    cardBlurb: 'Breathable tank for the gym and getting shots up.',
+    about:
+      "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
+    details: [
+      { label: 'Material', value: '90% Polyester / 10% Spandex' },
+      { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
+      { label: 'Neck', value: 'Scoop Neck' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Nicole B.', rating: 5, text: 'Bought this for my mom, a survivor. She loves it, and being a limited run makes it feel special.' },
+      { name: 'Terrell M.', rating: 5, text: 'Great cause, great shirt. Fits true to size and the material is soft.' },
+      { name: 'Casey L.', rating: 4, text: 'Love the design, hope they bring it back after it sells out.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/limited-black-model-front-v2.jpg',
+          '/images/products/limited-black-model-side-v2.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/limited-white-model-front-v2.jpg',
+          '/images/products/limited-white-model-side-v2.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: 'HWP Ball Compression Shirt',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
+    about:
+      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Fit', value: 'Regular Fit' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Chris B.', rating: 5, text: "Wear it under my jersey for every practice. Keeps me cool and doesn't stink after games like other brands." },
+      { name: 'Isaiah G.', rating: 4, text: 'Fits snug like a compression shirt should. Sizing runs true.' },
+      { name: 'Marcus D.', rating: 5, text: 'Great for training in the heat, wicks sweat fast.' },
+      { name: 'Jake T.', rating: 3, text: 'Good shirt but the sleeves feel a little tight on my arms. Otherwise solid.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/ball-compression-black-model-front-v2.jpg',
+          '/images/products/ball-compression-black-model-side-v2.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/ball-compression-white-model-front.jpg',
+          '/images/products/ball-compression-white-model-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: 'HWP Classic Compression Shirt',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
+    about:
+      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Fit', value: 'Regular Fit' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Andre P.', rating: 5, text: "Perfect base layer. Doesn't bunch up under my jersey." },
+      { name: 'Kevin M.', rating: 4, text: 'Good quality, fits true to size. Would buy another color if available.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/compression-black-model-front-v2.jpg',
+          '/images/products/compression-black-model-side-v2.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/compression-white-model-front-v2.jpg',
+          '/images/products/compression-white-model-side-v2.jpg',
+        ],
+        inStock: false,
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: 'HWP Compression Shirt',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    badge: 'New',
+    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
+    about:
+      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Fit', value: 'Regular Fit' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Darius L.', rating: 5, text: 'Fits perfect, moves with you. Been wearing it for every workout.' },
+      { name: 'Miguel S.', rating: 4, text: 'Solid compression fit, true to size, dries fast.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/new-compression-black-front.jpg',
+          '/images/products/new-compression-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/new-compression-white-front.jpg',
+          '/images/products/new-compression-white-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 13,
+    name: 'HWP Sleeveless Compression',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    badge: 'New',
+    cardBlurb: 'Slim compression layer to wear under your jersey.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Julian K.', rating: 5, text: "Love this one, it's my new go-to for training." },
+      { name: 'Devin C.', rating: 4, text: 'Solid fit and material, true to size.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/undershirt-new-black-front.jpg',
+          '/images/products/undershirt-new-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/undershirt-new-white-front.jpg',
+          '/images/products/undershirt-new-white-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 12,
+    name: 'HWP Classic Sleeveless Compression',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    cardBlurb: 'Slim compression layer to wear under your jersey.',
+    about:
+      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
+    details: [
+      { label: 'Material', value: '85% Polyester / 15% Spandex' },
+      { label: 'Collar', value: 'Crew Neck' },
+      { label: 'Fit', value: 'Slim Fit' },
+      { label: 'Length', value: 'Regular' },
+      { label: 'Fabric', value: 'Knitted' },
+    ],
+    reviews: [
+      { name: 'Bryce H.', rating: 5, text: 'Clean and simple, exactly what I wanted for layering.' },
+      { name: 'Omar F.', rating: 4, text: 'Comfortable fit, true to size.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/undershirt-wordmark-black-front.jpg',
+          '/images/products/undershirt-wordmark-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/undershirt-wordmark-white-front.jpg',
+          '/images/products/undershirt-wordmark-white-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
     id: 7,
     name: 'HWP Ball Tank',
     price: '$35',
@@ -77,11 +360,11 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 8,
-    name: 'Breast Cancer Awareness',
+    id: 9,
+    name: 'HWP Tank',
     price: '$35',
-    description: 'Breast Cancer Awareness Edition.',
-    badge: 'Limited Edition',
+    description: 'Hoop With Prezence.',
+    badge: 'New',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
       "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
@@ -93,9 +376,9 @@ export const products: Product[] = [
       { label: 'Care', value: 'Machine Wash' },
     ],
     reviews: [
-      { name: 'Nicole B.', rating: 5, text: 'Bought this for my mom, a survivor. She loves it, and being a limited run makes it feel special.' },
-      { name: 'Terrell M.', rating: 5, text: 'Great cause, great shirt. Fits true to size and the material is soft.' },
-      { name: 'Casey L.', rating: 4, text: 'Love the design, hope they bring it back after it sells out.' },
+      { name: 'Xavier B.', rating: 5, text: "Clean look, fits snug like a compression shirt should. This is my go-to for practice." },
+      { name: 'Noah P.', rating: 4, text: 'Good quality material, true to size. Would like to see more colors.' },
+      { name: 'Cam D.', rating: 5, text: "Lightweight and breathable, doesn't hold onto sweat." },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -103,16 +386,56 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/limited-black-model-front-v2.jpg',
-          '/images/products/limited-black-model-side-v2.jpg',
+          '/images/products/tank-new-black-front.jpg',
+          '/images/products/tank-new-black-side.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/limited-white-model-front-v2.jpg',
-          '/images/products/limited-white-model-side-v2.jpg',
+          '/images/products/sleeveless-white-wordmark-front.jpg',
+          '/images/products/sleeveless-white-wordmark-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: 'HWP Classic Tank',
+    price: '$35',
+    description: 'Hoop With Prezence.',
+    cardBlurb: 'Breathable tank for the gym and getting shots up.',
+    about:
+      "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
+    details: [
+      { label: 'Material', value: '90% Polyester / 10% Spandex' },
+      { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
+      { label: 'Neck', value: 'Scoop Neck' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Trevor H.', rating: 5, text: "Wear this to every training session. Doesn't ride up and dries fast." },
+      { name: 'Diego R.', rating: 4, text: 'Comfortable fit, true to size, good for training. Took a little longer to ship than I expected.' },
+      { name: 'Malik S.', rating: 5, text: 'Great for pickup games at the park, keeps me cool the whole time.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/tank-wordmark-black-front.jpg',
+          '/images/products/tank-wordmark-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/tank-wordmark-white-front.jpg',
+          '/images/products/tank-wordmark-white-side.jpg',
         ],
       },
     ],
@@ -218,358 +541,6 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 5,
-    name: 'HWP Ball Compression Shirt',
-    price: '$35',
-    description: 'Hoop With Prezence.',
-    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
-    about:
-      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
-    details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Fit', value: 'Regular Fit' },
-      { label: 'Collar', value: 'Crew Neck' },
-      { label: 'Sleeve', value: 'Short Sleeve' },
-      { label: 'Closure', value: 'Pull On' },
-      { label: 'Care', value: 'Machine Wash' },
-    ],
-    reviews: [
-      { name: 'Chris B.', rating: 5, text: "Wear it under my jersey for every practice. Keeps me cool and doesn't stink after games like other brands." },
-      { name: 'Isaiah G.', rating: 4, text: 'Fits snug like a compression shirt should. Sizing runs true.' },
-      { name: 'Marcus D.', rating: 5, text: 'Great for training in the heat, wicks sweat fast.' },
-      { name: 'Jake T.', rating: 3, text: 'Good shirt but the sleeves feel a little tight on my arms. Otherwise solid.' },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/ball-compression-black-model-front-v2.jpg',
-          '/images/products/ball-compression-black-model-side-v2.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/ball-compression-white-model-front.jpg',
-          '/images/products/ball-compression-white-model-side.jpg',
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: 'HWP Classic Compression Shirt',
-    price: '$35',
-    description: 'Hoop With Prezence.',
-    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
-    about:
-      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
-    details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Fit', value: 'Regular Fit' },
-      { label: 'Collar', value: 'Crew Neck' },
-      { label: 'Sleeve', value: 'Short Sleeve' },
-      { label: 'Closure', value: 'Pull On' },
-      { label: 'Care', value: 'Machine Wash' },
-    ],
-    reviews: [
-      { name: 'Andre P.', rating: 5, text: "Perfect base layer. Doesn't bunch up under my jersey." },
-      { name: 'Kevin M.', rating: 4, text: 'Good quality, fits true to size. Would buy another color if available.' },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/compression-black-model-front-v2.jpg',
-          '/images/products/compression-black-model-side-v2.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/compression-white-model-front-v2.jpg',
-          '/images/products/compression-white-model-side-v2.jpg',
-        ],
-        inStock: false,
-      },
-    ],
-  },
-  {
-    id: 6,
-    name: 'HWP Classic Tank',
-    price: '$35',
-    description: 'Hoop With Prezence.',
-    cardBlurb: 'Breathable tank for the gym and getting shots up.',
-    about:
-      "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
-    details: [
-      { label: 'Material', value: '90% Polyester / 10% Spandex' },
-      { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
-      { label: 'Neck', value: 'Scoop Neck' },
-      { label: 'Closure', value: 'Pull On' },
-      { label: 'Care', value: 'Machine Wash' },
-    ],
-    reviews: [
-      { name: 'Trevor H.', rating: 5, text: "Wear this to every training session. Doesn't ride up and dries fast." },
-      { name: 'Diego R.', rating: 4, text: 'Comfortable fit, true to size, good for training. Took a little longer to ship than I expected.' },
-      { name: 'Malik S.', rating: 5, text: 'Great for pickup games at the park, keeps me cool the whole time.' },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/tank-wordmark-black-front.jpg',
-          '/images/products/tank-wordmark-black-side.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/tank-wordmark-white-front.jpg',
-          '/images/products/tank-wordmark-white-side.jpg',
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: 'HWP Logo Hoodie',
-    price: '$65',
-    description: 'Hoop With Prezence.',
-    comingSoon: true,
-    cardBlurb: 'Brushed fleece hoodie built for cold mornings.',
-    showsThirdPartyApparel: true,
-    about:
-      'An ultra-soft cotton-blend fleece hoodie with a brushed interior for extra warmth. Finished with a front kangaroo pocket and ribbed cuffs and hem for a comfortable, locked-in fit — built for cold mornings, travel days, or just staying cozy off the court.',
-    details: [
-      { label: 'Material', value: '80% Cotton / 20% Polyester' },
-      { label: 'Lining', value: 'Brushed Fleece' },
-      { label: 'Pocket', value: 'Front Kangaroo Pocket' },
-      { label: 'Cuffs/Hem', value: 'Ribbed' },
-      { label: 'Care', value: 'Machine Wash Cold, Tumble Dry Low' },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Grey',
-        swatch: '#9CA3AF',
-        images: [
-          '/images/products/hoodie-grey-model-front.jpg',
-          '/images/products/hoodie-grey-print-close.jpg',
-        ],
-      },
-    ],
-  },
-  {
-    id: 9,
-    name: 'HWP Tank',
-    price: '$35',
-    description: 'Hoop With Prezence.',
-    badge: 'New',
-    cardBlurb: 'Breathable tank for the gym and getting shots up.',
-    about:
-      "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
-    details: [
-      { label: 'Material', value: '90% Polyester / 10% Spandex' },
-      { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
-      { label: 'Neck', value: 'Scoop Neck' },
-      { label: 'Closure', value: 'Pull On' },
-      { label: 'Care', value: 'Machine Wash' },
-    ],
-    reviews: [
-      { name: 'Xavier B.', rating: 5, text: "Clean look, fits snug like a compression shirt should. This is my go-to for practice." },
-      { name: 'Noah P.', rating: 4, text: 'Good quality material, true to size. Would like to see more colors.' },
-      { name: 'Cam D.', rating: 5, text: "Lightweight and breathable, doesn't hold onto sweat." },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/tank-new-black-front.jpg',
-          '/images/products/tank-new-black-side.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/sleeveless-white-wordmark-front.jpg',
-          '/images/products/sleeveless-white-wordmark-side.jpg',
-        ],
-      },
-    ],
-  },
-  {
-    id: 10,
-    name: 'HWP Compression Shirt',
-    price: '$35',
-    description: 'Hoop With Prezence.',
-    badge: 'New',
-    cardBlurb: 'Compression fit that wicks moisture mid-workout.',
-    about:
-      "A compression tee built to move like a second skin. Lightweight, elastic fabric wicks moisture fast and keeps you cool mid-workout, with UV protection built in for outdoor sessions. Whether it's the gym, the court, or a run, this is the layer you wear to perform in.",
-    details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Fit', value: 'Regular Fit' },
-      { label: 'Collar', value: 'Crew Neck' },
-      { label: 'Sleeve', value: 'Short Sleeve' },
-      { label: 'Closure', value: 'Pull On' },
-      { label: 'Care', value: 'Machine Wash' },
-    ],
-    reviews: [
-      { name: 'Darius L.', rating: 5, text: 'Fits perfect, moves with you. Been wearing it for every workout.' },
-      { name: 'Miguel S.', rating: 4, text: 'Solid compression fit, true to size, dries fast.' },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/new-compression-black-front.jpg',
-          '/images/products/new-compression-black-side.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/new-compression-white-front.jpg',
-          '/images/products/new-compression-white-side.jpg',
-        ],
-      },
-    ],
-  },
-  {
-    id: 11,
-    name: 'HWP Ball Sleeveless Compression',
-    price: '$35',
-    description: 'Hoop With Prezence.',
-    cardBlurb: 'Slim compression layer to wear under your jersey.',
-    about:
-      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
-    details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Collar', value: 'Crew Neck' },
-      { label: 'Fit', value: 'Slim Fit' },
-      { label: 'Length', value: 'Regular' },
-      { label: 'Fabric', value: 'Knitted' },
-    ],
-    reviews: [
-      { name: 'Elijah W.', rating: 5, text: 'Great layering piece, fits snug and true to size.' },
-      { name: 'Tony R.', rating: 4, text: 'Good quality, wish it came in more colors.' },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/undershirt-ball-black-front.jpg',
-          '/images/products/undershirt-ball-black-side.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/undershirt-ball-white-front.jpg',
-          '/images/products/undershirt-ball-white-side.jpg',
-        ],
-      },
-    ],
-  },
-  {
-    id: 12,
-    name: 'HWP Classic Sleeveless Compression',
-    price: '$35',
-    description: 'Hoop With Prezence.',
-    cardBlurb: 'Slim compression layer to wear under your jersey.',
-    about:
-      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
-    details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Collar', value: 'Crew Neck' },
-      { label: 'Fit', value: 'Slim Fit' },
-      { label: 'Length', value: 'Regular' },
-      { label: 'Fabric', value: 'Knitted' },
-    ],
-    reviews: [
-      { name: 'Bryce H.', rating: 5, text: 'Clean and simple, exactly what I wanted for layering.' },
-      { name: 'Omar F.', rating: 4, text: 'Comfortable fit, true to size.' },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/undershirt-wordmark-black-front.jpg',
-          '/images/products/undershirt-wordmark-black-side.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/undershirt-wordmark-white-front.jpg',
-          '/images/products/undershirt-wordmark-white-side.jpg',
-        ],
-      },
-    ],
-  },
-  {
-    id: 13,
-    name: 'HWP Sleeveless Compression',
-    price: '$35',
-    description: 'Hoop With Prezence.',
-    badge: 'New',
-    cardBlurb: 'Slim compression layer to wear under your jersey.',
-    about:
-      "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
-    details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Collar', value: 'Crew Neck' },
-      { label: 'Fit', value: 'Slim Fit' },
-      { label: 'Length', value: 'Regular' },
-      { label: 'Fabric', value: 'Knitted' },
-    ],
-    reviews: [
-      { name: 'Julian K.', rating: 5, text: "Love this one, it's my new go-to for training." },
-      { name: 'Devin C.', rating: 4, text: 'Solid fit and material, true to size.' },
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/undershirt-new-black-front.jpg',
-          '/images/products/undershirt-new-black-side.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/undershirt-new-white-front.jpg',
-          '/images/products/undershirt-new-white-side.jpg',
-        ],
-      },
-    ],
-  },
-  {
     id: 14,
     name: 'HWP Tee',
     price: '$25',
@@ -614,6 +585,35 @@ export const products: Product[] = [
         images: [
           '/images/products/tee-new-grey-front.jpg',
           '/images/products/tee-new-grey-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'HWP Logo Hoodie',
+    price: '$65',
+    description: 'Hoop With Prezence.',
+    comingSoon: true,
+    cardBlurb: 'Brushed fleece hoodie built for cold mornings.',
+    showsThirdPartyApparel: true,
+    about:
+      'An ultra-soft cotton-blend fleece hoodie with a brushed interior for extra warmth. Finished with a front kangaroo pocket and ribbed cuffs and hem for a comfortable, locked-in fit — built for cold mornings, travel days, or just staying cozy off the court.',
+    details: [
+      { label: 'Material', value: '80% Cotton / 20% Polyester' },
+      { label: 'Lining', value: 'Brushed Fleece' },
+      { label: 'Pocket', value: 'Front Kangaroo Pocket' },
+      { label: 'Cuffs/Hem', value: 'Ribbed' },
+      { label: 'Care', value: 'Machine Wash Cold, Tumble Dry Low' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Grey',
+        swatch: '#9CA3AF',
+        images: [
+          '/images/products/hoodie-grey-model-front.jpg',
+          '/images/products/hoodie-grey-print-close.jpg',
         ],
       },
     ],
