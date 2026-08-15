@@ -49,7 +49,6 @@ export const products: Product[] = [
       { label: 'Neck', value: 'Scoop Neck' },
       { label: 'Closure', value: 'Pull On' },
       { label: 'Care', value: 'Machine Wash' },
-      { label: 'Origin', value: 'Imported' },
     ],
     reviews: [
       { name: 'Marcus T.', rating: 5, text: "Wear this under my jersey every game. Doesn't ride up or get see-through when I sweat. Ordered a medium and it's snug in the right way." },
@@ -92,7 +91,6 @@ export const products: Product[] = [
       { label: 'Neck', value: 'Scoop Neck' },
       { label: 'Closure', value: 'Pull On' },
       { label: 'Care', value: 'Machine Wash' },
-      { label: 'Origin', value: 'Imported' },
     ],
     reviews: [
       { name: 'Nicole B.', rating: 5, text: 'Bought this for my mom, a survivor. She loves it, and being a limited run makes it feel special.' },
@@ -316,7 +314,6 @@ export const products: Product[] = [
       { label: 'Neck', value: 'Scoop Neck' },
       { label: 'Closure', value: 'Pull On' },
       { label: 'Care', value: 'Machine Wash' },
-      { label: 'Origin', value: 'Imported' },
     ],
     reviews: [
       { name: 'Trevor H.', rating: 5, text: "Wear this to every training session. Doesn't ride up and dries fast." },
@@ -387,7 +384,6 @@ export const products: Product[] = [
       { label: 'Neck', value: 'Scoop Neck' },
       { label: 'Closure', value: 'Pull On' },
       { label: 'Care', value: 'Machine Wash' },
-      { label: 'Origin', value: 'Imported' },
     ],
     reviews: [
       { name: 'Xavier B.', rating: 5, text: "Clean look, fits snug like a compression shirt should. This is my go-to for practice." },
