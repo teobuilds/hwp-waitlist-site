@@ -42,13 +42,14 @@ export const products: Product[] = [
     badge: 'Best Seller',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
-      "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
+      "Cut from 4-way stretch fabric that moves with you in every direction, this tank fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through long sessions — built for basketball, training, running, or whatever's next on the schedule.",
     details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Collar', value: 'O-Neck' },
-      { label: 'Fit', value: 'Slim Fit' },
-      { label: 'Length', value: 'Regular' },
-      { label: 'Fabric', value: 'Knitted' },
+      { label: 'Material', value: '90% Polyester / 10% Spandex' },
+      { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
+      { label: 'Neck', value: 'Scoop Neck' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+      { label: 'Origin', value: 'Imported' },
     ],
     reviews: [
       { name: 'Marcus T.', rating: 5, text: "Wear this under my jersey every game. Doesn't ride up or get see-through when I sweat. Ordered a medium and it's snug in the right way." },
@@ -307,13 +308,14 @@ export const products: Product[] = [
     description: 'Hoop With Prezence.',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
-      "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
+      "Cut from 4-way stretch fabric that moves with you in every direction, this tank fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through long sessions — built for basketball, training, running, or whatever's next on the schedule.",
     details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Collar', value: 'O-Neck' },
-      { label: 'Fit', value: 'Slim Fit' },
-      { label: 'Length', value: 'Regular' },
-      { label: 'Fabric', value: 'Knitted' },
+      { label: 'Material', value: '90% Polyester / 10% Spandex' },
+      { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
+      { label: 'Neck', value: 'Scoop Neck' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+      { label: 'Origin', value: 'Imported' },
     ],
     reviews: [
       { name: 'Trevor H.', rating: 5, text: "Wear this to every training session. Doesn't ride up and dries fast." },
@@ -377,13 +379,14 @@ export const products: Product[] = [
     badge: 'New',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
-      "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
+      "Cut from 4-way stretch fabric that moves with you in every direction, this tank fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through long sessions — built for basketball, training, running, or whatever's next on the schedule.",
     details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Collar', value: 'O-Neck' },
-      { label: 'Fit', value: 'Slim Fit' },
-      { label: 'Length', value: 'Regular' },
-      { label: 'Fabric', value: 'Knitted' },
+      { label: 'Material', value: '90% Polyester / 10% Spandex' },
+      { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
+      { label: 'Neck', value: 'Scoop Neck' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+      { label: 'Origin', value: 'Imported' },
     ],
     reviews: [
       { name: 'Xavier B.', rating: 5, text: "Clean look, fits snug like a compression shirt should. This is my go-to for practice." },
