@@ -85,13 +85,14 @@ export const products: Product[] = [
     badge: 'Limited Edition',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
     about:
-      "A sleeveless compression base layer built to move with you. Slim through the body with a clean O-neck, it's made to layer under a jersey or hoodie without adding bulk.",
+      "Cut from 4-way stretch fabric that moves with you in every direction, this tank fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through long sessions — built for basketball, training, running, or whatever's next on the schedule.",
     details: [
-      { label: 'Material', value: '85% Polyester / 15% Spandex' },
-      { label: 'Collar', value: 'O-Neck' },
-      { label: 'Fit', value: 'Slim Fit' },
-      { label: 'Length', value: 'Regular' },
-      { label: 'Fabric', value: 'Knitted' },
+      { label: 'Material', value: '90% Polyester / 10% Spandex' },
+      { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
+      { label: 'Neck', value: 'Scoop Neck' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Care', value: 'Machine Wash' },
+      { label: 'Origin', value: 'Imported' },
     ],
     reviews: [
       { name: 'Nicole B.', rating: 5, text: 'Bought this for my mom, a survivor. She loves it, and being a limited run makes it feel special.' },
