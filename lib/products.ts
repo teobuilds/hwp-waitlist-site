@@ -146,26 +146,24 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/classic-tee-black-model-front.jpg',
-          '/images/products/classic-tee-black-print-close.jpg',
-          '/images/products/classic-tee-black-back.jpg',
-          '/images/products/classic-tee-black-back-close.jpg',
+          '/images/products/tee-ball-black-front.jpg',
+          '/images/products/tee-ball-black-back.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/classic-tee-white-model-front.jpg',
-          '/images/products/classic-tee-white-back.jpg',
+          '/images/products/tee-ball-white-front.jpg',
+          '/images/products/tee-ball-white-back.jpg',
         ],
       },
       {
         name: 'Grey',
         swatch: '#9CA3AF',
         images: [
-          '/images/products/classic-tee-grey-model-front.jpg',
-          '/images/products/classic-tee-grey-back.jpg',
+          '/images/products/tee-ball-grey-front.jpg',
+          '/images/products/tee-ball-grey-back.jpg',
         ],
       },
     ],
@@ -176,7 +174,6 @@ export const products: Product[] = [
     price: '$25',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Soft tri-blend tee for gym days and lounging.',
-    showsThirdPartyApparel: true,
     about:
       "Built for whatever's on the agenda — workouts, errands, or a lounge-around day. This soft, lightweight tee is cut from a breathable tri-blend knit that moves with you and stays comfortable all day. Moisture-wicking and quick-drying, it keeps you cool at the gym and looks just as good with joggers on your day off.",
     details: [
@@ -198,24 +195,24 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/classic-tee-plain-black-model-front.jpg',
-          '/images/products/classic-tee-plain-black-print-close.jpg',
+          '/images/products/tee-wordmark-black-front.jpg',
+          '/images/products/tee-wordmark-black-side.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/classic-tee-plain-white-model-front-2.jpg',
-          '/images/products/classic-tee-plain-white-print-close.jpg',
+          '/images/products/tee-wordmark-white-front.jpg',
+          '/images/products/tee-wordmark-white-side.jpg',
         ],
       },
       {
         name: 'Grey',
         swatch: '#9CA3AF',
         images: [
-          '/images/products/classic-tee-plain-grey-model-front.jpg',
-          '/images/products/classic-tee-plain-grey-print-close.jpg',
+          '/images/products/tee-wordmark-grey-front.jpg',
+          '/images/products/tee-wordmark-grey-side.jpg',
         ],
       },
     ],
@@ -568,6 +565,55 @@ export const products: Product[] = [
         images: [
           '/images/products/undershirt-new-white-front.jpg',
           '/images/products/undershirt-new-white-side.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 14,
+    name: 'HWP New Classic Tee',
+    price: '$25',
+    description: 'Hoop With Prezence.',
+    badge: 'New',
+    cardBlurb: 'Soft tri-blend tee for gym days and lounging.',
+    about:
+      "Built for whatever's on the agenda — workouts, errands, or a lounge-around day. This soft, lightweight tee is cut from a breathable tri-blend knit that moves with you and stays comfortable all day. Moisture-wicking and quick-drying, it keeps you cool at the gym and looks just as good with joggers on your day off.",
+    details: [
+      { label: 'Material', value: '50% Polyester / 25% Cotton / 25% Rayon' },
+      { label: 'Collar', value: 'Crewneck' },
+      { label: 'Fit', value: 'Active' },
+      { label: 'Sleeve', value: 'Short Sleeve' },
+      { label: 'Closure', value: 'Pullover' },
+      { label: 'Care', value: 'Machine Wash' },
+    ],
+    reviews: [
+      { name: 'Cole R.', rating: 5, text: 'Love this design, clean and simple.' },
+      { name: 'Anthony V.', rating: 4, text: 'Soft material, fits true to size.' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Black',
+        swatch: '#1A1A1A',
+        images: [
+          '/images/products/tee-new-black-front.jpg',
+          '/images/products/tee-new-black-side.jpg',
+        ],
+      },
+      {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/tee-new-white-front.jpg',
+          '/images/products/tee-new-white-side.jpg',
+        ],
+      },
+      {
+        name: 'Grey',
+        swatch: '#9CA3AF',
+        images: [
+          '/images/products/tee-new-grey-front.jpg',
+          '/images/products/tee-new-grey-side.jpg',
         ],
       },
     ],
