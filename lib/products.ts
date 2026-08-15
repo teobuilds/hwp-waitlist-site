@@ -40,9 +40,9 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     badge: 'Best Seller',
-    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
-      "Cut from 4-way stretch fabric that moves with you in every direction, this tank fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through long sessions — built for basketball, training, running, or whatever's next on the schedule.",
+      "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
     details: [
       { label: 'Material', value: '90% Polyester / 10% Spandex' },
       { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
@@ -51,10 +51,10 @@ export const products: Product[] = [
       { label: 'Care', value: 'Machine Wash' },
     ],
     reviews: [
-      { name: 'Marcus T.', rating: 5, text: "Wear this under my jersey every game. Doesn't ride up or get see-through when I sweat. Ordered a medium and it's snug in the right way." },
+      { name: 'Marcus T.', rating: 5, text: "Wear this every time I go get shots up. Doesn't ride up or get see-through when I sweat. Ordered a medium and it's snug in the right way." },
       { name: 'Jordan K.', rating: 4, text: 'Good quality for the price. Fits true to size — just wish delivery was a bit quicker.' },
-      { name: 'DeShawn R.', rating: 5, text: "Finally a compression shirt that doesn't dig into my armpits. Wearing it 3x a week for training." },
-      { name: 'Alex P.', rating: 4, text: 'Solid layering piece. Wish it came in more colors but the fit is exactly what I wanted.' },
+      { name: 'DeShawn R.', rating: 5, text: "Finally a tank that doesn't dig into my armpits. Wearing it 3x a week for training." },
+      { name: 'Alex P.', rating: 4, text: 'Solid tank for the gym. Wish it came in more colors but the fit is exactly what I wanted.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -82,9 +82,9 @@ export const products: Product[] = [
     price: '$35',
     description: 'Breast Cancer Awareness Edition.',
     badge: 'Limited Edition',
-    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
-      "Cut from 4-way stretch fabric that moves with you in every direction, this tank fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through long sessions — built for basketball, training, running, or whatever's next on the schedule.",
+      "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
     details: [
       { label: 'Material', value: '90% Polyester / 10% Spandex' },
       { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
@@ -305,9 +305,9 @@ export const products: Product[] = [
     name: 'HWP Classic Tank',
     price: '$35',
     description: 'Hoop With Prezence.',
-    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
-      "Cut from 4-way stretch fabric that moves with you in every direction, this tank fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through long sessions — built for basketball, training, running, or whatever's next on the schedule.",
+      "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
     details: [
       { label: 'Material', value: '90% Polyester / 10% Spandex' },
       { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
@@ -318,7 +318,7 @@ export const products: Product[] = [
     reviews: [
       { name: 'Trevor H.', rating: 5, text: "Wear this to every training session. Doesn't ride up and dries fast." },
       { name: 'Diego R.', rating: 4, text: 'Comfortable fit, true to size, good for training. Took a little longer to ship than I expected.' },
-      { name: 'Malik S.', rating: 5, text: 'Great for layering under a hoodie in the winter.' },
+      { name: 'Malik S.', rating: 5, text: 'Great for pickup games at the park, keeps me cool the whole time.' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -375,9 +375,9 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     badge: 'New',
-    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
-      "Cut from 4-way stretch fabric that moves with you in every direction, this tank fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through long sessions — built for basketball, training, running, or whatever's next on the schedule.",
+      "Built for the gym, pickup runs, and getting shots up, this tank moves with you thanks to 4-way stretch fabric that fits close to the body for a second-skin feel. A moisture-wicking construction sweeps sweat away and dries fast, with flat-lock seams that stay chafe-free through every rep.",
     details: [
       { label: 'Material', value: '90% Polyester / 10% Spandex' },
       { label: 'Fit', value: 'Compression, Slim Fit, Stretch' },
@@ -456,7 +456,7 @@ export const products: Product[] = [
     name: 'HWP Ball Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
-    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    cardBlurb: 'Slim compression layer to wear under your jersey.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
@@ -495,7 +495,7 @@ export const products: Product[] = [
     name: 'HWP Classic Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
-    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    cardBlurb: 'Slim compression layer to wear under your jersey.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
@@ -535,7 +535,7 @@ export const products: Product[] = [
     price: '$35',
     description: 'Hoop With Prezence.',
     badge: 'New',
-    cardBlurb: 'Slim sleeveless layer for training and layering.',
+    cardBlurb: 'Slim compression layer to wear under your jersey.',
     about:
       "A sleeveless compression base layer built to move with you. Slim through the body with a clean crew neck, it's made to layer under a jersey or hoodie without adding bulk.",
     details: [
