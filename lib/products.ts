@@ -36,7 +36,7 @@ export type Product = {
 export const products: Product[] = [
   {
     id: 7,
-    name: 'HWP Ball Sleeveless Compression',
+    name: 'HWP Ball Tank',
     price: '$35',
     description: 'Hoop With Prezence.',
     badge: 'Best Seller',
@@ -119,7 +119,7 @@ export const products: Product[] = [
   },
   {
     id: 1,
-    name: 'HWP Ball Classic Tee',
+    name: 'HWP Ball Tee',
     price: '$25',
     description: 'Train with intention.',
     cardBlurb: 'Soft tri-blend tee for gym days and lounging.',
@@ -261,7 +261,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: 'HWP Compression Shirt',
+    name: 'HWP Classic Compression Shirt',
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Compression fit that wicks moisture mid-workout.',
@@ -302,7 +302,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: 'HWP Sleeveless Compression',
+    name: 'HWP Classic Tank',
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
@@ -371,7 +371,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: 'HWP New Sleeveless Compression',
+    name: 'HWP Tank',
     price: '$35',
     description: 'Hoop With Prezence.',
     badge: 'New',
@@ -412,7 +412,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    name: 'HWP New Compression Shirt',
+    name: 'HWP Compression Shirt',
     price: '$35',
     description: 'Hoop With Prezence.',
     badge: 'New',
@@ -453,7 +453,7 @@ export const products: Product[] = [
   },
   {
     id: 11,
-    name: 'Undershirt HWP Ball',
+    name: 'HWP Ball Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
@@ -492,7 +492,7 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    name: 'Undershirt HWP',
+    name: 'HWP Classic Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Slim sleeveless layer for training and layering.',
@@ -531,7 +531,7 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    name: 'Undershirt HWP New',
+    name: 'HWP Sleeveless Compression',
     price: '$35',
     description: 'Hoop With Prezence.',
     badge: 'New',
@@ -571,7 +571,7 @@ export const products: Product[] = [
   },
   {
     id: 14,
-    name: 'HWP New Classic Tee',
+    name: 'HWP Tee',
     price: '$25',
     description: 'Hoop With Prezence.',
     badge: 'New',
