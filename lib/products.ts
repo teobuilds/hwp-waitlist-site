@@ -3,6 +3,7 @@ export type ProductColor = {
   swatch: string;
   images: string[];
   inStock?: boolean;
+  outOfStockSizes?: string[];
 };
 
 export type ProductSpec = {
@@ -63,6 +64,7 @@ export const products: Product[] = [
           '/images/products/undershirt-ball-black-front.jpg',
           '/images/products/undershirt-ball-black-side.jpg',
         ],
+        outOfStockSizes: ['S', 'XL', 'XXL'],
       },
       {
         name: 'White',
@@ -71,6 +73,7 @@ export const products: Product[] = [
           '/images/products/undershirt-ball-white-front.jpg',
           '/images/products/undershirt-ball-white-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
     ],
   },
@@ -104,6 +107,7 @@ export const products: Product[] = [
           '/images/products/limited-black-model-front-v2.jpg',
           '/images/products/limited-black-model-side-v2.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
       {
         name: 'White',
@@ -112,6 +116,7 @@ export const products: Product[] = [
           '/images/products/limited-white-model-front-v2.jpg',
           '/images/products/limited-white-model-side-v2.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
     ],
   },
@@ -146,6 +151,7 @@ export const products: Product[] = [
           '/images/products/ball-compression-black-model-front-v2.jpg',
           '/images/products/ball-compression-black-model-side-v2.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
       {
         name: 'White',
@@ -154,6 +160,7 @@ export const products: Product[] = [
           '/images/products/ball-compression-white-model-front.jpg',
           '/images/products/ball-compression-white-model-side.jpg',
         ],
+        inStock: false,
       },
     ],
   },
@@ -186,6 +193,7 @@ export const products: Product[] = [
           '/images/products/compression-black-model-front-v2.jpg',
           '/images/products/compression-black-model-side-v2.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
       {
         name: 'White',
@@ -228,6 +236,7 @@ export const products: Product[] = [
           '/images/products/new-compression-black-front.jpg',
           '/images/products/new-compression-black-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
       {
         name: 'White',
@@ -236,6 +245,7 @@ export const products: Product[] = [
           '/images/products/new-compression-white-front.jpg',
           '/images/products/new-compression-white-side.jpg',
         ],
+        inStock: false,
       },
     ],
   },
@@ -268,6 +278,7 @@ export const products: Product[] = [
           '/images/products/undershirt-new-black-front.jpg',
           '/images/products/undershirt-new-black-side.jpg',
         ],
+        outOfStockSizes: ['S', 'XL', 'XXL'],
       },
       {
         name: 'White',
@@ -276,6 +287,7 @@ export const products: Product[] = [
           '/images/products/undershirt-new-white-front.jpg',
           '/images/products/undershirt-new-white-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
     ],
   },
@@ -307,6 +319,7 @@ export const products: Product[] = [
           '/images/products/undershirt-wordmark-black-front.jpg',
           '/images/products/undershirt-wordmark-black-side.jpg',
         ],
+        outOfStockSizes: ['S', 'XL', 'XXL'],
       },
       {
         name: 'White',
@@ -315,6 +328,7 @@ export const products: Product[] = [
           '/images/products/undershirt-wordmark-white-front.jpg',
           '/images/products/undershirt-wordmark-white-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
     ],
   },
@@ -348,6 +362,7 @@ export const products: Product[] = [
           '/images/products/tank-ball-black-front.jpg',
           '/images/products/tank-ball-black-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
       {
         name: 'White',
@@ -356,6 +371,7 @@ export const products: Product[] = [
           '/images/products/ball-sleeveless-white-model-front-v2.jpg',
           '/images/products/ball-sleeveless-white-model-side-v2.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
     ],
   },
@@ -389,6 +405,7 @@ export const products: Product[] = [
           '/images/products/tank-new-black-front.jpg',
           '/images/products/tank-new-black-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
       {
         name: 'White',
@@ -397,6 +414,7 @@ export const products: Product[] = [
           '/images/products/sleeveless-white-wordmark-front.jpg',
           '/images/products/sleeveless-white-wordmark-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
     ],
   },
@@ -429,6 +447,7 @@ export const products: Product[] = [
           '/images/products/tank-wordmark-black-front.jpg',
           '/images/products/tank-wordmark-black-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
       {
         name: 'White',
@@ -437,6 +456,7 @@ export const products: Product[] = [
           '/images/products/tank-wordmark-white-front.jpg',
           '/images/products/tank-wordmark-white-side.jpg',
         ],
+        outOfStockSizes: ['XL', 'XXL'],
       },
     ],
   },

@@ -225,7 +225,9 @@ function ProductDetailContent({ productId }: { productId: number }) {
   }
 
   const images = product.colors ? selectedColor?.images ?? [] : product.image ? [product.image] : [];
-  const isOutOfStock = selectedColor?.inStock === false;
+  const isColorOutOfStock = selectedColor?.inStock === false;
+  const isSelectedSizeOutOfStock = !!selectedSize && !!selectedColor?.outOfStockSizes?.includes(selectedSize);
+  const isOutOfStock = isColorOutOfStock || isSelectedSizeOutOfStock;
   const isComingSoon = product.comingSoon === true;
   const favorited = isFavorite(product.id, selectedColor?.name, selectedSize);
 
@@ -383,24 +385,27 @@ function ProductDetailContent({ productId }: { productId: number }) {
             <div>
               <p className="text-[14px] md:text-[15px] mb-2" style={{ color: '#171717', fontWeight: 600 }}>Select Size</p>
               <div className="grid grid-cols-3 gap-2">
-                {product.sizes.map(size => (
-                  <button
-                    key={size}
-                    onClick={() => !isOutOfStock && setSelectedSize(size)}
-                    disabled={isOutOfStock}
-                    className="relative rounded-lg border py-3 text-[14px] md:text-[15px] transition-colors"
-                    style={{
-                      borderColor: isOutOfStock ? '#E5E5E5' : selectedSize === size ? '#AF94E0' : '#E5E5E5',
-                      color: isOutOfStock ? '#CCCCCC' : selectedSize === size ? '#AF94E0' : '#171717',
-                      fontWeight: 600,
-                      backgroundColor: isOutOfStock ? '#FAFAFA' : undefined,
-                      cursor: isOutOfStock ? 'not-allowed' : 'pointer',
-                      textDecoration: isOutOfStock ? 'line-through' : undefined,
-                    }}
-                  >
-                    {size}
-                  </button>
-                ))}
+                {product.sizes.map(size => {
+                  const sizeUnavailable = isColorOutOfStock || !!selectedColor?.outOfStockSizes?.includes(size);
+                  return (
+                    <button
+                      key={size}
+                      onClick={() => !sizeUnavailable && setSelectedSize(size)}
+                      disabled={sizeUnavailable}
+                      className="relative rounded-lg border py-3 text-[14px] md:text-[15px] transition-colors"
+                      style={{
+                        borderColor: sizeUnavailable ? '#E5E5E5' : selectedSize === size ? '#AF94E0' : '#E5E5E5',
+                        color: sizeUnavailable ? '#CCCCCC' : selectedSize === size ? '#AF94E0' : '#171717',
+                        fontWeight: 600,
+                        backgroundColor: sizeUnavailable ? '#FAFAFA' : undefined,
+                        cursor: sizeUnavailable ? 'not-allowed' : 'pointer',
+                        textDecoration: sizeUnavailable ? 'line-through' : undefined,
+                      }}
+                    >
+                      {size}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
