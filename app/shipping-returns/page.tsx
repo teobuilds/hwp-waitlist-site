@@ -29,7 +29,7 @@ export default function ShippingReturnsPage() {
 
           <div>
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={{ color: '#171717', fontWeight: 700, letterSpacing: '-0.02em' }}>Questions?</h2>
-            <p>Reach out to us at <a href="mailto:hoopwithprezence@gmail.com" className="underline" style={{ color: '#AF94E0' }}>hoopwithprezence@gmail.com</a> and we&apos;ll get back to you as soon as we can.</p>
+            <p>Reach out to us at <a href="mailto:returns@hoopwithprezence.com" className="underline" style={{ color: '#AF94E0' }}>returns@hoopwithprezence.com</a> and we&apos;ll get back to you as soon as we can.</p>
           </div>
         </div>
       </section>

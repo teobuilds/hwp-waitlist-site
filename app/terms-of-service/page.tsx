@@ -124,7 +124,7 @@ export default function TermsOfServicePage() {
 
           <div>
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={h2}>19. Contact Us</h2>
-            <p>Questions about these Terms: <a href="mailto:hoopwithprezence@gmail.com" className="underline" style={link}>hoopwithprezence@gmail.com</a></p>
+            <p>Questions about these Terms: <a href="mailto:info@hoopwithprezence.com" className="underline" style={link}>info@hoopwithprezence.com</a></p>
           </div>
         </div>
       </section>

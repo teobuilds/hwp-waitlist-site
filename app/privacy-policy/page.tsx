@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={h2}>6. Your Rights</h2>
-            <p>You may contact us at <a href="mailto:hoopwithprezence@gmail.com" className="underline" style={link}>hoopwithprezence@gmail.com</a> to:</p>
+            <p>You may contact us at <a href="mailto:privacy@hoopwithprezence.com" className="underline" style={link}>privacy@hoopwithprezence.com</a> to:</p>
             <ul className="list-disc pl-5 mt-1 flex flex-col gap-1">
               <li>Request a copy of the personal information we hold about you</li>
               <li>Request correction of inaccurate information</li>
@@ -90,7 +90,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={h2}>9. Contact Us</h2>
-            <p>Questions about this policy: <a href="mailto:hoopwithprezence@gmail.com" className="underline" style={link}>hoopwithprezence@gmail.com</a></p>
+            <p>Questions about this policy: <a href="mailto:privacy@hoopwithprezence.com" className="underline" style={link}>privacy@hoopwithprezence.com</a></p>
           </div>
         </div>
       </section>

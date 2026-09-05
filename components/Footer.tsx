@@ -20,7 +20,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-2 md:gap-2.5 col-span-2 md:col-span-1">
           <h3 className="text-[12px] md:text-[14px] mb-1" style={{ color: '#171717', fontWeight: 700 }}>Contact</h3>
-          <a href="mailto:hoopwithprezence@gmail.com" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>hoopwithprezence@gmail.com</a>
+          <a href="mailto:hello@hoopwithprezence.com" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>hello@hoopwithprezence.com</a>
         </div>
       </div>
     </footer>
