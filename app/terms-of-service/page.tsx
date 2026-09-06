@@ -19,7 +19,7 @@ export default function TermsOfServicePage() {
         <div className="flex flex-col gap-6 md:gap-8 text-[13px] md:text-[15px]" style={body}>
           <div>
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={h2}>Overview</h2>
-            <p>These Terms of Service (&ldquo;Terms&rdquo;) govern your use of hoopwithprezence.com (the &ldquo;Site&rdquo;) and any purchases made through it. Hoop With Prezence (&ldquo;HWP,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is based in Virginia, USA. By visiting the Site and/or making a purchase, you agree to be bound by these Terms. If you do not agree, you may not use the Site.</p>
+            <p>These Terms of Service (&ldquo;Terms&rdquo;) govern your use of hoopwithprezence.com (the &ldquo;Site&rdquo;) and any purchases made through it. The Site is operated by Hoop With Prezence LLC (&ldquo;HWP,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), a limited liability company based in Virginia, USA. By visiting the Site and/or making a purchase, you agree to be bound by these Terms. If you do not agree, you may not use the Site.</p>
             <p className="mt-2">We may update these Terms at any time by posting changes to this page. Continued use of the Site after changes are posted constitutes acceptance of those changes.</p>
           </div>
 

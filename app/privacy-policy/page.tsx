@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
         <p className="text-center mb-6 md:mb-8 text-[11px] md:text-[13px]" style={{ color: '#999999', fontWeight: 500 }}>Last updated: August 1, 2026</p>
 
         <div className="flex flex-col gap-6 md:gap-8 text-[13px] md:text-[15px]" style={body}>
-          <p>Hoop With Prezence (&ldquo;HWP,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates hoopwithprezence.com (the &ldquo;Site&rdquo;). This Privacy Policy explains what information we collect, how we use it, and your choices regarding that information.</p>
+          <p>Hoop With Prezence LLC (&ldquo;HWP,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates hoopwithprezence.com (the &ldquo;Site&rdquo;). This Privacy Policy explains what information we collect, how we use it, and your choices regarding that information.</p>
 
           <div>
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={h2}>1. Information We Collect</h2>
