@@ -45,7 +45,7 @@ export default function ConfirmedPage() {
               href="https://testflight.apple.com/join/88YhmmVF"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-pill-filled inline-block px-6 py-2 text-[13px] md:text-[14px]"
+              className="btn-pill-filled-light inline-block px-6 py-2 text-[13px] md:text-[14px]"
             >
               Join the Beta
             </a>
@@ -77,7 +77,7 @@ export default function ConfirmedPage() {
             <div key={step.n} className="flex gap-3">
               <div
                 className="shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-white text-[13px] md:text-[14px]"
-                style={{ background: '#7956B9', fontWeight: 700 }}
+                style={{ background: '#AF94E0', fontWeight: 700 }}
               >
                 {step.n}
               </div>
