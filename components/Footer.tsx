@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="max-w-3xl mx-auto mt-8 md:mt-10 text-[10px] md:text-[11px] text-center" style={{ color: '#999999', fontWeight: 500 }}>
-        &copy; {new Date().getFullYear()} Hoop With Prezence LLC. All rights reserved.
+        &copy; {new Date().getFullYear()} Hoop With Prezence, LLC. All rights reserved.
       </p>
     </footer>
   );
