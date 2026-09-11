@@ -86,6 +86,9 @@ export default function WaitlistPage() {
                 else if (digits.length > 3) formatted = `${digits.slice(0,3)}-${digits.slice(3)}`;
                 setForm({ ...form, phone: formatted });
               }}
+              required
+              pattern="\d{3}-\d{3}-\d{4}"
+              title="Enter a valid 10-digit phone number"
               className="px-4 py-2 md:py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF94E0] text-[14px] md:text-base"
             />
           </div>
