@@ -64,7 +64,7 @@ export default function ConfirmedPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      <section className="flex flex-col items-center text-center px-6 pt-10 pb-16 md:pt-40 md:pb-20">
+      <section className="flex flex-col items-center text-center px-6 pt-24 pb-16 md:pt-40 md:pb-20">
         <h1 className="text-[24px] md:text-[40px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           You&apos;re in!
         </h1>
