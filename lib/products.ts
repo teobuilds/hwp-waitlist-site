@@ -38,7 +38,7 @@ export const products: Product[] = [
   {
     id: 11,
     name: 'HWP Ball Sleeveless Compression',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     badge: 'Best Seller',
     cardBlurb: 'Slim compression layer to wear under your jersey.',
@@ -80,7 +80,7 @@ export const products: Product[] = [
   {
     id: 8,
     name: 'Breast Cancer Awareness',
-    price: '$35',
+    price: '$30',
     description: 'Breast Cancer Awareness Edition.',
     badge: 'Limited Edition',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
@@ -123,7 +123,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: 'HWP Ball Compression Shirt',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Compression fit that wicks moisture mid-workout.',
     about:
@@ -167,7 +167,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: 'HWP Classic Compression Shirt',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Compression fit that wicks moisture mid-workout.',
     about:
@@ -209,7 +209,7 @@ export const products: Product[] = [
   {
     id: 10,
     name: 'HWP Compression Shirt',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     badge: 'New',
     cardBlurb: 'Compression fit that wicks moisture mid-workout.',
@@ -252,7 +252,7 @@ export const products: Product[] = [
   {
     id: 13,
     name: 'HWP Sleeveless Compression',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     badge: 'New',
     cardBlurb: 'Slim compression layer to wear under your jersey.',
@@ -294,7 +294,7 @@ export const products: Product[] = [
   {
     id: 12,
     name: 'HWP Classic Sleeveless Compression',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Slim compression layer to wear under your jersey.',
     about:
@@ -335,7 +335,7 @@ export const products: Product[] = [
   {
     id: 7,
     name: 'HWP Ball Tank',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
@@ -378,7 +378,7 @@ export const products: Product[] = [
   {
     id: 9,
     name: 'HWP Tank',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     badge: 'New',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
@@ -421,7 +421,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: 'HWP Classic Tank',
-    price: '$35',
+    price: '$30',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
