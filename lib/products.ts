@@ -80,7 +80,7 @@ export const products: Product[] = [
   {
     id: 8,
     name: 'Breast Cancer Awareness',
-    price: '$30',
+    price: '$35',
     description: 'Breast Cancer Awareness Edition.',
     badge: 'Limited Edition',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
