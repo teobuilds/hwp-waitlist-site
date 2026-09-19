@@ -25,7 +25,7 @@ const ROTATION_IMAGES = [
   '/images/rotation/rotation-10.jpg',
 ];
 
-const ROTATION_INTERVAL_MS = 3500;
+const ROTATION_INTERVAL_MS = 1500;
 
 export default function RotationBanner() {
   const [activeIndex, setActiveIndex] = useState(0);
