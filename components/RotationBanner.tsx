@@ -5,14 +5,23 @@ import { useEffect, useState } from 'react';
 
 const ROTATION_IMAGES = [
   '/images/rotation/rotation-1.jpg',
+  '/images/rotation/rotation-11.jpg',
   '/images/rotation/rotation-2.jpg',
+  '/images/rotation/rotation-12.jpg',
   '/images/rotation/rotation-3.jpg',
+  '/images/rotation/rotation-13.jpg',
   '/images/rotation/rotation-4.jpg',
+  '/images/rotation/rotation-14.jpg',
   '/images/rotation/rotation-5.jpg',
+  '/images/rotation/rotation-15.jpg',
   '/images/rotation/rotation-6.jpg',
+  '/images/rotation/rotation-16.jpg',
   '/images/rotation/rotation-7.jpg',
+  '/images/rotation/rotation-17.jpg',
   '/images/rotation/rotation-8.jpg',
+  '/images/rotation/rotation-18.jpg',
   '/images/rotation/rotation-9.jpg',
+  '/images/rotation/rotation-19.jpg',
   '/images/rotation/rotation-10.jpg',
 ];
 
