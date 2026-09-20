@@ -39,7 +39,10 @@ export async function POST(req: NextRequest) {
       currency: session.currency ?? 'usd',
     }]);
 
-    if (error && error.code !== '23505') {
+    if (error?.code === '23505') {
+      return NextResponse.json({ received: true });
+    }
+    if (error) {
       return NextResponse.json({ error: 'Failed to record order' }, { status: 500 });
     }
 
