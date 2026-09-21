@@ -504,6 +504,7 @@ export const products: Product[] = [
       {
         name: 'Grey',
         swatch: '#9CA3AF',
+        inStock: false,
         images: [
           '/images/products/tee-ball-grey-front.jpg',
           '/images/products/tee-ball-grey-back.jpg',
@@ -553,6 +554,7 @@ export const products: Product[] = [
       {
         name: 'Grey',
         swatch: '#9CA3AF',
+        inStock: false,
         images: [
           '/images/products/tee-wordmark-grey-front.jpg',
           '/images/products/tee-wordmark-grey-side.jpg',
@@ -602,6 +604,7 @@ export const products: Product[] = [
       {
         name: 'Grey',
         swatch: '#9CA3AF',
+        inStock: false,
         images: [
           '/images/products/tee-new-grey-front.jpg',
           '/images/products/tee-new-grey-side.jpg',
