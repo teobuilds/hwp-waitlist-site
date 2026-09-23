@@ -116,7 +116,7 @@ function ProductCard({ product }: { product: Product }) {
                       style={{
                         width: '150%',
                         height: 2,
-                        backgroundColor: '#999999',
+                        backgroundColor: '#EA580C',
                         transform: 'translate(-50%, -50%) rotate(45deg)',
                       }}
                     />
