@@ -349,17 +349,31 @@ function ProductDetailContent({ productId }: { productId: number }) {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {product.colors.map(color => (
-                    <button
-                      key={color.name}
-                      onClick={() => selectColor(color)}
-                      aria-label={color.name}
-                      title={color.name}
-                      className="w-9 h-9 rounded-full transition-shadow"
-                      style={{
-                        backgroundColor: color.swatch,
-                        boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #AF94E0' : '0 0 0 1px #E5E5E5',
-                      }}
-                    />
+                    <div key={color.name} className="relative w-9 h-9">
+                      <button
+                        onClick={() => selectColor(color)}
+                        aria-label={color.name}
+                        title={color.inStock === false ? `${color.name} (Sold Out)` : color.name}
+                        className="w-9 h-9 rounded-full transition-shadow"
+                        style={{
+                          backgroundColor: color.swatch,
+                          boxShadow: selectedColor?.name === color.name ? '0 0 0 2px white, 0 0 0 4px #AF94E0' : '0 0 0 1px #E5E5E5',
+                        }}
+                      />
+                      {color.inStock === false && (
+                        <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+                          <div
+                            className="absolute top-1/2 left-1/2"
+                            style={{
+                              width: '150%',
+                              height: 2,
+                              backgroundColor: '#EA580C',
+                              transform: 'translate(-50%, -50%) rotate(45deg)',
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
