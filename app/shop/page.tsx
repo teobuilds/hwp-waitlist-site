@@ -10,6 +10,7 @@ import FavoriteButton from '@/components/FavoriteButton';
 import RotationBanner from '@/components/RotationBanner';
 import { products, type Product, type ProductColor } from '@/lib/products';
 import { useFavorites } from '@/lib/favorites-context';
+import { FREE_SHIPPING_THRESHOLD } from '@/lib/shipping';
 
 function ProductCard({ product }: { product: Product }) {
   const router = useRouter();
@@ -159,7 +160,8 @@ function ShopContent() {
       <Navbar />
       <section className="pt-20 pb-10 md:pt-24 md:pb-8 px-3 md:px-6 max-w-3xl mx-auto">
         <h1 className="text-center mb-1 text-[20px] md:text-[32px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>Shop</h1>
-        <p className="text-center mb-4 md:mb-6 text-[11px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Hoop with Prezence, on and off the court.</p>
+        <p className="text-center mb-1 text-[11px] md:text-[16px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>Hoop with Prezence, on and off the court.</p>
+        <p className="text-center mb-4 md:mb-6 text-[10px] md:text-[14px]" style={{ color: '#EA580C', fontWeight: 700, letterSpacing: '-0.01em' }}>Free shipping on orders ${FREE_SHIPPING_THRESHOLD}+</p>
 
         <div className="grid grid-cols-2 gap-2.5 md:gap-4">
           <RotationBanner />

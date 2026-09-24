@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { FREE_SHIPPING_THRESHOLD, SHIPPING_FEE } from '@/lib/shipping';
 
 export default function ShippingReturnsPage() {
   return (
@@ -13,7 +14,7 @@ export default function ShippingReturnsPage() {
         <div className="flex flex-col gap-6 md:gap-8 text-[13px] md:text-[15px]" style={{ color: '#404040', fontWeight: 500, lineHeight: 1.5 }}>
           <div>
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={{ color: '#171717', fontWeight: 700, letterSpacing: '-0.02em' }}>Shipping</h2>
-            <p>We currently ship within the United States only. Standard shipping is a flat $5.99, and free on orders of $65 or more. Orders are packed and shipped within 3-5 business days, with delivery typically taking 3-7 business days after that depending on your location.</p>
+            <p>We currently ship within the United States only. Standard shipping is a flat ${SHIPPING_FEE}, and free on orders of ${FREE_SHIPPING_THRESHOLD} or more. Orders are packed and shipped within 3-5 business days, with delivery typically taking 3-7 business days after that depending on your location.</p>
           </div>
 
           <div>
