@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useCart } from '@/lib/cart-context';
 import { FREE_SHIPPING_THRESHOLD } from '@/lib/shipping';
+import Price from '@/components/Price';
+import { getProduct } from '@/lib/products';
 
 function FreeShippingBar({ subtotal }: { subtotal: number }) {
   const remaining = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
@@ -121,7 +123,7 @@ export default function CartDrawer() {
                           +
                         </button>
                       </div>
-                      <p className="text-[14px]" style={{ color: '#AF94E0', fontWeight: 700 }}>{item.price}</p>
+                      <Price price={item.price} compareAtPrice={getProduct(item.productId)?.compareAtPrice} className="text-[14px]" />
                     </div>
                     <button
                       onClick={() => removeItem(item.productId, item.color, item.size)}

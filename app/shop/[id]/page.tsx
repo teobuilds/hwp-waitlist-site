@@ -6,6 +6,7 @@ import { notFound, useSearchParams } from 'next/navigation';
 import { Suspense, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import FavoriteButton from '@/components/FavoriteButton';
+import Price from '@/components/Price';
 import { getProduct, products, type ProductColor, type ProductSpec, type ProductReview } from '@/lib/products';
 import { useCart } from '@/lib/cart-context';
 import { useFavorites } from '@/lib/favorites-context';
@@ -171,7 +172,7 @@ function RelatedProducts({ currentId }: { currentId: number }) {
               </div>
               <div className="p-2.5 md:p-3">
                 <p className="text-[12px] md:text-[14px] leading-tight" style={{ color: '#AF94E0', fontWeight: 700 }}>{product.name}</p>
-                <p className="text-[12px] md:text-[13px] mt-0.5" style={{ color: '#AF94E0', fontWeight: 700 }}>{product.price}</p>
+                <Price price={product.price} compareAtPrice={product.compareAtPrice} className="text-[12px] md:text-[13px] mt-0.5" />
               </div>
             </Link>
           );
@@ -340,7 +341,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
                 className="shrink-0"
               />
             </div>
-            <p className="text-[22px] md:text-[26px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
+            <Price price={product.price} compareAtPrice={product.compareAtPrice} className="text-[22px] md:text-[26px]" style={{ letterSpacing: '-0.02em' }} />
 
             {product.colors && (
               <div>

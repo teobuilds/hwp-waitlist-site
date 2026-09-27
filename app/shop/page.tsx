@@ -11,6 +11,7 @@ import RotationBanner from '@/components/RotationBanner';
 import { products, type Product, type ProductColor } from '@/lib/products';
 import { useFavorites } from '@/lib/favorites-context';
 import { FREE_SHIPPING_THRESHOLD } from '@/lib/shipping';
+import Price from '@/components/Price';
 
 function ProductCard({ product }: { product: Product }) {
   const router = useRouter();
@@ -94,7 +95,7 @@ function ProductCard({ product }: { product: Product }) {
         {product.cardBlurb && (
           <p className="text-[10px] md:text-[14px]" style={{ color: '#999999', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{product.cardBlurb}</p>
         )}
-        <p className="text-[12px] md:text-[16px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.02em' }}>{product.price}</p>
+        <Price price={product.price} compareAtPrice={product.compareAtPrice} className="text-[12px] md:text-[16px]" style={{ letterSpacing: '-0.02em' }} />
 
         {product.colors && (
           <div className="flex flex-wrap gap-2.5 md:gap-1.5 mt-1 items-center">

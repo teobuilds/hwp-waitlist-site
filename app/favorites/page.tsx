@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 import Navbar from '@/components/Navbar';
 import FavoriteButton from '@/components/FavoriteButton';
+import Price from '@/components/Price';
 import { useFavorites } from '@/lib/favorites-context';
 import { getProduct } from '@/lib/products';
 
@@ -80,9 +81,7 @@ function FavoritesContent() {
                         {[fav.color, fav.size].filter(Boolean).join(' / ')}
                       </p>
                     )}
-                    <p className="text-[12px] md:text-[16px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.02em' }}>
-                      {product.price}
-                    </p>
+                    <Price price={product.price} compareAtPrice={product.compareAtPrice} className="text-[12px] md:text-[16px]" style={{ letterSpacing: '-0.02em' }} />
                   </div>
                 </Link>
               );

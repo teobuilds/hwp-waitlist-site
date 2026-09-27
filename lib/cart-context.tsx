@@ -1,5 +1,6 @@
 'use client';
 
+import { getProduct } from './products';
 import { createContext, useContext, useEffect, useState, useCallback, ReactNode } from 'react';
 
 export type CartItem = {
@@ -41,7 +42,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) setItems(JSON.parse(raw));
+      if (raw) {
+        // Re-price saved items so carts from before a price change show current prices
+        const saved: CartItem[] = JSON.parse(raw);
+        setItems(saved.map(i => ({ ...i, price: getProduct(i.productId)?.price ?? i.price })));
+      }
     } catch {
       // ignore corrupt storage
     }
