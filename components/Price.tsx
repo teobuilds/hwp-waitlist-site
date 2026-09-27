@@ -12,14 +12,14 @@ export default function Price({ price, compareAtPrice, className, style }: Props
     <p className={className} style={{ color: '#AF94E0', fontWeight: 700, ...style }}>
       {compareAtPrice && (
         <>
-          <s style={{ color: '#999999', fontWeight: 600 }}>
+          <s style={{ color: '#BBBBBB', fontWeight: 500, fontSize: '0.8em' }}>
             <span className="sr-only">Was </span>
             {compareAtPrice}
           </s>{' '}
           <span className="sr-only">now </span>
         </>
       )}
-      {price}
+      {compareAtPrice ? <span style={{ color: '#EA580C' }}>{price}</span> : price}
     </p>
   );
 }
