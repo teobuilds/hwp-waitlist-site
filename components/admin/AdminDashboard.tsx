@@ -169,7 +169,7 @@ function OrderCard({ order }: { order: AdminOrder }) {
 }
 
 export default function AdminDashboard({ orders }: { orders: AdminOrder[] }) {
-  const [onlyToPack, setOnlyToPack] = useState(false);
+  const [filter, setFilter] = useState<'all' | 'to_pack' | 'packed'>('all');
 
   const active = orders.filter(o => o.status !== 'cancelled');
   const toPack = active.filter(o => o.status === 'to_pack').length;
@@ -177,7 +177,7 @@ export default function AdminDashboard({ orders }: { orders: AdminOrder[] }) {
   const revenue = active.reduce((sum, o) => sum + o.amount_total, 0);
 
   const visible = orders
-    .filter(o => !onlyToPack || o.status === 'to_pack')
+    .filter(o => filter === 'all' || o.status === filter)
     .sort((a, b) => SORT_RANK[a.status] - SORT_RANK[b.status] || b.created_at.localeCompare(a.created_at));
 
   async function signOut() {
@@ -212,15 +212,16 @@ export default function AdminDashboard({ orders }: { orders: AdminOrder[] }) {
           “Collected” includes tax and shipping. Cancelled orders aren’t counted.
         </p>
 
-        <div className="mt-6 flex gap-2">
-          <button onClick={() => setOnlyToPack(false)} className={onlyToPack ? 'btn-pill px-4 py-1.5 text-[13px]' : 'btn-pill-filled px-4 py-1.5 text-[13px]'}>All orders</button>
-          <button onClick={() => setOnlyToPack(true)} className={onlyToPack ? 'btn-pill-filled px-4 py-1.5 text-[13px]' : 'btn-pill px-4 py-1.5 text-[13px]'}>To pack only</button>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {([['all', 'All orders'], ['to_pack', 'To pack only'], ['packed', 'To ship only']] as const).map(([key, label]) => (
+            <button key={key} onClick={() => setFilter(key)} className={filter === key ? 'btn-pill-filled px-4 py-1.5 text-[13px]' : 'btn-pill px-4 py-1.5 text-[13px]'}>{label}</button>
+          ))}
         </div>
 
         <div className="mt-4 flex flex-col gap-3">
           {visible.length === 0 ? (
             <p className="py-10 text-center text-[14px]" style={{ color: '#9CA3AF', fontWeight: 500 }}>
-              {onlyToPack ? 'Nothing to pack. You’re all caught up.' : 'No orders yet.'}
+              {filter === 'to_pack' ? 'Nothing to pack. You’re all caught up.' : filter === 'packed' ? 'Nothing waiting to ship.' : 'No orders yet.'}
             </p>
           ) : (
             visible.map(o => <OrderCard key={o.id} order={o} />)
