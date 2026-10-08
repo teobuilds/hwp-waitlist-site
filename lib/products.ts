@@ -82,7 +82,8 @@ export const products: Product[] = [
   {
     id: 8,
     name: 'Breast Cancer Awareness',
-    price: '$35',
+    price: '$20',
+    compareAtPrice: '$35',
     description: 'Breast Cancer Awareness Edition.',
     badge: 'Limited Edition',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
@@ -342,7 +343,8 @@ export const products: Product[] = [
   {
     id: 7,
     name: 'HWP Ball Tank',
-    price: '$30',
+    price: '$25',
+    compareAtPrice: '$30',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
@@ -385,7 +387,8 @@ export const products: Product[] = [
   {
     id: 9,
     name: 'HWP Tank',
-    price: '$30',
+    price: '$25',
+    compareAtPrice: '$30',
     description: 'Hoop With Prezence.',
     badge: 'New',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
@@ -428,7 +431,8 @@ export const products: Product[] = [
   {
     id: 6,
     name: 'HWP Classic Tank',
-    price: '$30',
+    price: '$25',
+    compareAtPrice: '$30',
     description: 'Hoop With Prezence.',
     cardBlurb: 'Breathable tank for the gym and getting shots up.',
     about:
