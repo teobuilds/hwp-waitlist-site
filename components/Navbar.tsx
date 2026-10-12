@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useCart } from '@/lib/cart-context';
 import { useFavorites } from '@/lib/favorites-context';
 import CartDrawer from './CartDrawer';
+import { APP_STORE_URL } from '@/lib/app-store';
 
 export default function Navbar() {
   const { itemCount, openCart } = useCart();
@@ -62,11 +63,11 @@ export default function Navbar() {
           )}
         </button>
 
-        <Link href="/waitlist">
+        <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
           <button className="btn-pill px-4 py-2 text-[13px] md:px-6 md:py-3 md:text-[15px]" style={{ fontWeight: 600, letterSpacing: '0em', lineHeight: 1.2 }}>
-            Join
+            Get the App
           </button>
-        </Link>
+        </a>
       </div>
 
       <CartDrawer />

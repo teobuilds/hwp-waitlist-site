@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import AppStoreBadge from '@/components/AppStoreBadge';
 
 const features = [
   {
@@ -48,11 +48,7 @@ export default function Home() {
           <Image src="/images/screen-home.png" alt="Hoop With Prezence App" width={340} height={690} className="drop-shadow-xl w-[220px] md:w-[340px] h-auto" />
         </div>
 
-        <Link href="/waitlist">
-          <button className="btn-pill mt-6 md:mt-10 px-6 py-2.5 md:px-8 md:py-3 text-[13px] md:text-[15px]">
-            Join the Waitlist
-          </button>
-        </Link>
+        <AppStoreBadge className="mt-6 md:mt-10" />
       </section>
 
       {/* Feature Sections */}
@@ -79,11 +75,7 @@ export default function Home() {
       <section className="py-14 md:py-24 flex flex-col items-center text-center px-6">
         <h2 className="text-[24px] md:text-[32px]" style={{ color: '#7956B9', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>Unleash your edge.</h2>
         <p className="mt-2 text-[15px] md:text-[22px]" style={{ color: '#AF94E0', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.1 }}>Start transforming your game now.</p>
-        <Link href="/waitlist">
-          <button className="btn-pill mt-6 md:mt-8 px-6 py-2.5 md:px-8 md:py-3 text-[13px] md:text-[15px]">
-            Get it now
-          </button>
-        </Link>
+        <AppStoreBadge className="mt-6 md:mt-8" />
       </section>
 
       <Footer />
