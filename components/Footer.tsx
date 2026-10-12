@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { APP_STORE_URL } from '@/lib/app-store';
 
 export default function Footer() {
   return (
@@ -9,6 +10,7 @@ export default function Footer() {
           <Link href="/" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>Home</Link>
           <Link href="/shop?preview=hwp2025" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>Shop</Link>
           <Link href="/favorites" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>Favorites</Link>
+          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="text-[11px] md:text-[13px] hover:opacity-70 transition-opacity" style={{ color: '#999999', fontWeight: 500 }}>Download the App</a>
         </div>
 
         <div className="flex flex-col gap-2 md:gap-2.5">
