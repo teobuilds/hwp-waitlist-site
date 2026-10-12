@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
         <h1 className="text-center mb-1 text-[22px] md:text-[32px]" style={{ color: '#AF94E0', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1 }}>
           Privacy Policy
         </h1>
-        <p className="text-center mb-6 md:mb-8 text-[11px] md:text-[13px]" style={{ color: '#999999', fontWeight: 500 }}>Last updated: August 1, 2026</p>
+        <p className="text-center mb-6 md:mb-8 text-[11px] md:text-[13px]" style={{ color: '#999999', fontWeight: 500 }}>Last updated: October 12, 2026</p>
 
         <div className="flex flex-col gap-6 md:gap-8 text-[13px] md:text-[15px]" style={body}>
           <p>Hoop With Prezence, LLC (&ldquo;HWP,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates hoopwithprezence.com (the &ldquo;Site&rdquo;). This Privacy Policy explains what information we collect, how we use it, and your choices regarding that information.</p>
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={h2}>1. Information We Collect</h2>
             <p className="mt-2" style={{ ...body, fontWeight: 700, color: '#171717' }}>Information you give us directly:</p>
             <ul className="list-disc pl-5 mt-1 flex flex-col gap-1">
-              <li><strong>Waitlist signup</strong>: name, email address, and phone number when you join our waitlist.</li>
+              <li><strong>Pre-launch waitlist</strong>: name, email address, and phone number if you joined our waitlist before the app launched. The waitlist is now closed and we no longer collect this information.</li>
               <li><strong>Order information</strong>: when you make a purchase, our payment processor (Stripe) collects your name, email, shipping address, and payment details. We receive and store your name, email, shipping address, and order details (items purchased, amount paid) &mdash; we do not receive or store your full card number, CVV, or other raw payment credentials.</li>
               <li><strong>Communications</strong>: if you email us, we retain that correspondence to respond to you.</li>
             </ul>
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-5 flex flex-col gap-1">
               <li>To fulfill and ship your orders</li>
               <li>To send order confirmations and respond to customer service inquiries</li>
-              <li>To notify you about the app/waitlist launch or related updates, if you&apos;ve joined the waitlist</li>
+              <li>To notify you about the app launch or related updates, if you joined our pre-launch waitlist</li>
               <li>To detect and prevent fraud</li>
               <li>To comply with legal and tax obligations</li>
             </ul>
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
             <p>We share information only with the service providers (&ldquo;processors&rdquo;) that help us run the Site and fulfill orders:</p>
             <ul className="list-disc pl-5 mt-1 flex flex-col gap-1">
               <li><strong>Stripe</strong> &mdash; payment processing (handles all card data directly)</li>
-              <li><strong>Supabase</strong> &mdash; database hosting for our waitlist and order records</li>
+              <li><strong>Supabase</strong> &mdash; database hosting for our pre-launch waitlist and order records</li>
               <li><strong>Resend</strong> &mdash; sends transactional/order notification emails</li>
               <li><strong>Vercel</strong> &mdash; hosts the Site</li>
             </ul>
@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={h2}>4. Data Retention</h2>
-            <p>We retain waitlist and order information for as long as reasonably necessary to fulfill orders, maintain business records, and comply with tax/legal obligations. You may request deletion of your information at any time (see Section 6).</p>
+            <p>We retain pre-launch waitlist and order information for as long as reasonably necessary to fulfill orders, maintain business records, and comply with tax/legal obligations. You may request deletion of your information at any time (see Section 6).</p>
           </div>
 
           <div>
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
               <li>Request a copy of the personal information we hold about you</li>
               <li>Request correction of inaccurate information</li>
               <li>Request deletion of your information (subject to what we&apos;re legally required to retain, e.g. for tax records)</li>
-              <li>Unsubscribe from waitlist communications</li>
+              <li>Unsubscribe from pre-launch waitlist communications</li>
             </ul>
           </div>
 
