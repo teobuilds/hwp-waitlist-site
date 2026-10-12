@@ -6,7 +6,7 @@ import AppStoreBadge from '@/components/AppStoreBadge';
 const features = [
   {
     title: 'Create a Play',
-    description: 'Create, diagram, and analyze plays with a dynamic coaching board. Map out movements by role and position, then generate personalized workouts based on your actions and reads.',
+    description: 'Upload game film from your past games and choose your intensity. Our AI breaks down your movements, mistakes, and game patterns so you know exactly what to work on.',
     imageRight: true,
     image: '/images/screen-create-play.png',
   },
