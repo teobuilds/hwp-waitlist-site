@@ -282,8 +282,8 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/undershirt-new-black-front.jpg',
-          '/images/products/undershirt-new-black-side.jpg',
+          '/images/products/undershirt-new-black-photo-front.jpg',
+          '/images/products/undershirt-new-black-photo-closeup.jpg',
         ],
         outOfStockSizes: ['S', 'XL', 'XXL'],
       },
@@ -597,28 +597,11 @@ export const products: Product[] = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
-        name: 'Black',
-        swatch: '#1A1A1A',
-        images: [
-          '/images/products/tee-new-black-front.jpg',
-          '/images/products/tee-new-black-side.jpg',
-        ],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/tee-new-white-front.jpg',
-          '/images/products/tee-new-white-side.jpg',
-        ],
-      },
-      {
         name: 'Grey',
         swatch: '#9CA3AF',
-        inStock: false,
         images: [
-          '/images/products/tee-new-grey-front.jpg',
-          '/images/products/tee-new-grey-side.jpg',
+          '/images/products/jorts-grey-front.jpg',
+          '/images/products/jorts-grey-side.jpg',
         ],
       },
     ],
