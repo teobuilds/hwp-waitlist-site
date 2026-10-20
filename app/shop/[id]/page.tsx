@@ -315,7 +315,7 @@ function ProductDetailContent({ productId }: { productId: number }) {
               </div>
               {product.showsThirdPartyApparel && (
                 <p className="text-[10px] leading-snug" style={{ color: '#999999', fontWeight: 500 }}>
-                  Shown on sample apparel for fit reference &mdash; HWP shirts ship with HWP branding only, no third-party logos.
+                  Third-party logos shown are on sample apparel only &mdash; your HWP item ships with HWP branding only and will not include any third-party logos.
                 </p>
               )}
             </div>

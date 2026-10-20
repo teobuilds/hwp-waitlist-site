@@ -69,6 +69,7 @@ export const products: Product[] = [
         outOfStockSizes: ['S', 'XL', 'XXL'],
       },
     ],
+    showsThirdPartyApparel: true,
   },
   {
     id: 8,
@@ -104,6 +105,7 @@ export const products: Product[] = [
         outOfStockSizes: ['XL', 'XXL'],
       },
     ],
+    showsThirdPartyApparel: true,
   },
   {
     id: 5,
@@ -140,6 +142,7 @@ export const products: Product[] = [
         outOfStockSizes: ['XL', 'XXL'],
       },
     ],
+    showsThirdPartyApparel: true,
   },
   {
     id: 4,
@@ -174,6 +177,7 @@ export const products: Product[] = [
         outOfStockSizes: ['XL', 'XXL'],
       },
     ],
+    showsThirdPartyApparel: true,
   },
   {
     id: 13,
@@ -208,6 +212,7 @@ export const products: Product[] = [
         outOfStockSizes: ['S', 'XL', 'XXL'],
       },
     ],
+    showsThirdPartyApparel: true,
   },
   {
     id: 12,
@@ -241,6 +246,7 @@ export const products: Product[] = [
         outOfStockSizes: ['S', 'XL', 'XXL'],
       },
     ],
+    showsThirdPartyApparel: true,
   },
   {
     id: 1,
@@ -343,22 +349,23 @@ export const products: Product[] = [
         ],
       },
     ],
+    showsThirdPartyApparel: true,
   },
   {
     id: 14,
-    name: 'HWP Tee',
+    name: 'HWP 3/4 Pants',
     price: '$25',
     description: 'Hoop With Prezence.',
     badge: 'New',
-    cardBlurb: 'Soft tri-blend tee for gym days and lounging.',
+    cardBlurb: 'Baggy brushed-fleece 3/4 pants for lounging and street style.',
     about:
-      "Built for whatever's on the agenda — workouts, errands, or a lounge-around day. This soft, lightweight tee is cut from a breathable tri-blend knit that moves with you and stays comfortable all day. Moisture-wicking and quick-drying, it keeps you cool at the gym and looks just as good with joggers on your day off.",
+      "Baggy, below-the-knee sweatpants cut from soft brushed fleece that's warm without the bulk. An elastic waistband with an adjustable drawstring keeps the fit comfortable, and the straight, roomy leg gives you space to move. Three pockets hold your phone, keys, and wallet. Wear them with a simple tee and sneakers or a hoodie for a street-style look.",
     details: [
-      { label: 'Material', value: '50% Polyester / 25% Cotton / 25% Rayon' },
-      { label: 'Collar', value: 'Crewneck' },
-      { label: 'Fit', value: 'Active' },
-      { label: 'Sleeve', value: 'Short Sleeve' },
-      { label: 'Closure', value: 'Pullover' },
+      { label: 'Material', value: '50% Polyester / 50% Cotton' },
+      { label: 'Fabric', value: 'Brushed Fleece' },
+      { label: 'Fit', value: 'Baggy, Straight Leg' },
+      { label: 'Length', value: '11 in, Below Knee' },
+      { label: 'Closure', value: 'Drawstring' },
       { label: 'Care', value: 'Machine Wash' },
     ],
     reviews: [
@@ -376,6 +383,7 @@ export const products: Product[] = [
         ],
       },
     ],
+    showsThirdPartyApparel: true,
   },
 ];
 
