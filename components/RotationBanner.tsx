@@ -16,7 +16,6 @@ const ROTATION_IMAGES = [
   '/images/rotation/rotation-10.jpg',
   '/images/rotation/rotation-11.jpg',
   '/images/rotation/rotation-12.jpg',
-  '/images/rotation/rotation-13.jpg',
 ];
 
 const ROTATION_INTERVAL_MS = 1500;
