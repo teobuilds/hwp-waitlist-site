@@ -74,7 +74,7 @@ export const products: Product[] = [
   {
     id: 8,
     name: 'Breast Cancer Awareness',
-    price: '$20',
+    price: '$30',
     compareAtPrice: '$35',
     description: 'Breast Cancer Awareness Edition.',
     badge: 'Limited Edition',
@@ -354,7 +354,7 @@ export const products: Product[] = [
   {
     id: 14,
     name: 'HWP 3/4 Pants',
-    price: '$25',
+    price: '$45',
     description: 'Hoop With Prezence.',
     badge: 'New',
     cardBlurb: 'Baggy brushed-fleece 3/4 pants for lounging and street style.',
