@@ -63,8 +63,8 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/undershirt-ball-black-front.jpg',
-          '/images/products/undershirt-ball-black-side.jpg',
+          '/images/products/ball-sleeveless-black-photo-front.jpg',
+          '/images/products/ball-sleeveless-black-photo-closeup.jpg',
         ],
         outOfStockSizes: ['S', 'XL', 'XXL'],
       },
@@ -104,20 +104,20 @@ export const products: Product[] = [
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       {
+        name: 'White',
+        swatch: '#FFFFFF',
+        images: [
+          '/images/products/limited-white-photo-front.jpg',
+          '/images/products/limited-white-photo-closeup.jpg',
+        ],
+        outOfStockSizes: ['XL', 'XXL'],
+      },
+      {
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
           '/images/products/limited-black-model-front-v2.jpg',
           '/images/products/limited-black-model-side-v2.jpg',
-        ],
-        outOfStockSizes: ['XL', 'XXL'],
-      },
-      {
-        name: 'White',
-        swatch: '#FFFFFF',
-        images: [
-          '/images/products/limited-white-model-front-v2.jpg',
-          '/images/products/limited-white-model-side-v2.jpg',
         ],
         outOfStockSizes: ['XL', 'XXL'],
       },
@@ -152,8 +152,8 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/ball-compression-black-model-front-v2.jpg',
-          '/images/products/ball-compression-black-model-side-v2.jpg',
+          '/images/products/ball-compression-black-photo-front.jpg',
+          '/images/products/ball-compression-black-photo-closeup.jpg',
         ],
         outOfStockSizes: ['XL', 'XXL'],
       },
@@ -195,8 +195,8 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/compression-black-model-front-v2.jpg',
-          '/images/products/compression-black-model-side-v2.jpg',
+          '/images/products/compression-black-photo-front.jpg',
+          '/images/products/compression-black-photo-closeup.jpg',
         ],
         outOfStockSizes: ['XL', 'XXL'],
       },
@@ -500,16 +500,16 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/tee-ball-black-front.jpg',
-          '/images/products/tee-ball-black-back.jpg',
+          '/images/products/tee-ball-black-photo-front.jpg',
+          '/images/products/tee-ball-black-photo-back.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/tee-ball-white-front.jpg',
-          '/images/products/tee-ball-white-back.jpg',
+          '/images/products/tee-ball-white-photo-front.jpg',
+          '/images/products/tee-ball-white-photo-back.jpg',
         ],
       },
       {
@@ -517,8 +517,8 @@ export const products: Product[] = [
         swatch: '#9CA3AF',
         inStock: false,
         images: [
-          '/images/products/tee-ball-grey-front.jpg',
-          '/images/products/tee-ball-grey-back.jpg',
+          '/images/products/tee-ball-grey-photo-front.jpg',
+          '/images/products/tee-ball-grey-photo-back.jpg',
         ],
       },
     ],
@@ -550,16 +550,16 @@ export const products: Product[] = [
         name: 'Black',
         swatch: '#1A1A1A',
         images: [
-          '/images/products/tee-wordmark-black-front.jpg',
-          '/images/products/tee-wordmark-black-side.jpg',
+          '/images/products/tee-wordmark-black-photo-front.jpg',
+          '/images/products/tee-wordmark-black-photo-closeup.jpg',
         ],
       },
       {
         name: 'White',
         swatch: '#FFFFFF',
         images: [
-          '/images/products/tee-wordmark-white-front.jpg',
-          '/images/products/tee-wordmark-white-side.jpg',
+          '/images/products/tee-wordmark-white-photo-front.jpg',
+          '/images/products/tee-wordmark-white-photo-closeup.jpg',
         ],
       },
       {
@@ -567,8 +567,8 @@ export const products: Product[] = [
         swatch: '#9CA3AF',
         inStock: false,
         images: [
-          '/images/products/tee-wordmark-grey-front.jpg',
-          '/images/products/tee-wordmark-grey-side.jpg',
+          '/images/products/tee-wordmark-grey-photo-front.jpg',
+          '/images/products/tee-wordmark-grey-photo-closeup.jpg',
         ],
       },
     ],
