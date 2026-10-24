@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { Resend } from 'resend';
 
 const SIZES = ['S', 'M', 'L', 'XL', '2XL'];
 
@@ -62,6 +63,32 @@ export async function POST(req: NextRequest) {
 
   if (error) {
     return NextResponse.json({ error: 'Something went wrong. Try again or email us.' }, { status: 500 });
+  }
+
+  if (process.env.RESEND_API_KEY) {
+    try {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      await resend.emails.send({
+        from: 'HWP Ambassadors <orders@hoopwithprezence.com>',
+        to: 'ceo@hoopwithprezence.com',
+        replyTo: email,
+        subject: `New ambassador application — ${name}`,
+        text: [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Phone: ${phone}`,
+          `Handle: ${handle}`,
+          `Team/school: ${teamSchool || '—'}`,
+          `Shirt size: ${shirtSize}`,
+          `Ship to: ${shippingAddress}`,
+          '',
+          'What makes them different:',
+          about,
+        ].join('\n'),
+      });
+    } catch {
+      // The application is already saved; a failed notification shouldn't fail the submit.
+    }
   }
 
   return NextResponse.json({ success: true }, { status: 200 });
