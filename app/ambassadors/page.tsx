@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import AmbassadorForm from '@/components/AmbassadorForm';
 
 export default function AmbassadorsPage() {
   const link = { color: '#AF94E0' };
@@ -28,15 +29,19 @@ export default function AmbassadorsPage() {
           </div>
 
           <div>
-            <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={{ color: '#171717', fontWeight: 700, letterSpacing: '-0.02em' }}>How to apply</h2>
-            <p>Email us at <a href="mailto:hello@hoopwithprezence.com?subject=Ambassador%20Program%20Application" className="underline" style={link}>hello@hoopwithprezence.com</a> with:</p>
+            <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={{ color: '#171717', fontWeight: 700, letterSpacing: '-0.02em' }}>What you do</h2>
+            <p>You get free gear. In return:</p>
             <ul className="list-disc pl-5 mt-1 flex flex-col gap-1">
-              <li>Your name, team/school, and position</li>
-              <li>Links to socials, highlight film, or stats</li>
-              <li>Shirt size and shipping address</li>
-              <li>Why you want to rep Hoop With Prezence</li>
+              <li>Make 3 videos repping HWP</li>
+              <li>Post a story that sends your followers to HWP to buy</li>
+              <li>Tag #HWPambassador so it&apos;s clear the gear was gifted</li>
             </ul>
-            <p className="mt-2">We review every application and reach out directly if it&apos;s a fit.</p>
+          </div>
+
+          <div>
+            <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={{ color: '#171717', fontWeight: 700, letterSpacing: '-0.02em' }}>Apply</h2>
+            <p className="mb-4">We review every application and reach out directly if it&apos;s a fit. Questions? Email <a href="mailto:hello@hoopwithprezence.com" className="underline" style={link}>hello@hoopwithprezence.com</a>.</p>
+            <AmbassadorForm />
           </div>
         </div>
       </section>
