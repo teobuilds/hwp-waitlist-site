@@ -116,7 +116,7 @@ export default function AmbassadorForm() {
       <label className="flex items-start gap-2">
         <input name="agreed" type="checkbox" required className="mt-1 h-4 w-4 accent-[#AF94E0]" />
         <span style={{ color: '#404040', fontWeight: 500 }}>
-          I agree to make 3 HWP videos and post a story linking to HWP. I&apos;ll tag #HWPambassador.
+          If I&apos;m accepted, I agree to make 3 videos for Hoop With Prezence. We&apos;ll tell you everything about how to do it.
         </span>
       </label>
 
