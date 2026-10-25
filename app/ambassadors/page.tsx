@@ -35,15 +35,6 @@ export default function AmbassadorsPage() {
               <li>Your own promo code. Every time someone orders with it, you earn <strong>10% of the order</strong></li>
               <li>Paid out monthly</li>
             </ul>
-          </div>
-
-          <div>
-            <h2 className="mb-1.5 text-[14px] md:text-[17px]" style={{ color: '#171717', fontWeight: 700, letterSpacing: '-0.02em' }}>What you do</h2>
-            <ul className="list-disc pl-5 flex flex-col gap-1">
-              <li>Make 3 videos repping HWP</li>
-              <li>Post a story that sends your followers to HWP to buy</li>
-              <li>Tag #HWPambassador so it&apos;s clear the gear was gifted</li>
-            </ul>
             <p className="mt-3 text-[11px] md:text-[13px]" style={{ color: '#999999' }}>Commission is calculated on the item total (not shipping or tax) and doesn&apos;t apply to refunded orders. Payouts are sent once you&apos;ve earned $10 or more.</p>
           </div>
 
