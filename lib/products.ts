@@ -385,6 +385,39 @@ export const products: Product[] = [
     ],
     showsThirdPartyApparel: true,
   },
+  {
+    id: 2,
+    name: 'HWP Logo Hoodie',
+    price: '$60',
+    description: 'Hoop With Prezence.',
+    badge: 'New',
+    cardBlurb: 'Soft fleece-lined pullover hoodie in heather grey.',
+    about:
+      "A classic heather grey pullover hoodie cut from a premium 300GSM cotton-blend fabric that feels soft from the first wear. The lightweight fleece lining adds lasting warmth without the bulk, making it an easy all-season layer. A front kangaroo pocket, ribbed cuffs and hem, and a regular fit keep it comfortable on the court, in the gym, or out on the street. Pre-washed to minimize shrinkage, with an anti-pilling finish that keeps it looking fresh wash after wash. Finished with the Hoop With Prezence chest logo.",
+    details: [
+      { label: 'Material', value: '50% Polyester / 50% Cotton' },
+      { label: 'Fabric', value: '300GSM Cotton Blend, Fleece Lining' },
+      { label: 'Fit', value: 'Regular' },
+      { label: 'Neck', value: 'Hooded' },
+      { label: 'Sleeve', value: 'Long Sleeve' },
+      { label: 'Closure', value: 'Pull On' },
+      { label: 'Pocket', value: 'Front Kangaroo Pocket' },
+      { label: 'Cuffs/Hem', value: 'Ribbed' },
+      { label: 'Care', value: 'Machine Wash Cold, Tumble Dry Low' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      {
+        name: 'Grey',
+        swatch: '#9CA3AF',
+        images: [
+          '/images/products/hoodie-grey-model-front.jpg',
+          '/images/products/hoodie-grey-print-close.jpg',
+        ],
+      },
+    ],
+    showsThirdPartyApparel: true,
+  },
 ];
 
 export function getProduct(id: number) {
