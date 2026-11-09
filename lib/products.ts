@@ -387,7 +387,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: 'HWP Logo Hoodie',
+    name: 'HWP Hoodie',
     price: '$60',
     description: 'Hoop With Prezence.',
     badge: 'New',
